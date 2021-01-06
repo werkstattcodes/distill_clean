@@ -17,7 +17,7 @@ categories:
   - snapbox
   - mapbox
 
-preview: submissionsepidemiclaw_files/preview.png
+preview: static-maps-with-mapbox-background-images-snapbox_files/preview.png
 
 output:
   distill::distill_article:
