@@ -278,7 +278,8 @@ readr::write_excel_csv2(df_submission, file=here::here("blog_data", "epidemic_la
 ```
 
 ```{r include=FALSE}
-df_submission <- readr::read_csv2(file="submissionsepidemiclaw_files/df_submission_rss.csv")
+# df_submission <- readr::read_csv2(file="submissionsepidemiclaw_files/df_submission_rss.csv")
+df_submission <- readr::read_csv2(file=here::here("_blog_data",                              "epidemic_law_submissions", "df_submission_rss.csv"))
 
 ```
 
@@ -387,7 +388,8 @@ Now with all pdf links available we can start to download them. To do so, I use 
 
 ```{r include=FALSE}
 # load saved links to pdf_files
-df_submission <- readr::read_csv2(file="submissionsepidemiclaw_files/df_submission.csv")
+# df_submission <- readr::read_csv2(file="submissionsepidemiclaw_files/df_submission.csv")
+df_submission <- readr::read_csv2(file=here::here("_blog_data", "epidemic_law_submissions","df_submission.csv"))
 
 ```
 
@@ -1194,8 +1196,7 @@ But how does this result contrast with e.g. submissions to other bills. To put t
 [^2]: I don't reproduce the code for the analysis here, but it is available on my github.
 
 ```{r echo=FALSE}
-df_sozial_sim <- readr::read_csv2(file="submissionsepidemiclaw_files/df_bar_sim_sozial.csv") %>% 
-  mutate(law="Sozialhilfegrundgesetz")
+df_sozial_sim <- readr::read_csv2(file=here::here("_blog_data", "epidemic_law_submissions", "df_bar_sim_sozial.csv")) %>%  mutate(law="Sozialhilfegrundgesetz")
 
 df_sim_comb <- bind_rows(df_sozial_sim, df_bar_sim) %>% 
   group_by(law, sim_interval) %>% 
