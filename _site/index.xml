@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>werk.statt.codes</title>
+    <link>https://werk.statt.codes/</link>
+    <atom:link href="https://werk.statt.codes/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Personal blog on stuff related to R
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Wed, 06 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Welcome to My Blog</title>
+      <dc:creator>Nora Jones</dc:creator>
+      <link>https://werk.statt.codes/posts/welcome</link>
+      <description>Welcome to our new blog, My Blog. We hope you enjoy 
+reading what we have to say!</description>
+      <guid>https://werk.statt.codes/posts/welcome</guid>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Similarity of public submissions to Austria's amendment of the epidemic law</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/posts/2020-12-22-submissionsepidemiclaw</link>
+      <description>An analysis of public submissions to bill seeking to amend Austria's epidemic law.</description>
+      <category>Austria</category>
+      <category>Corona virus</category>
+      <category>OCR</category>
+      <category>stringr</category>
+      <category>web scraping</category>
+      <guid>https://werk.statt.codes/posts/2020-12-22-submissionsepidemiclaw</guid>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/posts/2020-12-22-submissionsepidemiclaw/submissionsepidemiclaw_files/preview.png" medium="image" type="image/png" width="1086" height="685"/>
+    </item>
+    <item>
+      <title>Vienna Elections 2020: Analysis of parties' ads on facebook</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/posts/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook</link>
+      <description>Analysis of the facebook ads placed in the run-up to the 2020 Vienna city elections.</description>
+      <category>Austria</category>
+      <category>social media</category>
+      <category>election</category>
+      <guid>https://werk.statt.codes/posts/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook</guid>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/posts/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png" medium="image" type="image/png" width="1079" height="683"/>
+    </item>
+  </channel>
+</rss>

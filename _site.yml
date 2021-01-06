@@ -1,14 +1,38 @@
-name: "distill_clean"
-title: "My Blog"
+name: "blog_distill"
+title: "werk.statt.codes"
 description: |
-  My Blog
+  Personal blog on stuff related to R
 output_dir: "_site"
+base_url: https://werk.statt.codes/
 navbar:
   search: true
   right:
-    - text: "Home"
-      href: index.html
-    - text: "About"
+    # - text: "Home"
+    #   href: index.html
+    # - text: "About"
+    - icon: fa fa-info-circle
       href: about.html
-output: distill::distill_article
-theme: theme.css
+    - icon: fa fa-twitter
+      href: https://twitter.com/zoowalk
+    - icon: fa fa-github
+      href: https://www.github.com/werkstattcodes
+    - icon: fa fa-rss
+      href: index.xml
+  
+collections:
+  posts:
+    feed_items_max: 50
+    #disqus: werk.statt.codes
+    share: [twitter, linkedin, facebook]
+    # subscribe: _subscribe.html
+
+rss:
+  full_content: false
+
+output: 
+  distill::distill_article
+
+theme: theme.css 
+#preview: static/site-preview.png
+
+#creative_commons: CC BY
