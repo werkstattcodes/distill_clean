@@ -4,6 +4,7 @@ description: |
   My Blog
 output_dir: "docs"
 navbar:
+  search: true
   right:
     - text: "Home"
       href: index.html
