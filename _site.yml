@@ -2,7 +2,7 @@ name: "distill_clean"
 title: "My Blog"
 description: |
   My Blog
-output_dir: "docs"
+output_dir: "_site"
 navbar:
   search: true
   right:
@@ -11,3 +11,4 @@ navbar:
     - text: "About"
       href: about.html
 output: distill::distill_article
+  
