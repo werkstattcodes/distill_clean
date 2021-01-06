@@ -43,5 +43,19 @@ reading what we have to say!</description>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png" medium="image" type="image/png" width="1079" height="683"/>
     </item>
+    <item>
+      <title>Static maps with mapbox background images (snapbox)</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2020-11-25-static-maps-with-mapbox-background-images-snapbox</link>
+      <description>How to create ggplot maps with mapbox images as background</description>
+      <category>maps</category>
+      <category>Austria</category>
+      <category>sf</category>
+      <category>snapbox</category>
+      <category>mapbox</category>
+      <guid>https://werk.statt.codes/post/2020-11-25-static-maps-with-mapbox-background-images-snapbox</guid>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2020-11-25-static-maps-with-mapbox-background-images-snapbox/static-maps-with-mapbox-background-images-snapbox_files/figure-html5/unnamed-chunk-6-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
   </channel>
 </rss>
