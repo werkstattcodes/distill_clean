@@ -7,16 +7,7 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 06 Jan 2021 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>Welcome to My Blog</title>
-      <dc:creator>Nora Jones</dc:creator>
-      <link>https://werk.statt.codes/post/welcome</link>
-      <description>Welcome to our new blog, My Blog. We hope you enjoy 
-reading what we have to say!</description>
-      <guid>https://werk.statt.codes/post/welcome</guid>
-      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Similarity of public submissions to Austria's amendment of the epidemic law</title>
       <dc:creator>Roland Schmidt</dc:creator>
@@ -84,6 +75,31 @@ reading what we have to say!</description>
       <guid>https://werk.statt.codes/post/2020-10-10-vienna-elections-2020-age-profile</guid>
       <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-10-10-vienna-elections-2020-age-profile/vienna-elections-2020-age-profile_files/figure-html5/unnamed-chunk-20-1.svg" medium="image" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>Austrian Parliament: MPs transparency and conflict of interest report</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2020-07-21-austrian-parliament-mps-transparency-and-conflict-of-interest-report</link>
+      <description>Analysis of MP's transparency and conflict of interest report.</description>
+      <category>Austria</category>
+      <category>OCR</category>
+      <category>web scraping</category>
+      <guid>https://werk.statt.codes/post/2020-07-21-austrian-parliament-mps-transparency-and-conflict-of-interest-report</guid>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2020-07-21-austrian-parliament-mps-transparency-and-conflict-of-interest-report/austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/preview.png" medium="image" type="image/png" width="4200" height="3000"/>
+    </item>
+    <item>
+      <title>Update on Google mobility reports on Austria</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2020-06-08-update-on-mobility-patterns</link>
+      <description>This is a short update on my previous post dealing with Google’s mobility reports on Austria during the Covid-19 crisis.</description>
+      <category>Austria</category>
+      <category>climate</category>
+      <category>Corona virus</category>
+      <category>shiny</category>
+      <guid>https://werk.statt.codes/post/2020-06-08-update-on-mobility-patterns</guid>
+      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2020-06-08-update-on-mobility-patterns/update-on-mobility-patterns_files/figure-html5/unnamed-chunk-14-1.png" medium="image" type="image/png" width="3900" height="2400"/>
     </item>
   </channel>
 </rss>
