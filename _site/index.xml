@@ -98,8 +98,19 @@
       <category>Corona virus</category>
       <category>shiny</category>
       <guid>https://werk.statt.codes/post/2020-06-08-update-on-mobility-patterns</guid>
-      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-06-08-update-on-mobility-patterns/update-on-mobility-patterns_files/figure-html5/unnamed-chunk-14-1.png" medium="image" type="image/png" width="3900" height="2400"/>
+    </item>
+    <item>
+      <title>Google's Mobility reports: changes to mobility patterns during Covid-19 lock-down in Austria</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2020-04-28-google-s-mobility-reportsmd</link>
+      <description>Analysis of Google's mobility reports following introductino of Covid lockdown in March 2020.</description>
+      <category>Corona virus</category>
+      <category>Austria</category>
+      <guid>https://werk.statt.codes/post/2020-04-28-google-s-mobility-reportsmd</guid>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2020-04-28-google-s-mobility-reportsmd/google-s-mobility-reportsmd_files/figure-html5/unnamed-chunk-9-1.png" medium="image" type="image/png" width="2520" height="2160"/>
     </item>
   </channel>
 </rss>
