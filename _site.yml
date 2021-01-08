@@ -20,7 +20,7 @@ navbar:
       href: index.xml
   
 collections:
-  posts:
+  post:
     feed_items_max: 50
     #disqus: werk.statt.codes
     share: [twitter, linkedin, facebook]
