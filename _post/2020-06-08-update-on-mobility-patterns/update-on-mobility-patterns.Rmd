@@ -65,6 +65,9 @@ library(paletteer)
 library(ggtext)
 library(glue)
 library(gt)
+
+
+
 ```
 </details>
 
@@ -91,6 +94,11 @@ knitr::opts_chunk$set(
 )
 
 options(width=180, dplyr.width = 150)
+
+plot_bg_color <- readr::read_file(file=here::here("theme.css")) %>% 
+  str_extract(., regex("(?<=background-color:).*?(?=;)")) %>% str_trim()
+
+
 ```
 </details>
 
@@ -346,7 +354,8 @@ plot_park <- df_temp_mobility %>%
                                     color="grey30",
                                     hjust=1),
         legend.position="bottom",
-        strip.text.y = element_text(hjust=1)
+        strip.text.y = element_text(hjust=1),
+        plot.background = element_rect(fill=plot_bg_color, color=plot_bg_color)
   )+
   guides(color=guide_legend(title = "type of days",
                             title.position = "left",
@@ -402,6 +411,7 @@ plot_temp <- df_temp_mobility %>%
                                     hjust=1),
         legend.position="bottom",
         legend.direction = "horizontal",
+                plot.background = element_rect(fill=plot_bg_color, color=plot_bg_color),
         strip.text.y = element_text(hjust=1))+
   lemon::facet_rep_grid(day.indicator~sub_region_1,
                         repeat.tick.labels = T,
