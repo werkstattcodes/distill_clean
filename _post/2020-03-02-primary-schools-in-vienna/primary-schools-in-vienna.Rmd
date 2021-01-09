@@ -667,7 +667,7 @@ Complementing the absolute difference of the AHS ratios, I also divided the AHS 
 
 ```{r include=FALSE}
 df_main <- readr::read_rds(here("_blog_data", "Vienna_primary_schools", "df_main.rds"))
-Sys.setenv("MAPBOX_TOKEN" = "pk.eyJ1Ijoiem9vd2FsayIsImEiOiJjazFjMW52NWIwZDVjM21scmE1Y296MnUxIn0.ZXSu71B2VjyBwlUldNUtLg")
+
 ```
 
 <details closed> 
