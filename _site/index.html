@@ -2209,10 +2209,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   d-byline {
-      padding-top: 0.5rem;
-      padding-bottom: 1rem;
-  }
+      padding-top: 0px;
+      padding-bottom: 0px;
+      }
 
+  d-byline .byline {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+       }
+
+
+  .posts-list .metadata {
+      margin-top: 0px !important;
+      }
+
+
+  .posts-list .post-preview {
+       border-bottom: 0px;
+      }
 
   pre {
     display: block;
@@ -2965,6 +2978,26 @@ function init_posts_list() {
 <p>Preliminary look at the COVID data on Austria.</p>
 </div>
 </a>
+<a href="post/2020-03-02-primary-schools-in-vienna/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Austria","plotly"]}</script>
+<div class="metadata">
+<div class="publishedDate">March 2, 2020</div>
+<div class="dt-authors">
+<div class="dt-author">Roland Schmidt</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Segregation in Vienna's primary schools?</h2>
+<div class="dt-tags">
+<div class="dt-tag">Austria</div>
+<div class="dt-tag">plotly</div>
+</div>
+<p>A short description of the post.</p>
+</div>
+</a>
 </div>
 <div class="posts-sidebar">
 <div class="sidebar-section categories">
@@ -2972,11 +3005,11 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(9)</span>
+<span class="category-count">(10)</span>
 </li>
 <li>
 <a href="#category:Austria">Austria</a>
-<span class="category-count">(9)</span>
+<span class="category-count">(10)</span>
 </li>
 <li>
 <a href="#category:climate">climate</a>
@@ -3013,6 +3046,10 @@ function init_posts_list() {
 <li>
 <a href="#category:OCR">OCR</a>
 <span class="category-count">(4)</span>
+</li>
+<li>
+<a href="#category:plotly">plotly</a>
+<span class="category-count">(1)</span>
 </li>
 <li>
 <a href="#category:reactable">reactable</a>
