@@ -149,9 +149,7 @@ d-article h2 {
 
 /*TITLE ON LISTING PAGE*/
 .posts-list .description h2 {
-    /*font-family: 'Oswald', sans-serif !important;*/
-    /*color: red;*/
-    font-size: 1.3rem;
+    font-size: 18px !important;
 }
 
 
