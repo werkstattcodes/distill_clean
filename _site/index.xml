@@ -35,6 +35,17 @@
       <media:content url="https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png" medium="image" type="image/png" width="1079" height="683"/>
     </item>
     <item>
+      <title>test crosstalk</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-01-13-test-crosstalk</link>
+      <description>Drawing on public data from Vienna's school administration I look at how many percentages of pupils in each primary schoos subsequently leave for schools offering eventually a higher education entrance qualification (Matura). The main interest is in contrasting these ratios between closely (geo-)located schools.</description>
+      <category>Austria</category>
+      <category>plotly</category>
+      <category>crosstalk</category>
+      <guid>https://werk.statt.codes/post/2021-01-13-test-crosstalk</guid>
+      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Static maps with mapbox background images (snapbox)</title>
       <dc:creator>Roland Schmidt</dc:creator>
       <link>https://werk.statt.codes/post/2020-11-25-static-maps-with-mapbox-background-images-snapbox</link>
@@ -122,6 +133,16 @@
       <guid>https://werk.statt.codes/post/2020-04-23-covid-19-corona-virus-quick-look-at-some-data</guid>
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-04-23-covid-19-corona-virus-quick-look-at-some-data/covid-19-corona-virus-quick-look-at-some-data_files/figure-html5/unnamed-chunk-6-1.png" medium="image" type="image/png" width="3600" height="2160"/>
+    </item>
+    <item>
+      <title>Segregation in Vienna's primary schools?</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2020-03-02-primary-schools-in-vienna</link>
+      <description>Drawing on public data from Vienna's school administration I look at how many percentages of pupils in each primary schoos subsequently leave for schools offering eventually a higher education entrance qualification (Matura). The main interest is in contrasting these ratios between closely (geo-)located schools.</description>
+      <category>Austria</category>
+      <category>plotly</category>
+      <guid>https://werk.statt.codes/post/2020-03-02-primary-schools-in-vienna</guid>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
