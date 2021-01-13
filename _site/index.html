@@ -2208,20 +2208,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }*/
 
 
-  d-byline {
-      padding-top: 0px;
+  .d-byline {
+      padding-top: 0px; /*no change. why?*/
       padding-bottom: 0px;
       }
 
   d-byline .byline {
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding-top: 0px; /*padding added here additional, but no change*/
+      padding-bottom: 0px;
        }
-
 
   .posts-list .metadata {
       margin-top: 0px !important;
       }
-
 
   .posts-list .post-preview {
        border-bottom: 0px;
@@ -2803,7 +2803,7 @@ function init_posts_list() {
 </div>
 </a>
 <a href="post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Austria","social media","election"]}</script>
+<script class="post-metadata" type="text/json">{"categories":["Austria","social media","elections"]}</script>
 <div class="metadata">
 <div class="publishedDate">Dec. 19, 2020</div>
 <div class="dt-authors">
@@ -2818,7 +2818,7 @@ function init_posts_list() {
 <div class="dt-tags">
 <div class="dt-tag">Austria</div>
 <div class="dt-tag">social media</div>
-<div class="dt-tag">election</div>
+<div class="dt-tag">elections</div>
 </div>
 <p>Analysis of the facebook ads placed in the run-up to the 2020 Vienna city elections.</p>
 </div>
@@ -2977,19 +2977,22 @@ function init_posts_list() {
 </div>
 </a>
 <a href="post/2020-03-02-primary-schools-in-vienna/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Austria","plotly"]}</script>
+<script class="post-metadata" type="text/json">{"categories":["Austria","plotly","crosstalk"]}</script>
 <div class="metadata">
-<div class="publishedDate">March 1, 2020</div>
+<div class="publishedDate">March 2, 2020</div>
 <div class="dt-authors">
 <div class="dt-author">Roland Schmidt</div>
 </div>
 </div>
-<div class="thumbnail"></div>
+<div class="thumbnail">
+<img data-src="post/2020-03-02-primary-schools-in-vienna/primary-schools-in-vienna_files/preview.png"/>
+</div>
 <div class="description">
 <h2>Segregation in Vienna's primary schools?</h2>
 <div class="dt-tags">
 <div class="dt-tag">Austria</div>
 <div class="dt-tag">plotly</div>
+<div class="dt-tag">crosstalk</div>
 </div>
 <p>Drawing on public data from Vienna's school administration I look at how many percentages of pupils in each primary schoos subsequently leave for schools offering eventually a higher education entrance qualification (Matura). The main interest is in contrasting these ratios between closely (geo-)located schools.</p>
 </div>
@@ -3016,12 +3019,12 @@ function init_posts_list() {
 <span class="category-count">(5)</span>
 </li>
 <li>
-<a href="#category:election">election</a>
+<a href="#category:crosstalk">crosstalk</a>
 <span class="category-count">(1)</span>
 </li>
 <li>
 <a href="#category:elections">elections</a>
-<span class="category-count">(1)</span>
+<span class="category-count">(2)</span>
 </li>
 <li>
 <a href="#category:gt">gt</a>
@@ -3082,7 +3085,7 @@ function init_posts_list() {
 <a href="#">More articles &raquo;</a>
 </div>
 </div>
-<!--/radix_placeholder_article_listing-->
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>Posts</h1>

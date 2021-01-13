@@ -13,7 +13,7 @@ author:
 categories:
   - Austria
   - social media
-  - election
+  - elections
 date: 12-19-2020
 preview: welcome_files/preview.png
 

@@ -29,7 +29,7 @@
       <description>Analysis of the facebook ads placed in the run-up to the 2020 Vienna city elections.</description>
       <category>Austria</category>
       <category>social media</category>
-      <category>election</category>
+      <category>elections</category>
       <guid>https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook</guid>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png" medium="image" type="image/png" width="1079" height="683"/>
@@ -130,8 +130,10 @@
       <description>Drawing on public data from Vienna's school administration I look at how many percentages of pupils in each primary schoos subsequently leave for schools offering eventually a higher education entrance qualification (Matura). The main interest is in contrasting these ratios between closely (geo-)located schools.</description>
       <category>Austria</category>
       <category>plotly</category>
+      <category>crosstalk</category>
       <guid>https://werk.statt.codes/post/2020-03-02-primary-schools-in-vienna</guid>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2020-03-02-primary-schools-in-vienna/primary-schools-in-vienna_files/preview.png" medium="image" type="image/png" width="756" height="653"/>
     </item>
   </channel>
 </rss>

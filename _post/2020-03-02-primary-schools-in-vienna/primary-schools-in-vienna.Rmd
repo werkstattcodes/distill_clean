@@ -14,8 +14,9 @@ author:
 categories:
   - Austria
   - plotly
+  - crosstalk
   
-preview: static-maps-with-mapbox-background-images-snapbox_files/preview.png
+preview: primary-schools-in-vienna_files/preview.png
 
 output:
   distill::distill_article:
@@ -82,7 +83,10 @@ The inconvenient elephant in the room here seems to be some parents’ fear that
 
 
 # Analysis
-So, triggered by this ‘hearsay’ (and, guilty as charged, by my affinity with R), I wanted to dig a bit deeper and see whether ‘the data’ has anything pertaining to say. The straightforward approach would be simply to look at the share of kids with first languages other than German in each school and compare them. While this data is certainly collected (when enrolling your kid), as far as I can tell, it is not made publicly available on an individual school level (and maybe that’s actually good). However, during our school search I came across a rather informative map provided by Austria’s statistical office (see [here]( https://www.statistik.at/atlas/schulen/#){target=”_blank”}). The map presents not only the location for every (primary) school in Austria, but also data on the school subsequently attended by its pupils once they finished the fourth grade. See e.g. <br>![Example of table of 4th graders' school destination](/post/2020-02-17-primary-schools-in-vienna_files/vienna_schools_table.PNG){width=50% height=50%}.
+So, triggered by this ‘hearsay’ (and, guilty as charged, by my affinity with R), I wanted to dig a bit deeper and see whether ‘the data’ has anything pertaining to say. The straightforward approach would be simply to look at the share of kids with first languages other than German in each school and compare them. While this data is certainly collected (when enrolling your kid), as far as I can tell, it is not made publicly available on an individual school level (and maybe that’s actually good). However, during our school search I came across a rather informative map provided by Austria’s statistical office (see [here]( https://www.statistik.at/atlas/schulen/#){target=”_blank”}). The map presents not only the location for every (primary) school in Austria, but also data on the school subsequently attended by its pupils once they finished the fourth grade. See e.g. the image below. <br>
+
+![Example of table of 4th graders' school destination](primary-schools-in-vienna_files/vienna_schools_table.PNG){width=50% height=100%}
+<br>
 
 In short, with this data we know how many % of all pupils ‘graduating’ from a primary school’s 4th grade subsequently attended either a AHS (or equivalent; a high school/gymnasium) or an NMS (or equivalent; ‘new secondary school’). Critically, an AHS offers a direct trajectory to a school leaving examination after eight years which is required to attend university. In contrast, an NMS lasts only for four years after which kids either go for an apprenticeship, start to work, or if their school record was good enough, switch for another four to five years to an AHS or similar school type which offers a school leaving exam. To (over)simplify, leaving for an AHS is by and large considered to be better for the future educational and professional development. I will subsequently call the % of kids per school leaving for an AHS (or equivalent) the __AHS ratio__.^[To be clear, first: this blog does not intend to convey that a kid attending a middle school rather than a high school is on an individual or school level some sort of a failure. Definitely not. Kids can develop at different pace, have different needs and abilities at different times. An NMS might be just the right fit. While I am not ignorant to the particular challenges NMS entail, they should be an environment in which kids can prosper and life chances be seized. That this is not always the reality is a different story. Second: This post also does not mean to say that schools with higher AHS ratios are ‘better’ schools. Better, in my understanding, is based on schools ability to educationally and socially develop kids from where they stand when they enter school to the point when they leave. And in this regard, schools are hardly served with a clean slate (kids have different starting positions).]
 
