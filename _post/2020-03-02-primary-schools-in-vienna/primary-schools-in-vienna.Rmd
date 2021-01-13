@@ -5,9 +5,6 @@ description: |
   
 date: 03-02-2020
 
-theme: theme.css
-
-
 author:
   - first_name: "Roland"
     last_name: "Schmidt"
@@ -45,7 +42,6 @@ library(ggplot2)
 library(here)
 library(extrafont)
 loadfonts(device = "win", quiet = T)
-extrafont::fonts()
 library(hrbrthemes)
 library(scales)
 library(ggiraph)
@@ -63,16 +59,11 @@ options(pillar.sigfig = 12)
 library(geosphere)
 library(plotly)
 library(crosstalk)
+library(htmltools)
 ```
 
 ```{r setup, echo = F}
-# knit_hooks$set(wrap = function(before, options, envir){
-# if (before){
-# paste0('<', options$wrap, '>')
-# } else {
-# paste0('</', options$wrap, '>')
-# }
-# })
+
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, dpi = 180, fig.height = 5, fig.width = 7, fig.align = "center")
 options(width = 180, dplyr.width = 150)
 
@@ -546,7 +537,7 @@ df_difference <- diff_matrix %>%
 df_difference
 ```
 
-```{r, eval=T}
+```{r, eval=F}
 # add details of schools to dataframe containing all combinations of schools (nested);
 # first for 1st school in pair, then for 2nd school in pair;
 # extract values of interest for easier handling from nested dataframe;
@@ -597,10 +588,18 @@ df_main <- df_difference %>%
   by = c("school_2" = "properties_skz_vj")
   )
 
-# readr::write_rds(df_main, file=here::here("_blog_data", "Vienna_primary_schools","df_main2.rds"))
+# readr::write_rds(df_main, file=here::here("_blog_data", "Vienna_primary_schools","df_main_base.rds"))
 
 
 ```
+
+
+
+```{r, eval=T, include=F}
+df_main <- readr::read_rds(here::here("_blog_data", "Vienna_primary_schools", "df_main_base.rds"))
+
+```
+
 
 ```{r, eval=T}
 # create a tooltip for the graphic
@@ -631,6 +630,8 @@ df_main <- df_main %>%
     function(x, y) pmax(x, y) / pmin(x, y)
   ))
 ```
+
+
 
 ```{r eval=T, paged.print=TRUE}
 # Here the full table with the data
@@ -782,40 +783,18 @@ cross_map2 <- plotly::plot_mapbox(
     paper_bgcolor = bgr_color
   ) %>% 
     config(mapboxAccessToken = Sys.getenv("MAPBOX_TOKEN"))
-```
-</details>
 
-```{r, eval=T}
-# combine graphs
-
-cross_plot <- crosstalk::bscols(
-plot_distance_diff,
-cross_map2)
-#
-
-```
-
-cross_plot <- crosstalk::bscols(
-plot_distance_diff,
-cross_map2)
-```{r eval=FALSE, include=FALSE}
-# cross_plot
-```
+#combine both plots vertically/as two columns
+#problem: introduces bootstrap css which conflicts with css of blog
+cross_plot <- crosstalk::bscols(plot_distance_diff, cross_map2)
 
 cross_plot <- browsable(tagList(cross_plot))
-cross_plot
-
-```{r, eval=T}
-library(htmltools)
-# cross_plot <- browsable(tagList(plot_distance_diff, cross_map2))
-cross_plot <- browsable(tagList(cross_plot))
-# cross_plot
-```
 
 
-```{r, eval=T}
+
 # see here for how to remove bootstrap css which otherwise messes up you blogdown's css
 # https://github.com/rstudio/crosstalk/issues/26
+# only works when combining plots vertically though ! hence css not as intended;
 
 unstrap <- function(x) {
   attr(x, "html_dependencies") <-
@@ -830,13 +809,15 @@ unstrap <- function(x) {
 
 cross_plot_clean <- unstrap(cross_plot)
 ```
+</details>
 
 
-cross_plot_clean
-```{r echo=FALSE, layout="l-page", fig.height=30}
+```{r echo=FALSE, fig.height=30, layout="l-page"}
 
 cross_plot_clean
 ```
+
+
 
 As the scatter plot shows, there were 36 (public) school pairs with a distance of less than 500 meters between them. A good part of these schools had AHS ratios different by up to 25 % points. What stands out, however, are some cases with differences of above 30 or even 40 % points. The primary schools in the Löwegasse and Deckergasse are only 52 meters away, yet there AHS ratio differ by 35 percentage points. While 64 % of 4th graders in the Löwegasse leave for an AHS, only 28 % do so from the Deckergsse. The primary schools in the Odakergasse and Meindlgasse are only 137 meters away from each other, yet their AHS ratios differ by 44.17 percentage points. In probabilistic terms (AHS factor), a kid from the Meinlgasse is three times (3.08) more likely to transfer to an AHS than a kid from the Odakergasse. These are quite stark contrasts. Similarly, although somewhat farther away (289 m), is the discrepancy between the primary school in the Kindermangasse and Rötzergasse. While the former has an AHS ratio of 69 %, the latter has a ratio of only 22 %. Also a factor of 3.08. For me a critical point here is – the school I was referring to at the beginning of this blog post is among these three schools.
 
