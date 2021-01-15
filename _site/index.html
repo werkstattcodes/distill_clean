@@ -2208,15 +2208,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }*/
 
 
-  .d-byline {
-      padding-top: 0px; /*no change. why?*/
-      padding-bottom: 0px;
+  body > d-byline {
+      padding: 0rem; 
+      border-style: none;
+      border-top: 0px !important;
       }
 
+
+
+  d-article {
+     border-style: none;
+     }
+
+
   d-byline .byline {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      padding-top: 0px; /*padding added here additional, but no change*/
-      padding-bottom: 0px;
+      border-top: 0px !important;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
        }
 
   .posts-list .metadata {
@@ -2994,7 +3001,45 @@ function init_posts_list() {
 <div class="dt-tag">plotly</div>
 <div class="dt-tag">crosstalk</div>
 </div>
-<p>Drawing on public data from Vienna's school administration I look at how many percentages of pupils in each primary schoos subsequently leave for schools offering eventually a higher education entrance qualification (Matura). The main interest is in contrasting these ratios between closely (geo-)located schools.</p>
+<p>Drawing on public data from Vienna's school administration I look at how many percentages of pupils in each primary school subsequently leave for schools offering eventually a higher education entrance qualification (Matura). The main interest is in contrasting these ratios between closely (geo-)located schools.</p>
+</div>
+</a>
+<a href="post/2020-02-07-bih-voting-behavior-of-mps-in-house-of-representatives/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Bosnia","OCR","web scraping"]}</script>
+<div class="metadata">
+<div class="publishedDate">Feb. 7, 2020</div>
+<div class="dt-authors">
+<div class="dt-author">Roland Schmidt</div>
+</div>
+</div>
+<div class="thumbnail">
+<img data-src="post/2020-02-07-bih-voting-behavior-of-mps-in-house-of-representatives/bih-voting-behavior-of-mps-in-house-of-representatives_files/figure-html5/unnamed-chunk-3-1.png"/>
+</div>
+<div class="description">
+<h2>Bosnia: Voting behavior of MPs in the House of Representatives</h2>
+<div class="dt-tags">
+<div class="dt-tag">Bosnia</div>
+<div class="dt-tag">OCR</div>
+<div class="dt-tag">web scraping</div>
+</div>
+<p>A short description of the post.</p>
+</div>
+</a>
+<a href="post/2021-01-01-test-css/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">Jan. 20, 0001</div>
+<div class="dt-authors">
+<div class="dt-author">Roland Schmidt</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>test css</h2>
+<div class="dt-tags"></div>
+<p>A short description of the post.</p>
 </div>
 </a>
 </div>
@@ -3004,11 +3049,15 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(10)</span>
+<span class="category-count">(12)</span>
 </li>
 <li>
 <a href="#category:Austria">Austria</a>
 <span class="category-count">(10)</span>
+</li>
+<li>
+<a href="#category:Bosnia">Bosnia</a>
+<span class="category-count">(1)</span>
 </li>
 <li>
 <a href="#category:climate">climate</a>
@@ -3040,7 +3089,7 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:OCR">OCR</a>
-<span class="category-count">(4)</span>
+<span class="category-count">(5)</span>
 </li>
 <li>
 <a href="#category:plotly">plotly</a>
@@ -3076,7 +3125,7 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:web_scraping">web scraping</a>
-<span class="category-count">(3)</span>
+<span class="category-count">(4)</span>
 </li>
 </ul>
 </div>

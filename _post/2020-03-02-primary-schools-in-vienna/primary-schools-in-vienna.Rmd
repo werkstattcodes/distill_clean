@@ -1,7 +1,7 @@
 ---
 title: "Segregation in Vienna's primary schools?"
 description: |
-  Drawing on public data from Vienna's school administration I look at how many percentages of pupils in each primary schoos subsequently leave for schools offering eventually a higher education entrance qualification (Matura). The main interest is in contrasting these ratios between closely (geo-)located schools. 
+  Drawing on public data from Vienna's school administration I look at how many percentages of pupils in each primary school subsequently leave for schools offering eventually a higher education entrance qualification (Matura). The main interest is in contrasting these ratios between closely (geo-)located schools. 
   
 date: 03-02-2020
 
