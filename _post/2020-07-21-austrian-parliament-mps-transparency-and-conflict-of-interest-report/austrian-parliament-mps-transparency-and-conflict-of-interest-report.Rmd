@@ -168,7 +168,7 @@ my_caption=c("data: Austrian Parliament, Liste gemäß § 9 Bezügebegrenzungs-B
 # Data extraction
 As so often, one of the main challenges to actually analyze available data is to 'liberate' the information of interest from the format in which they are provided. The Parliament's report comes as a pretty 'untidy' pdf with subheadings etc.,  a format hardly conducive for further analysis. Here's one MP's declaration from the report: 
 
-![](/post/2020-07-03-austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/list_example - Copy.PNG){width=100%}
+![](austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/list_example - Copy.PNG){width=100%}
 
 Essentially, the table provides four relevant pieces of information: *1) an income category*, which groups MPs' additional income (which is within the scope of the legal reporting obligations and in addition to their salary as an MP) according to their average monthly income in 2019; 
 
