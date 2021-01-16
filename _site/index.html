@@ -2143,7 +2143,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /*-- Specify custom fonts ~~~ must be imported above   --*/
     --heading-font:    sans-serif;
     --mono-font:       monospace;
-    --body-font:       sans-serif;
+    --body-font:       Lato; /*sans-serif;*/
     --navbar-font:     sans-serif;  /* websites + blogs only */
   }
 
@@ -2214,9 +2214,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       }
 
   body > d-byline {
-      padding: 0rem; 
-      border-style: none;
-      border-top: 0px !important;
+      padding: 0rem;
+      border-top:0px !important
       }
 
   d-article {
@@ -2226,8 +2225,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   d-byline .byline {
       border-top: 0px !important;
-       grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
        }
+
+  d-byline .byline h3 {
+      margin-block-start: 0em !important; /*moves byline up; aligns all three components horizontally*/
+      }
 
   .posts-list .metadata {
       margin-top: 0px !important;
@@ -2256,6 +2259,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article h1 {
      border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
      padding-bottom: 0.5rem;
+     margin-top: 0px;  /*aligns heading with heading of toc*/
      font-size: 28px !important;
   }
 
@@ -3028,6 +3032,28 @@ function init_posts_list() {
 <p>A short description of the post.</p>
 </div>
 </a>
+<a href="post/2019-11-20-vorzugsstimmen/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["elections","stringr","tidyr::pivot","Austria"]}</script>
+<div class="metadata">
+<div class="publishedDate">Nov. 20, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Roland Schmidt</div>
+</div>
+</div>
+<div class="thumbnail">
+<img data-src="post/2019-11-20-vorzugsstimmen/vorzugsstimmen_files/figure-html5/unnamed-chunk-5-1.png"/>
+</div>
+<div class="description">
+<h2>Austrian General Elections 2019: Preference votes</h2>
+<div class="dt-tags">
+<div class="dt-tag">elections</div>
+<div class="dt-tag">stringr</div>
+<div class="dt-tag">tidyr::pivot</div>
+<div class="dt-tag">Austria</div>
+</div>
+<p>A look at the distribution of preference votes casted in the 2019 general elections.</p>
+</div>
+</a>
 <a href="post/2021-01-01-test-css/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
@@ -3052,11 +3078,11 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(12)</span>
+<span class="category-count">(13)</span>
 </li>
 <li>
 <a href="#category:Austria">Austria</a>
-<span class="category-count">(10)</span>
+<span class="category-count">(11)</span>
 </li>
 <li>
 <a href="#category:Bosnia">Bosnia</a>
@@ -3076,7 +3102,7 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:elections">elections</a>
-<span class="category-count">(2)</span>
+<span class="category-count">(3)</span>
 </li>
 <li>
 <a href="#category:gt">gt</a>
@@ -3124,7 +3150,11 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:stringr">stringr</a>
-<span class="category-count">(2)</span>
+<span class="category-count">(3)</span>
+</li>
+<li>
+<a href="#category:tidyr::pivot">tidyr::pivot</a>
+<span class="category-count">(1)</span>
 </li>
 <li>
 <a href="#category:web_scraping">web scraping</a>

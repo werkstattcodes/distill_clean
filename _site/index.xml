@@ -148,6 +148,19 @@
       <media:content url="https://werk.statt.codes/post/2020-02-07-bih-voting-behavior-of-mps-in-house-of-representatives/bih-voting-behavior-of-mps-in-house-of-representatives_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1920" height="1344"/>
     </item>
     <item>
+      <title>Austrian General Elections 2019: Preference votes</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2019-11-20-vorzugsstimmen</link>
+      <description>A look at the distribution of preference votes casted in the 2019 general elections.</description>
+      <category>elections</category>
+      <category>stringr</category>
+      <category>tidyr::pivot</category>
+      <category>Austria</category>
+      <guid>https://werk.statt.codes/post/2019-11-20-vorzugsstimmen</guid>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2019-11-20-vorzugsstimmen/vorzugsstimmen_files/figure-html5/unnamed-chunk-5-1.png" medium="image" type="image/png" width="1920" height="576"/>
+    </item>
+    <item>
       <title>test css</title>
       <dc:creator>Roland Schmidt</dc:creator>
       <link>https://werk.statt.codes/post/2021-01-01-test-css</link>

@@ -2145,7 +2145,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /*-- Specify custom fonts ~~~ must be imported above   --*/
     --heading-font:    sans-serif;
     --mono-font:       monospace;
-    --body-font:       sans-serif;
+    --body-font:       Lato; /*sans-serif;*/
     --navbar-font:     sans-serif;  /* websites + blogs only */
   }
 
@@ -2216,9 +2216,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       }
 
   body > d-byline {
-      padding: 0rem; 
-      border-style: none;
-      border-top: 0px !important;
+      padding: 0rem;
+      border-top:0px !important
       }
 
   d-article {
@@ -2228,8 +2227,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   d-byline .byline {
       border-top: 0px !important;
-       grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
        }
+
+  d-byline .byline h3 {
+      margin-block-start: 0em !important; /*moves byline up; aligns all three components horizontally*/
+      }
 
   .posts-list .metadata {
       margin-top: 0px !important;
@@ -2258,6 +2261,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article h1 {
      border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
      padding-bottom: 0.5rem;
+     margin-top: 0px;  /*aligns heading with heading of toc*/
      font-size: 28px !important;
   }
 
