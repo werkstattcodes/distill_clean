@@ -206,6 +206,7 @@ data_date <- format(Sys.Date(), "%d %b %Y")
 my_caption <- glue::glue("data: https://www.wien.gv.at/politik/wahlen/grbv/2020/\nanalysis: Roland Schmidt | @zoowalk | https://werk.statt.codes")
 
 ```
+</details>
 
 
 # Context
