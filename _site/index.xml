@@ -166,8 +166,19 @@
       <category>tidyr::pivot</category>
       <category>Austria</category>
       <guid>https://werk.statt.codes/post/2019-11-20-vorzugsstimmen</guid>
-      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2019-11-20-vorzugsstimmen/vorzugsstimmen_files/figure-html5/unnamed-chunk-23-1.png" medium="image" type="image/png" width="1920" height="576"/>
+    </item>
+    <item>
+      <title>Women in parliament</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2019-10-24-women-in-parliament</link>
+      <description>How well are women represented in Austria's new parliament. A comparative look at the female share of MPs.</description>
+      <category>Austria</category>
+      <category>women</category>
+      <guid>https://werk.statt.codes/post/2019-10-24-women-in-parliament</guid>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2019-10-24-women-in-parliament/women-in-parliament_files/2019-10-24Women_in_Parliament_combined.png" medium="image" type="image/png" width="3307" height="2125"/>
     </item>
     <item>
       <title>test css</title>
