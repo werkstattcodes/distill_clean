@@ -68,7 +68,7 @@ d-appendix {
   --text-color:       unset;
   --text-size:        15px;
   --hover-color:      unset;
-  --bkgd-color:       #f0eff0;
+  --bkgd-color:       var(--blog-bg-color);
 }
 
 .distill-site-footer {
@@ -81,8 +81,13 @@ d-appendix {
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
 
+
+:root {
+  --blog-bg-color: #e6e6e6 /*(standard) #E2E1D9 (green); #f0eff0;*/
+}
+
 body {
-   background-color: #E2E1D9; /*#f0eff0; */
+   background-color: var(--blog-bg-color);
 }
 
 
@@ -174,7 +179,7 @@ d-article pre, d-article div.sourceCode, d-article div.sourceCode pre {
     overflow: auto !important;
     overflow-x: auto !important;
     overflow-y: auto !important;
-     background-color: #f0eff0; 
+     background-color: var(--blog-bg-color); 
 }
 
 
@@ -205,7 +210,7 @@ a.title:not(nav-right) {
 a.title:hover:not(nav-right) {
    color: black;
    font-weight: bold;
-   background-color: #f0eff0;
+   background-color: var(--blog-bg-color);
 }
 
 
@@ -220,7 +225,7 @@ a.title:hover:not(nav-right) {
 
 .nav-search {
     font-size: 15px;
-    background-color: #f0eff0;
+    background-color: var(--blog-bg-color);
     
 }
 
@@ -231,7 +236,7 @@ a.title:hover:not(nav-right) {
     margin-left: 10px;
     margin-top: 10px;
     /*vertical-align: text-top;*/
-    background-color: #f0eff0;
+    background-color: var(--blog-bg-color);
     /*color: red;*/
     padding-bottom: 0px;
     padding-top: 0px;

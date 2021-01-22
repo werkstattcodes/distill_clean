@@ -12,15 +12,28 @@ date: 01-20-0001
 output:
   distill::distill_article:
     self_contained: false
+    code_folding: true
+
 ---
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = T)
+library(tidyverse)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+```{r first_chunk, include=T, eval=T, include=F, echo=F}
+data("mtcars")
+mtcars %>% 
+  ggplot()+
+  geom_point(aes(disp, cyl))
+```
 
+here comes the referenced label:
+
+```{r ref.label="first_chunk", code_folding="OPEN", eval=F}
+library(geofacet)
+geofacet::aus
+```
 

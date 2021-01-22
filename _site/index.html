@@ -2177,7 +2177,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       unset;
     --text-size:        15px;
     --hover-color:      unset;
-    --bkgd-color:       #f0eff0;
+    --bkgd-color:       var(--blog-bg-color);
   }
 
   .distill-site-footer {
@@ -2190,8 +2190,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
 
+
+  :root {
+    --blog-bg-color: #e6e6e6 /*(standard) #E2E1D9 (green); #f0eff0;*/
+  }
+
   body {
-     background-color: #E2E1D9; /*#f0eff0; */
+     background-color: var(--blog-bg-color);
   }
 
 
@@ -2283,7 +2288,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       overflow: auto !important;
       overflow-x: auto !important;
       overflow-y: auto !important;
-       background-color: #f0eff0; 
+       background-color: var(--blog-bg-color); 
   }
 
 
@@ -2314,7 +2319,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   a.title:hover:not(nav-right) {
      color: black;
      font-weight: bold;
-     background-color: #f0eff0;
+     background-color: var(--blog-bg-color);
   }
 
 
@@ -2329,7 +2334,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   .nav-search {
       font-size: 15px;
-      background-color: #f0eff0;
+      background-color: var(--blog-bg-color);
       
   }
 
@@ -2340,7 +2345,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       margin-left: 10px;
       margin-top: 10px;
       /*vertical-align: text-top;*/
-      background-color: #f0eff0;
+      background-color: var(--blog-bg-color);
       /*color: red;*/
       padding-bottom: 0px;
       padding-top: 0px;
@@ -2793,6 +2798,23 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
+<a href="post/2021-01-20-code-folding-and-echof/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">Jan. 20, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">author</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="post/2021-01-20-code-folding-and-echof/code-folding-and-echof_files/figure-html5/unnamed-chunk-2-1.png"/>
+</div>
+<div class="description">
+<h2>code folding and echo=F</h2>
+<div class="dt-tags"></div>
+<p>A short description of the post.</p>
+</div>
+</a>
 <a href="post/2020-12-22-submissionsepidemiclaw/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["Austria","Corona virus","OCR","stringr","web scraping"]}</script>
 <div class="metadata">
@@ -2886,13 +2908,13 @@ function init_posts_list() {
 <a href="post/2020-10-10-vienna-elections-2020-age-profile/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["Austria","elections","OCR","regex","reactable","gt"]}</script>
 <div class="metadata">
-<div class="publishedDate">Oct. 9, 2020</div>
+<div class="publishedDate">Oct. 10, 2020</div>
 <div class="dt-authors">
 <div class="dt-author">Roland Schmidt</div>
 </div>
 </div>
 <div class="thumbnail">
-<img src="post/2020-10-10-vienna-elections-2020-age-profile/vienna-elections-2020-age-profile_files/figure-html5/unnamed-chunk-20-1.svg"/>
+<img data-src="post/2020-10-10-vienna-elections-2020-age-profile/vienna-elections-2020-age-profile_files/figure-html5/unnamed-chunk-20-1.svg"/>
 </div>
 <div class="description">
 <h2>Vienna Elections 2020: Age profile of electoral candidates</h2>
@@ -3035,13 +3057,13 @@ function init_posts_list() {
 <a href="post/2019-11-20-vorzugsstimmen/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["elections","stringr","tidyr::pivot","Austria"]}</script>
 <div class="metadata">
-<div class="publishedDate">Nov. 20, 2019</div>
+<div class="publishedDate">Nov. 19, 2019</div>
 <div class="dt-authors">
 <div class="dt-author">Roland Schmidt</div>
 </div>
 </div>
 <div class="thumbnail">
-<img data-src="post/2019-11-20-vorzugsstimmen/vorzugsstimmen_files/figure-html5/unnamed-chunk-5-1.png"/>
+<img data-src="post/2019-11-20-vorzugsstimmen/vorzugsstimmen_files/figure-html5/unnamed-chunk-23-1.png"/>
 </div>
 <div class="description">
 <h2>Austrian General Elections 2019: Preference votes</h2>
@@ -3078,7 +3100,7 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(13)</span>
+<span class="category-count">(14)</span>
 </li>
 <li>
 <a href="#category:Austria">Austria</a>

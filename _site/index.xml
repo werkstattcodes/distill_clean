@@ -7,7 +7,16 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>code folding and echo=F</title>
+      <dc:creator>author</dc:creator>
+      <link>https://werk.statt.codes/post/2021-01-20-code-folding-and-echof</link>
+      <description>A short description of the post.</description>
+      <guid>https://werk.statt.codes/post/2021-01-20-code-folding-and-echof</guid>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-01-20-code-folding-and-echof/code-folding-and-echof_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Similarity of public submissions to Austria's amendment of the epidemic law</title>
       <dc:creator>Roland Schmidt</dc:creator>
@@ -73,7 +82,7 @@
       <category>reactable</category>
       <category>gt</category>
       <guid>https://werk.statt.codes/post/2020-10-10-vienna-elections-2020-age-profile</guid>
-      <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-10-10-vienna-elections-2020-age-profile/vienna-elections-2020-age-profile_files/figure-html5/unnamed-chunk-20-1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
@@ -157,8 +166,8 @@
       <category>tidyr::pivot</category>
       <category>Austria</category>
       <guid>https://werk.statt.codes/post/2019-11-20-vorzugsstimmen</guid>
-      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2019-11-20-vorzugsstimmen/vorzugsstimmen_files/figure-html5/unnamed-chunk-5-1.png" medium="image" type="image/png" width="1920" height="576"/>
+      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2019-11-20-vorzugsstimmen/vorzugsstimmen_files/figure-html5/unnamed-chunk-23-1.png" medium="image" type="image/png" width="1920" height="576"/>
     </item>
     <item>
       <title>test css</title>
