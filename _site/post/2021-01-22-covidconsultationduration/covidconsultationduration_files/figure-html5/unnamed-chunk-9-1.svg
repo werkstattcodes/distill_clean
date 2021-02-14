@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 468.00 360.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    line, polyline, polygon, path, rect, circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<rect x='0.00' y='0.00' width='468.00' height='360.00' style='stroke-width: 1.12; stroke: none; fill: #E6E6E6;' />
+<defs>
+  <clipPath id='cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg=='>
+    <rect x='28.80' y='40.52' width='439.20' height='285.93' />
+  </clipPath>
+</defs>
+<rect x='28.80' y='40.52' width='439.20' height='285.93' style='stroke-width: 1.12; stroke: none; fill: #E6E6E6;' clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)' />
+<polyline points='28.80,326.45 468.00,326.45 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)' />
+<polyline points='28.80,252.75 468.00,252.75 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)' />
+<polyline points='28.80,179.05 468.00,179.05 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)' />
+<polyline points='28.80,105.35 468.00,105.35 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)' />
+<rect x='28.80' y='66.51' width='208.04' height='259.93' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #4D4D4D;' clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)' />
+<rect x='259.96' y='322.98' width='208.04' height='3.46' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #FFA500;' clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)' />
+<g clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)'><text x='28.80' y='66.51' style='font-size: 28.45px; fill: #4D4D4D; font-family: Arial;' textLength='63.30px' lengthAdjust='spacingAndGlyphs'>3527</text></g>
+<g clip-path='url(#cpMjguODB8NDY4LjAwfDMyNi40NXw0MC41Mg==)'><text x='259.96' y='322.98' style='font-size: 28.45px; fill: #4D4D4D; font-family: Arial;' textLength='31.65px' lengthAdjust='spacingAndGlyphs'>47</text></g>
+<defs>
+  <clipPath id='cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA='>
+    <rect x='0.00' y='0.00' width='468.00' height='360.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='21.49' y='329.65' style='font-size: 9.00px; fill: #7F7F7F; font-family: Roboto Condensed;' textLength='4.44px' lengthAdjust='spacingAndGlyphs'>0</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='6.40' y='255.95' style='font-size: 9.00px; fill: #7F7F7F; font-family: Roboto Condensed;' textLength='19.54px' lengthAdjust='spacingAndGlyphs'>1,000</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='6.40' y='182.25' style='font-size: 9.00px; fill: #7F7F7F; font-family: Roboto Condensed;' textLength='19.54px' lengthAdjust='spacingAndGlyphs'>2,000</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='6.40' y='108.55' style='font-size: 9.00px; fill: #7F7F7F; font-family: Roboto Condensed;' textLength='19.54px' lengthAdjust='spacingAndGlyphs'>3,000</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='102.24' y='335.71' style='font-size: 9.00px; fill: #1A1A1A; font-family: Roboto Condensed;' textLength='61.16px' lengthAdjust='spacingAndGlyphs'>more than 3 days</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='336.79' y='335.71' style='font-size: 9.00px; fill: #1A1A1A; font-family: Roboto Condensed;' textLength='54.37px' lengthAdjust='spacingAndGlyphs'>3 or fewer days</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text transform='translate(6.40,326.45) rotate(-90)' style='font-size: 9.00px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='54.29px' lengthAdjust='spacingAndGlyphs'>Number of bills</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='0.00' y='32.02' style='font-size: 11.00px; fill: #7F7F7F; font-family: Roboto Condensed;' textLength='682.60px' lengthAdjust='spacingAndGlyphs'>Bill 88/ME XXVII amending the 'law on epidemics' was open for consultation for three days. How many other bills had a similar or shorter consultation period?</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='0.00' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='40.97px' lengthAdjust='spacingAndGlyphs'>Number</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='45.50' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='10.73px' lengthAdjust='spacingAndGlyphs'>of</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='65.00' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='22.17px' lengthAdjust='spacingAndGlyphs'>bills</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='104.00' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='21.89px' lengthAdjust='spacingAndGlyphs'>with</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='136.50' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='27.14px' lengthAdjust='spacingAndGlyphs'>three</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='175.50' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='10.78px' lengthAdjust='spacingAndGlyphs'>or</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='195.00' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='29.24px' lengthAdjust='spacingAndGlyphs'>fewer</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='234.00' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='24.27px' lengthAdjust='spacingAndGlyphs'>days</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='266.50' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='10.73px' lengthAdjust='spacingAndGlyphs'>of</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='286.00' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='64.67px' lengthAdjust='spacingAndGlyphs'>consultation</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='370.50' y='18.53' style='font-size: 13.00px; font-weight: bold; fill: #333333; font-family: Roboto Condensed;' textLength='33.15px' lengthAdjust='spacingAndGlyphs'>period</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='28.80' y='351.36' style='font-size: 8.00px; fill: #7F7F7F; font-family: Roboto Condensed;' textLength='308.16px' lengthAdjust='spacingAndGlyphs'>Data: https://www.parlament.gv.at; XIV (4.11.1975) to XXVII (as of 24.01.2021) legislative period.</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8MzYwLjAwfDAuMDA=)'><text x='28.80' y='360.00' style='font-size: 8.00px; fill: #7F7F7F; font-family: Roboto Condensed;' textLength='199.98px' lengthAdjust='spacingAndGlyphs'>Analysis: Roland Schmidt | @zoowalk | https://werk.statt.codes</text></g>
+</svg>

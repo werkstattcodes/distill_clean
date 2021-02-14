@@ -2146,7 +2146,7 @@ d-appendix {
 
 /* Optional: embed custom fonts here with `@import`          */
 /* This must remain at the top of this file.                 */
-@import url('https://fonts.googleapis.com/css?family=Lato');
+/*@import url('https://fonts.googleapis.com/css?family=Lato');*/
 @import url('https://fonts.googleapis.com/css?family=PT Serif');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Karla');
@@ -2154,7 +2154,7 @@ d-appendix {
 
 html {
   /*-- Main font sizes --*/
-  --title-size:      35px;
+  --title-size:      25px;
   --body-size:       1.06rem;
   --code-size:       14px;
   --aside-size:      12px;
@@ -2170,7 +2170,7 @@ html {
   /*-- Specify custom fonts ~~~ must be imported above   --*/
   --heading-font:    sans-serif;
   --mono-font:       monospace;
-  --body-font:       Lato; /*sans-serif;*/
+  --body-font:       sans-serif;
   --navbar-font:     sans-serif;  /* websites + blogs only */
 }
 
@@ -2235,10 +2235,33 @@ body {
 }*/
 
 
+/*d-article-with-toc p {
+ line-height: 140% !important
+}*/
+
+.d-article .p {
+    line-height: 1.6em !important;
+}
+
+
+/* short description text after title of post in article*/
+.d-title .p {
+   font-size: medium !important;
+   font-style: italic !important;
+   color:red !important;
+   margin-top: 6px;
+}
+
+.d-title p {
+   font-size: medium !important;
+   font-style: italic !important;
+   color:red !important;
+   margin-top: 6px;
+}
+
 /*d-title{
    padding-bottom: 0px;
 }*/
-
 
 
 .d-byline {
@@ -2289,8 +2312,8 @@ pre {
 /*HEADINGS*/
 
 d-article h1 {
-   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-   padding-bottom: 0.5rem;
+   border-bottom: 0px solid rgba(0, 0, 0, 0.1) !important;
+   /'padding-bottom: 0.5rem;*/
    margin-top: 0px;  /*aligns heading with heading of toc*/
    font-size: 28px !important;
 }
@@ -2307,6 +2330,14 @@ d-article h2 {
     font-size: 18px !important;
 }
 
+/*remove author on listing page*/
+.posts-list .dt-authors {
+     visibility: hidden;
+}
+
+.posts-sidebar .sidebar-section {
+   visibility: hidden;
+}
 
 
 /*OVERFLOW PROPERTIE FOR CODE CHUNKS; SCROLL BAR*/
@@ -2324,12 +2355,14 @@ d-article pre, d-article div.sourceCode, d-article div.sourceCode pre {
 /*NAV BAR CHANGING BACKGROUND*/
 
 .distill-site-nav a:not(.title) {
-    color: black;
+    color: grey;
 }
 
 .distill-site-nav a:hover:not(.title) {
-    color: white;
-    background-color: black;
+    color: #296273;
+    /*background-color: firebrick;*/
+    /*border-width: 0px 0px 1px 0px:*/
+    /*border-bottom: solid;*/
 }
 
 
@@ -2337,14 +2370,14 @@ d-article pre, d-article div.sourceCode, d-article div.sourceCode pre {
 a.title:not(nav-right) {
    color: white;
    font-weight: bold;
-   background-color: black;
+   background-color: #296273;
    padding-bottom: 0px !important;
    padding-top: 0px !important;
    margin-top: 14px;
 }
 
 a.title:hover:not(nav-right) {
-   color: black;
+   color: #296273;
    font-weight: bold;
    background-color: var(--blog-bg-color);
 }
@@ -2467,8 +2500,9 @@ details[open] summary::after {
 .reactable-body {
   /*color: #7f7f7f;*/
   font-size: 80%;*/
+  color:red;
   font-weight: 100;*/
-  font-family: Karla;*/
+  /*font-family: Karla;*/
   line-height: 100%; */	
 }
 
@@ -2795,7 +2829,9 @@ d-appendix d-footnote-list a.footnote-backlink {
 <span class='fu'><a href='https://rdrr.io/r/base/options.html'>options</a></span><span class='op'>(</span>width<span class='op'>=</span><span class='fl'>180</span>, dplyr.width <span class='op'>=</span> <span class='fl'>150</span><span class='op'>)</span>
 
 <span class='va'>plot_bg_color</span> <span class='op'>&lt;-</span> <span class='fu'>readr</span><span class='fu'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/read_file.html'>read_file</a></span><span class='op'>(</span>file<span class='op'>=</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"theme.css"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'>str_extract</span><span class='op'>(</span><span class='va'>.</span>, <span class='fu'><a href='https://rdrr.io/r/base/regex.html'>regex</a></span><span class='op'>(</span><span class='st'>"(?&lt;=background-color:).*?(?=;)"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>str_trim</span><span class='op'>(</span><span class='op'>)</span>
+  <span class='fu'>str_extract</span><span class='op'>(</span><span class='va'>.</span>, <span class='fu'><a href='https://rdrr.io/r/base/regex.html'>regex</a></span><span class='op'>(</span><span class='st'>"(?&lt;=blog-bg-color:).*?(?=;)"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>str_trim</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>str_extract</span><span class='op'>(</span><span class='va'>.</span>, <span class='fu'><a href='https://rdrr.io/r/base/regex.html'>regex</a></span><span class='op'>(</span><span class='st'>"^#\\S+"</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>

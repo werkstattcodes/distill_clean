@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://werk.statt.codes/about.html</loc>
-    <lastmod>2021-01-13T15:01:31+01:00</lastmod>
+    <lastmod>2021-02-12T21:33:32+01:00</lastmod>
   </url>
   <url>
     <loc>https://werk.statt.codes/</loc>
     <lastmod>2021-01-13T15:01:31+01:00</lastmod>
   </url>
   <url>
-    <loc>https://werk.statt.codes/post/2021-01-20-code-folding-and-echof/</loc>
-    <lastmod>2021-01-20T13:02:17+01:00</lastmod>
+    <loc>https://werk.statt.codes/post/2021-01-22-covidconsultationduration/</loc>
+    <lastmod>2021-02-15T00:00:02+01:00</lastmod>
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2020-12-22-submissionsepidemiclaw/</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2020-10-10-vienna-elections-2020-age-profile/</loc>
-    <lastmod>2021-01-18T01:21:41+01:00</lastmod>
+    <lastmod>2021-01-22T23:01:29+01:00</lastmod>
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2020-07-21-austrian-parliament-mps-transparency-and-conflict-of-interest-report/</loc>
@@ -38,11 +38,11 @@
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2020-06-08-update-on-mobility-patterns/</loc>
-    <lastmod>2021-01-13T15:01:30+01:00</lastmod>
+    <lastmod>2021-01-22T22:49:42+01:00</lastmod>
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2020-04-28-google-s-mobility-reportsmd/</loc>
-    <lastmod>2021-01-13T15:01:29+01:00</lastmod>
+    <lastmod>2021-01-22T22:38:30+01:00</lastmod>
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2020-04-23-covid-19-corona-virus-quick-look-at-some-data/</loc>
@@ -50,11 +50,11 @@
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2020-03-02-primary-schools-in-vienna/</loc>
-    <lastmod>2021-01-13T23:19:44+01:00</lastmod>
+    <lastmod>2021-01-22T22:42:23+01:00</lastmod>
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2020-02-07-bih-voting-behavior-of-mps-in-house-of-representatives/</loc>
-    <lastmod>2021-01-15T02:47:14+01:00</lastmod>
+    <lastmod>2021-01-22T22:30:06+01:00</lastmod>
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2019-11-20-vorzugsstimmen/</loc>
@@ -62,10 +62,6 @@
   </url>
   <url>
     <loc>https://werk.statt.codes/post/2019-10-24-women-in-parliament/</loc>
-    <lastmod>2021-01-22T10:38:42+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://werk.statt.codes/post/2021-01-01-test-css/</loc>
-    <lastmod>2021-01-21T11:49:38+01:00</lastmod>
+    <lastmod>2021-01-22T11:07:09+01:00</lastmod>
   </url>
 </urlset>

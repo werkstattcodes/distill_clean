@@ -96,8 +96,9 @@ knitr::opts_chunk$set(
 options(width=180, dplyr.width = 150)
 
 plot_bg_color <- readr::read_file(file=here::here("theme.css")) %>% 
-  str_extract(., regex("(?<=background-color:).*?(?=;)")) %>% str_trim()
-
+  str_extract(., regex("(?<=blog-bg-color:).*?(?=;)")) %>%
+  str_trim() %>% 
+  str_extract(., regex("^#\\S+"))
 
 ```
 </details>

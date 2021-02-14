@@ -71,8 +71,10 @@ library(here)
 
 wdr <- getwd() 
 
-bgr_color<- readr::read_file(file=here::here("theme.css")) %>% 
-  str_extract(., regex("(?<=background-color:).*?(?=;)")) %>% str_trim()
+plot_bg_color <- readr::read_file(file=here::here("theme.css")) %>% 
+  str_extract(., regex("(?<=blog-bg-color:).*?(?=;)")) %>%
+  str_trim() %>% 
+  str_extract(., regex("^#\\S+"))
 
 blog_theme <- function(){
     hrbrthemes::theme_ipsum_rc() +
@@ -88,7 +90,7 @@ blog_theme <- function(){
                                   face="bold", 
                                   margin=margin(b=0.3, unit="cm")),
         plot.title.position="plot",
-        plot.background= element_rect(fill=bgr_color, color=bgr_color),
+        plot.background= element_rect(fill=plot_bg_color, color=plot_bg_color),
         plot.subtitle = element_text(size = 15, color = "grey30"),
         plot.margin=margin(l=0, t=0.5, b=0.5, unit="cm"),
        # plot.caption = element_text(hjust=c(0,1)),
@@ -300,7 +302,7 @@ plot_df_outcome_chambers <- df_outcome_chambers %>%
                   
                   theme = theme_ipsum_rc()) &
   theme(legend.position = "bottom",
-        plot.background=element_rect(fill=bgr_color, color=bgr_color),
+        plot.background=element_rect(fill=plot_bg_color, color=plot_bg_color),
         plot.margin=margin(b=0, t=0, l=0, r=0, unit="cm"),
         legend.text = element_text(size=12),
         legend.justification = "left") 
@@ -375,7 +377,7 @@ plot_df_outcome_chambers_combined <- df_outcome_chambers_combined  %>%
         axis.title.y = element_text(angle=0),
         plot.title = element_text(size = 14, face="bold", margin=margin(b=0.3, unit="cm")),
         plot.title.position = "plot",
-        plot.background= element_rect(fill=bgr_color, color=bgr_color),
+        plot.background= element_rect(fill=plot_bg_color, color=plot_bg_color),
         plot.margin=margin(l=0, r=0, b=0, unit="cm"),
         plot.subtitle = element_text(size = 12, color = "grey30"),
         plot.caption.position = "plot",
@@ -484,14 +486,14 @@ plots_tile <- plots_tile %>%
   theme(axis.text.x=element_blank(),
         axis.title.x=element_text(hjust=0),
         strip.text = element_text(face="bold"),
-        panel.background = element_rect(fill=bgr_color, color=bgr_color),
+        panel.background = element_rect(fill=plot_bg_color, color=plot_bg_color),
         panel.grid.major = element_blank(),
         plot.subtitle = element_text(size = 12, color = "grey30"),
         plot.title = element_text(size = 14, face="bold", margin=margin(b=0.3, unit="cm")),
         plot.margin=margin(l=0, t=0.5, b=0.5, unit="cm"),
         plot.title.position = "plot",
         plot.caption = element_text(hjust=c(0, 1)),
-        plot.background= element_rect(fill=bgr_color, color=bgr_color),
+        plot.background= element_rect(fill=plot_bg_color, color=plot_bg_color),
         legend.position = "top",
         legend.justification = "left")+
   facet_wrap(vars(party),
@@ -563,7 +565,7 @@ df_votes_delegates %>%
         plot.caption = element_text(hjust=c(0,1)),
         plot.margin=margin(l=0, t=0.5, b=0.5, r=0, unit="cm"),
         plot.subtitle = element_text(size = 12, color = "grey30"),
-        plot.background=element_rect(fill=bgr_color, color=bgr_color),
+        plot.background=element_rect(fill=plot_bg_color, color=plot_bg_color),
         axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         legend.position = "top",
@@ -647,7 +649,7 @@ df_party_voting %>%
         plot.title = element_text(size = 14, face="bold", margin=margin(b=0.3, unit="cm")),
         plot.title.position="plot",
         plot.margin=margin(l=0, t=0.5, b=0.5, r=0, unit="cm"),
-        plot.background=element_rect(fill=bgr_color, color=bgr_color),
+        plot.background=element_rect(fill=plot_bg_color, color=plot_bg_color),
         panel.grid.major.y =  element_blank(),
         panel.grid.minor.x = element_blank(),
         legend.position = "none",
@@ -711,7 +713,7 @@ plot_delegates <- df_delegate_voting %>%
               panel.grid.minor = element_blank(),
               panel.grid.major.x = element_blank(),
               panel.spacing.x = unit(0.3, "cm"),
-              plot.background=element_rect(fill=bgr_color, color=bgr_color),
+              plot.background=element_rect(fill=plot_bg_color, color=plot_bg_color),
               panel.spacing.y = unit(0.3, "cm"))+
         scale_y_continuous(labels=scales::label_percent(accuracy=1),
                            minor_breaks = NULL,

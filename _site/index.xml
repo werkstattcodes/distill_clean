@@ -7,15 +7,18 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>code folding and echo=F</title>
-      <dc:creator>author</dc:creator>
-      <link>https://werk.statt.codes/post/2021-01-20-code-folding-and-echof</link>
-      <description>A short description of the post.</description>
-      <guid>https://werk.statt.codes/post/2021-01-20-code-folding-and-echof</guid>
-      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2021-01-20-code-folding-and-echof/code-folding-and-echof_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
+      <title>Austria's Covid legislation: Duration of parliamentarian consultation period in comparision.</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-01-22-covidconsultationduration</link>
+      <description>A (relative) deep dive into the length of the public consultation period for draft bills in Austria, and whether three days for three pages are actually 'normal'.</description>
+      <category>Austria</category>
+      <category>Corona</category>
+      <category>pdftools</category>
+      <guid>https://werk.statt.codes/post/2021-01-22-covidconsultationduration</guid>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-01-22-covidconsultationduration/covidconsultationduration_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1248" height="960"/>
     </item>
     <item>
       <title>Similarity of public submissions to Austria's amendment of the epidemic law</title>
@@ -179,14 +182,6 @@
       <guid>https://werk.statt.codes/post/2019-10-24-women-in-parliament</guid>
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2019-10-24-women-in-parliament/women-in-parliament_files/2019-10-24Women_in_Parliament_combined.png" medium="image" type="image/png" width="3307" height="2125"/>
-    </item>
-    <item>
-      <title>test css</title>
-      <dc:creator>Roland Schmidt</dc:creator>
-      <link>https://werk.statt.codes/post/2021-01-01-test-css</link>
-      <description>A short description of the post.</description>
-      <guid>https://werk.statt.codes/post/2021-01-01-test-css</guid>
-      <pubDate>Sat, 20 Jan 0001 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

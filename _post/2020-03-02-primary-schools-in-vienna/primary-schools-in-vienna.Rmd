@@ -68,8 +68,10 @@ library(htmltools)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, dpi = 180, fig.height = 5, fig.width = 7, fig.align = "center")
 options(width = 180, dplyr.width = 150)
 
-bgr_color<- readr::read_file(file=here::here("theme.css")) %>% 
-  str_extract(., regex("(?<=background-color:).*?(?=;)")) %>% str_trim()
+plot_bg_color <- readr::read_file(file=here::here("theme.css")) %>% 
+  str_extract(., regex("(?<=blog-bg-color:).*?(?=;)")) %>%
+  str_trim() %>% 
+  str_extract(., regex("^#\\S+"))
 
 
 ```
@@ -287,7 +289,7 @@ plot_district <- df_share %>%
     legend.justification = "left",
     legend.title = element_blank(),
     plot.margin = margin(l = 0, t = 0.5, b = 0.5, unit = "cm"),
-    plot.background = element_rect(fill = bgr_color, color = "transparent"),
+    plot.background = element_rect(fill = plot_bg_color, color = "transparent"),
     plot.title = element_text(size = 14, face = "bold", margin = margin(b = 0, unit = "cm")),
     plot.title.position = "plot",
     plot.subtitle = element_text(size = 12, color = "grey30"),
@@ -435,7 +437,7 @@ Only public schools. Hover over dots to get details.",
     legend.justification = "left",
     legend.title = element_blank(),
     plot.margin = margin(l = 0, t = 0.5, b = 0.5, unit = "cm"),
-    plot.background = element_rect(fill = bgr_color, color = "transparent"),
+    plot.background = element_rect(fill = plot_bg_color, color = "transparent"),
     plot.title = element_text(size = 14, face = "bold", margin = margin(b = 0, unit = "cm")),
     plot.title.position = "plot",
     plot.subtitle = element_text(size = 12, color = "grey30"),
@@ -740,8 +742,8 @@ plot_distance_diff <-
     font = list(family = "Roboto Condensed"),
     xaxis = list(title = "distance between schools in meters"),
     yaxis = list(title = "absolute difference of AHS ratios (% points)"),
-    plot_bgcolor = bgr_color,
-    paper_bgcolor = bgr_color
+    plot_bgcolor = plot_bg_color,
+    paper_bgcolor = plot_bg_color
   )
 
 # plot_distance_diff
@@ -784,7 +786,7 @@ cross_map2 <- plotly::plot_mapbox(
       )
     ),
     showlegend = FALSE,
-    paper_bgcolor = bgr_color
+    paper_bgcolor = plot_bg_color
   ) %>% 
     config(mapboxAccessToken = Sys.getenv("MAPBOX_TOKEN"))
 
