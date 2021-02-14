@@ -443,7 +443,8 @@ df_submission <- df_submission %>%
 </details>
 
 ```{r include=FALSE}
-df_submission <- readr::read_rds(file="submissionsepidemiclaw_files/df_submission_150.rds")
+df_submission <- readr::read_rds(file=here::here("_blog_data", "epidemic_law_submissions",
+                                                 "df_submission_150.rds"))
 
 ```
 

@@ -902,7 +902,7 @@ pl_consolidated
 ```
 
 ## Overview table {#datatable}
-If you are interested in the details pertaining to each bill, the table below provides them. 
+If you are interested in the details pertaining to each bill, the table below provides them. Note that for the sake of completness this table also includes those bills for which I retrieved impossible/wrong duration data (see [here](#wrongdata) for details.) However, The latter were excluded from the analysis.
 
 ```{r ref.label="chunk_reactable", code_folding=NULL, eval=F, echo=F}
 
