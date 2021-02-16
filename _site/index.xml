@@ -31,7 +31,7 @@
       <category>stringr</category>
       <category>web scraping</category>
       <guid>https://werk.statt.codes/post/2020-12-22-submissionsepidemiclaw</guid>
-      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-12-22-submissionsepidemiclaw/submissionsepidemiclaw_files/preview.png" medium="image" type="image/png" width="1086" height="685"/>
     </item>
     <item>
@@ -43,7 +43,7 @@
       <category>social media</category>
       <category>elections</category>
       <guid>https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook</guid>
-      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png" medium="image" type="image/png" width="1079" height="683"/>
     </item>
     <item>
@@ -64,7 +64,7 @@
       <title>Recreating NYT election map</title>
       <dc:creator>Roland Schmidt</dc:creator>
       <link>https://werk.statt.codes/post/2020-11-18-recreating-nyt-election-map</link>
-      <description>How to re-create election maps by the NYT with ggplot</description>
+      <description>How to re-create election maps by the NYT with ggplot.</description>
       <category>Austria</category>
       <category>Corona virus</category>
       <category>OCR</category>
@@ -72,6 +72,7 @@
       <category>web scraping</category>
       <guid>https://werk.statt.codes/post/2020-11-18-recreating-nyt-election-map</guid>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2020-11-18-recreating-nyt-election-map/recreating-nyt-election-map_files/preview.png" medium="image" type="image/png" width="5267" height="2547"/>
     </item>
     <item>
       <title>Vienna Elections 2020: Age profile of electoral candidates</title>

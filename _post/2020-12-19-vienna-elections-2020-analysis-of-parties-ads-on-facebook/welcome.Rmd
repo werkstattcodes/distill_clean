@@ -69,7 +69,7 @@ library(kableExtra)
 
 <summary>Code: themes, color codes </summary>
 
-Do I see this text
+
 
 ```{r}
 # DEFINITIONS -------------------------------------------------------------
@@ -154,7 +154,10 @@ theme_post <- function() {
 
 
 plot_bg_color <- readr::read_file(file=here::here("theme.css")) %>% 
-  str_extract(., regex("(?<=background-color:).*?(?=;)")) %>% str_trim()
+  str_extract(., regex("(?<=blog-bg-color:).*?(?=;)")) %>%
+  str_trim() %>% 
+  str_extract(., regex("^#\\S+"))
+
 
 ```
 
@@ -488,7 +491,6 @@ With our dataset now put into scope we have details on `r nrow(df_ads) %>% scale
 df_ads <- df_ads %>% 
   select(starts_with("ad"), contains("page"), contains("party"),  contains("spend"), currency, funding_entity, contains("impression"), contains("demographic"), potential_reach, publisher_platforms)
 
-glimpse(df_ads)
 
 ```
 
@@ -589,10 +591,6 @@ df_impression_check <- df_ads_wide %>%
 #readr::write_csv2(df_impression_check,file=here::here("blog_data","vienna_elections_2020_facebook","df_impression_check.csv"))
 ```
 
-
-```{r echo=FALSE}
-glimpse(df_ads_wide)
-```
 
 # Number and value of ads {#number-and-value-of-ads}
 
@@ -774,14 +772,18 @@ For an overview let's plot the pertaining numbers for the top 5 pages of each pa
 
 ```{r message=FALSE, warning=FALSE}
 df_pl_pages <- df_ads_wide %>% 
+  ungroup() %>% 
   group_by(party) %>% 
   mutate(page_name_lum=fct_lump_n(page_name, n=5,
                                   other_level="all other")) %>% 
+  ungroup() %>% 
   group_by(party, page_name_lum) %>% 
   summarise(ads_n=n(),
-            across(.cols=contains("spend_") & where(is.numeric),
-                   .fns=sum)) %>% 
-  select(party, page_name_lum, ads_n, spend_lower_bound_rev, spend_mid, spend_upper_bound) %>%   ungroup() %>% 
+            across(.cols=c(contains("spend_") & where(is.numeric)),
+                   .fns=sum
+                   )) %>% 
+  ungroup() %>% 
+  select(party, page_name_lum, ads_n, spend_lower_bound_rev, spend_mid, spend_upper_bound) %>%   
   arrange(-ads_n)
 
 pl_pages <- df_pl_pages %>% 

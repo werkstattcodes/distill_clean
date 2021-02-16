@@ -2218,8 +2218,9 @@ d-appendix {
 /* Add any additional CSS rules below                      */
 
 
+
 :root {
-  --blog-bg-color: #e6e6e6 /*(standard) #E2E1D9 (green); #f0eff0;*/
+  --blog-bg-color: #e6e6e6 /* #FFFFFF (standard) #E2E1D9 (green); #f0eff0;*/
 }
 
 body {
@@ -2227,41 +2228,24 @@ body {
 }
 
 
-/*p {
- text-align: left;
- /*font-family: Lato;*/
- font-size: 100%;
- line-height: 1.3; /*zeilenabstand*/
-}*/
 
-
-/*d-article-with-toc p {
- line-height: 140% !important
-}*/
-
-.d-article .p {
+d-article p {
     line-height: 1.6em !important;
 }
 
 
 /* short description text after title of post in article*/
-.d-title .p {
+d-title p {
    font-size: medium !important;
    font-style: italic !important;
-   color:red !important;
    margin-top: 6px;
+   margin-bottom: 0px;
 }
 
-.d-title p {
-   font-size: medium !important;
-   font-style: italic !important;
-   color:red !important;
-   margin-top: 6px;
+d-title {
+   padding-top: 6rem;
+   padding-bottom: 1rem;
 }
-
-/*d-title{
-   padding-bottom: 0px;
-}*/
 
 
 .d-byline {

@@ -137,11 +137,11 @@ rt_theme <- reactableTheme(backgroundColor = plot_bg_color,
 # Context
 This is an addition to my previous posts on COVID related legislation in Austria. 
 
-Over New Year (!), the Austrian government introduced another bill with the aim to get a grip on the COVID pandemic. With the speed with which things have been developping and the flurry of hard/soft/de facto lockdowns, I have to confess that I would have to look into the text to recall the changes introduced by bill 88/ME (in full: *'Epidemiegesetz, COVID-19-Maßnahmengesetz, Änderung'*). However, what made the bill remarkable even during these times was its legislative genesis, with the government limiting the public consultative process to only three days. As mentioned in previous posts, Austria's legislative procedure includes a public consultation process which allows citizens, NGOs, churches etc. to file submissions in which they can raise concerns and provide feedback on the draft law. At least in theory, it's a feedback loop which allows the government to solicit input and revise its bills.
+Over New Year (!), the Austrian government introduced another bill with the aim to get a grip on the COVID pandemic. With the speed with which things have been developping and the flurry of hard/soft/de facto lockdowns, I have to confess that I would have to look into the text to recall the changes introduced by bill 88/ME (XXVII) (in full: *'Epidemiegesetz, COVID-19-Maßnahmengesetz, Änderung'*). However, what made the bill memorable even during these times was its legislative genesis, with the government limiting the public consultative process to only three days. As mentioned in previous posts, Austria's legislative procedure includes a public consultation process which allows citizens, NGOs, churches etc. to file submissions in which they can raise concerns and provide feedback on the draft law. At least in theory, it's a feedback loop which allows the government to solicit input and revise its bills.
 
 Unsurprisingly, at least to me, the government was harshly criticized for this short consultation period and accused of rendering any meaningful consideration impossible. I am no expert on the legislative process, but a quick Google search led me to a [circular](https://www.bundeskanzleramt.gv.at/dam/jcr:32bd35f3-2815-42ab-b276-be8aaba18124/RS_600614Begutachtungsfristen.doc){target="_blank"} from 2008 in which the Chancellery's own constitutional service urged ministries to provide a consultative period of at least six weeks. In contrast, some pointed out that the bill had only three pages and that - in light of the urgency due to a pandemic - three days should suffice to read and comment on the bill. 
 
-This debate made me wonder how long other bills were open for the consultative process and how the bill 88/ME would compare, also when considering their documents' lengths. To answer these questions, I a) extracted from the parliament's website the start and end dates of each bill's consultative period to calculate the length of the consultative process; b) downloaded the text of all pertaining bills and retrieved their number of pages. Putting the length of the consultation process and the length of the bill together should allow to better evaluate the three day notice for the amendment to the epidemic bill.
+This debate made me wonder how long other bills were open for the consultative process and how bill 88/ME (XXVII) would compare, also when considering their documents' lengths. To answer these questions, I a) extracted from the parliament's website the start and end dates of all bill's consultative period since 1975, *as published on the parliament's website*. Based on these dates I calculated the length of the consultative process; b) downloaded the text of all pertaining bills and retrieved their number of pages. Putting the length of the consultation process and the length of the bill together should allow to better evaluate the three day notice for the amendment to the epidemic bill.
 
 I'll first present the results and other stuff I found noteworthy, and then focus on some of the required steps in R to obtain them. The raw dataset containing the consolidated results is [here](#datatable).
 
@@ -828,7 +828,9 @@ pl_consolidated <- df_consolidated %>%
        subtitle="Bill 88/ME XXVII amending the 'law on epidemics' was open for consultation for three days. \nHow many other bills had a similar or shorter consultation period?",
        y="Number of bills",
        x="Length of consultation period",
-       caption=caption)+
+       caption=glue::glue("{caption}\nAnalysis excluded {nrow(df_duration_mult %>% filter(if_any(starts_with('date'), is.na)))+nrow(df_duration_collected %>% 
+  filter(duration_collected<0))} bills with errors in the data source. See blog for details.")
+       )+
   geom_bar(aes(x=duration_3,
                y=n,
                fill=duration_3),
@@ -857,9 +859,14 @@ pl_consolidated <- df_consolidated %>%
                                     angle=90,
                                     vjust=1,
                                     hjust=0),
-        axis.title.x = element_blank())
-```
+        axis.title.x = element_text(color="grey30",
+                                    # angle=90,
+                                    # vjust=1,
+                                    hjust=0))
+  
 
+  
+```
 
 # Results
 
@@ -869,7 +876,7 @@ pl_consolidated <- df_consolidated %>%
 
 ```
 
-To start with, let's have a look at the number of submissions filled during the consultation process per bill. The plot below  shows quite clearly that bills related to Covid triggered record breaking numbers of submissions. Apart from the three latest Covid bills, only the two drafts related to security issues (*'Sicherheitspolizeigesetz'*) with around 9,000 submissions were within a similar level. To get details, hover over the dots. Note that the y-axis is log-scaled to keep the variation among bills with fewer submissions visible.
+To start with, let's have a look at the number of submissions filed during the consultation process per bill. The plot below  shows quite clearly that bills related to Covid triggered record breaking numbers of submissions. Apart from the three latest Covid bills, only the two drafts related to security issues (*'Sicherheitspolizeigesetz'*) with around 9,000 submissions were within a similar level. To get details, hover over the dots. Note that the y-axis is log-scaled to keep the variation among bills with fewer submissions visible.
 
 ```{r fig.height=5, echo=F, code_folding=NULL}
 pl_submissions_per_bill
@@ -879,7 +886,7 @@ Unrelated but still interesting, bills related to the educational sector trigger
 </aside>
 
 ## Duration of consultation process and length of bills
-But what about the initial question? How unusual is it that a bill of three pages length, i.e. bill 88/ME, is open for consultation for only three days? The plot below essentially addresses the question put forward in the introduction. As the orange dot in the graph below highlights, there has never been another bill with three pages and as little as three days of consultation. The next bills in the same page-length category had eight days (among them a bill amending the law on gambling/*Glückspielgesetz*...). So at least from this perspective, our bill in question has been quite an aberration. 
+But what about the initial question? How unusual is it that a bill of three pages length, i.e. bill 88/ME (XXVII), is open for consultation for only three days? The plot below addresses this question. As the orange dot in the graph below highlights, there has never been another bill with three pages and as little as three days of consultation. The next bills in the same page-length category had eight days (among them a bill amending the law on gambling/*Glückspielgesetz*...). So at least from this perspective, the consultation period for bill 88/ME was quite an aberration. 
 
 However, if we broaden our view a bit, and also consider bills with fewer or more than three pages, we see that there were several other bills for which consultation periods shorter than three days were granted.  
 
@@ -891,18 +898,18 @@ However, if we broaden our view a bit, and also consider bills with fewer or mor
 pl_length_duration
 ```
 
-Nevertheless, out of the `r nrow(df_consolidated)` bills open for consultation, `r df_consolidated %>% filter(duration_collected>3) %>% nrow()` featured longer consultation periods than three days. There were only `r df_consolidated %>% filter(duration_collected>=0) %>% filter(duration_collected<=3) %>% nrow()` bills with three or fewer days (excluding results with negative duration or incomplete start/end dates, see [here](#wrongdata)). 
+Nevertheless, out of the `r nrow(df_consolidated)` bills open for consultation, `r df_consolidated %>% filter(duration_collected>3) %>% nrow()` featured longer consultation periods than three days. There were only `r df_consolidated %>% filter(duration_collected>=0) %>% filter(duration_collected<=3) %>% nrow()` bills with three or fewer days (excluding results with negative duration or incomplete start/end dates due to errors in the data source, see [here](#wrongdata)). 
 
 ```{r ref.label=c("chunk_3days"), code_folding="Code plot", eval=F}
 
 ```
 
-```{r, fig.height=5, echo=F, code_folding=NULL}
+```{r, fig.height=5, echo=F, code_folding=NULL, dev="ragg_png"}
 pl_consolidated
 ```
 
 ## Overview table {#datatable}
-If you are interested in the details pertaining to each bill, the table below provides them. Note that for the sake of completness this table also includes those bills for which I retrieved impossible/wrong duration data (see [here](#wrongdata) for details.) However, The latter were excluded from the analysis.
+If you are interested in the details pertaining to each bill, the table below provides them. Note that for the sake of completeness this table also includes those bills for which I retrieved impossible/wrong duration data (see [here](#wrongdata) for details.) However, the latter were excluded from the analysis.
 
 ```{r ref.label="chunk_reactable", code_folding=NULL, eval=F, echo=F}
 

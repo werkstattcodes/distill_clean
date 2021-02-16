@@ -2191,8 +2191,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* Add any additional CSS rules below                      */
 
 
+
   :root {
-    --blog-bg-color: #e6e6e6 /*(standard) #E2E1D9 (green); #f0eff0;*/
+    --blog-bg-color: #e6e6e6 /* #FFFFFF (standard) #E2E1D9 (green); #f0eff0;*/
   }
 
   body {
@@ -2200,41 +2201,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
 
-  /*p {
-   text-align: left;
-   /*font-family: Lato;*/
-   font-size: 100%;
-   line-height: 1.3; /*zeilenabstand*/
-  }*/
 
-
-  /*d-article-with-toc p {
-   line-height: 140% !important
-  }*/
-
-  .d-article .p {
+  d-article p {
       line-height: 1.6em !important;
   }
 
 
   /* short description text after title of post in article*/
-  .d-title .p {
+  d-title p {
      font-size: medium !important;
      font-style: italic !important;
-     color:red !important;
      margin-top: 6px;
+     margin-bottom: 0px;
   }
 
-  .d-title p {
-     font-size: medium !important;
-     font-style: italic !important;
-     color:red !important;
-     margin-top: 6px;
+  d-title {
+     padding-top: 6rem;
+     padding-bottom: 1rem;
   }
-
-  /*d-title{
-     padding-bottom: 0px;
-  }*/
 
 
   .d-byline {
@@ -2856,7 +2840,7 @@ function init_posts_list() {
 <a href="post/2020-12-22-submissionsepidemiclaw/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["Austria","Corona virus","OCR","stringr","web scraping"]}</script>
 <div class="metadata">
-<div class="publishedDate">Dec. 21, 2020</div>
+<div class="publishedDate">Dec. 22, 2020</div>
 <div class="dt-authors">
 <div class="dt-author">Roland Schmidt</div>
 </div>
@@ -2879,7 +2863,7 @@ function init_posts_list() {
 <a href="post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["Austria","social media","elections"]}</script>
 <div class="metadata">
-<div class="publishedDate">Dec. 19, 2020</div>
+<div class="publishedDate">Dec. 18, 2020</div>
 <div class="dt-authors">
 <div class="dt-author">Roland Schmidt</div>
 </div>
@@ -2929,7 +2913,7 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img/>
+<img src="post/2020-11-18-recreating-nyt-election-map/recreating-nyt-election-map_files/preview.png"/>
 </div>
 <div class="description">
 <h2>Recreating NYT election map</h2>
@@ -2940,7 +2924,7 @@ function init_posts_list() {
 <div class="dt-tag">stringr</div>
 <div class="dt-tag">web scraping</div>
 </div>
-<p>How to re-create election maps by the NYT with ggplot</p>
+<p>How to re-create election maps by the NYT with ggplot.</p>
 </div>
 </a>
 <a href="post/2020-10-10-vienna-elections-2020-age-profile/" class="post-preview">
@@ -3242,7 +3226,7 @@ function init_posts_list() {
 <a href="#">More articles &raquo;</a>
 </div>
 </div>
-<!--/radix_placeholder_article_listing-->
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>Posts</h1>
