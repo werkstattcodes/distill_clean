@@ -169,7 +169,7 @@ girafe(ggobj = gg_point)
 
 # Normal, theme_ipsum_rc, plot_title_elmenent_markdown, device svglite
 
-```{r dev="svglite", eval=F}
+```{r dev="svglite", eval=T}
 gg_point = ggplot(data = data) +
   labs(title="long title long title long title")+
     geom_point_interactive(aes(x = wt, y = qsec, color = disp,
