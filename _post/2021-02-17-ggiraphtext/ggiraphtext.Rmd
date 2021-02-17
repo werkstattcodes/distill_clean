@@ -34,19 +34,15 @@ data$carname <- row.names(data)
 ```
 
 
-```{r}
-theme_post <- function() {hrbrthemes::theme_ipsum_rc()}
-```
 
-
-```{r, eval=F}
+```{r eval=T}
 theme_post <- function() {
   hrbrthemes::theme_ipsum_rc() +
     theme(
       # plot.background = element_rect(fill = plot_bg_color, color=NA),
       # panel.background = element_rect(fill = plot_bg_color, color=NA),
-      # #panel.border = element_rect(colour = plot_bg_color, fill=NA),
-      #plot.border = element_rect(colour = plot_bg_color, fill=NA),
+      # panel.border = element_rect(colour = plot_bg_color, fill=NA),
+      # plot.border = element_rect(colour = plot_bg_color, fill=NA),
       plot.margin = margin(l = 0, 
                            t = 0.25,
                            unit = "cm"),
@@ -166,6 +162,19 @@ gg_point = ggplot(data = data) +
     geom_point_interactive(aes(x = wt, y = qsec, color = disp,
     tooltip = carname, data_id = carname)) +
   theme_post()+
+  theme(plot.title=element_markdown())
+
+girafe(ggobj = gg_point)
+```
+
+# Normal, theme_ipsum_rc, plot_title_elmenent_markdown, device svglite
+
+```{r dev="svglite", eval=F}
+gg_point = ggplot(data = data) +
+  labs(title="long title long title long title")+
+    geom_point_interactive(aes(x = wt, y = qsec, color = disp,
+    tooltip = carname, data_id = carname)) +
+  theme_ipsum_rc()+
   theme(plot.title=element_markdown())
 
 girafe(ggobj = gg_point)
