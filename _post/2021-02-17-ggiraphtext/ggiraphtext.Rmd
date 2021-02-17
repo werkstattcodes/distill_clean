@@ -46,7 +46,7 @@ theme_post <- function() {
       plot.margin = margin(l = 0, 
                            t = 0.25,
                            unit = "cm"),
-      plot.title = element_markdown(
+      plot.title = element_text(
         color = "grey20",
         face = "bold",
         margin = margin(l = 0, unit = "cm"),
@@ -161,8 +161,8 @@ gg_point = ggplot(data = data) +
   labs(title="long title long title long title")+
     geom_point_interactive(aes(x = wt, y = qsec, color = disp,
     tooltip = carname, data_id = carname)) +
-  theme_post()+
-  theme(plot.title=element_markdown())
+  theme_post()#+
+  # theme(plot.title=element_text())
 
 girafe(ggobj = gg_point)
 ```
