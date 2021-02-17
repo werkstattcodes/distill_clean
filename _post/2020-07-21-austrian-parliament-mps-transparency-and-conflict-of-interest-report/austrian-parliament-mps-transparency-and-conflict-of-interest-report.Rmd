@@ -9,6 +9,7 @@ author:
     last_name: "Schmidt"
     url: https://werk.statt.codes
     orcid_id: 0000-0002-6897-1693
+    
 categories:
   - Austria
   - OCR
@@ -22,11 +23,8 @@ output:
     toc_depth: 3
     toc_float: true
     self_contained: false
-
+    
 creative_commons: CC BY-NC-SA
-
-
-
 ---
 
 
@@ -86,8 +84,7 @@ knitr::opts_chunk$set(
   # fig.width = 7,
   out.width = "100%",
   message = FALSE,
-  warning = FALSE,
-  dpi = 300
+  warning = FALSE
 )
 
 options(width = 180, dplyr.width = 150)
@@ -96,10 +93,17 @@ options(width = 180, dplyr.width = 150)
 
 <details closed> 
 <summary>Code: Define plot theme</summary> 
-```{r echo=TRUE}
-theme_post <- function() {
+```{r echo=F}
+plot_bg_color <- readr::read_file(file=here::here("theme.css")) %>% 
+  str_extract(., regex("(?<=blog-bg-color:).*?(?=;)")) %>%
+  str_trim() %>% 
+  str_extract(., regex("^#\\S+"))
+
+theme_post2 <- function() {
   hrbrthemes::theme_ipsum_rc() +
     theme(
+      plot.background = element_rect(fill = plot_bg_color, color=NA),
+      panel.background = element_rect(fill = plot_bg_color, color=NA),
       plot.margin = margin(l = 0, unit = "cm"),
       plot.title = element_markdown(
         color = "grey20",
@@ -160,6 +164,83 @@ theme_post <- function() {
       text = element_text(size = 5)
     )
 }
+
+theme_post <- function() {
+  hrbrthemes::theme_ipsum_rc() +
+    theme(
+      plot.background = element_rect(fill = plot_bg_color, color=NA),
+      panel.background = element_rect(fill = plot_bg_color, color=NA),
+      #panel.border = element_rect(colour = plot_bg_color, fill=NA),
+      #plot.border = element_rect(colour = plot_bg_color, fill=NA),
+      plot.margin = margin(l = 0, 
+                           t = 0.25,
+                           unit = "cm"),
+      plot.title = element_markdown(
+        color = "grey20",
+        face = "bold",
+        margin = margin(l = 0, unit = "cm"),
+        size = 13
+      ),
+      plot.title.position = "plot",
+      plot.subtitle = element_text(
+        color = "grey50",
+        margin = margin(t = 0.2, b = 0.3, unit = "cm"),
+        size = 11
+      ),
+      plot.caption = element_text(
+        color = "grey50",
+        size = 8,
+        hjust = c(0)
+      ),
+      plot.caption.position = "panel",
+      axis.title.x = element_text(
+        angle = 0,
+        color = "grey50",
+        hjust = 1
+      ),
+      axis.text.x = element_text(
+        size = 9,
+        color = "grey50"
+      ),
+      axis.title.y = element_blank(),
+      axis.text.y = element_text(
+        size = 9,
+        color = "grey50"
+      ),
+      panel.grid.minor.x = element_blank(),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor.y = element_blank(),
+      panel.spacing = unit(0.25, "cm"),
+      panel.spacing.y = unit(0.25, "cm"),
+      strip.text = element_text(
+        angle = 0,
+        size = 9,
+        vjust = 1,
+        face = "bold"
+      ),
+      legend.title = element_text(
+        color = "grey30",
+        face = "bold",
+        vjust = 1,
+        size = 9
+      ),
+      legend.text = element_text(
+        size = 9,
+        color = "grey30"
+      ),
+      legend.justification = "left",
+      legend.box = "horizontal", # arrangement of multiple legends
+      legend.direction = "vertical",
+      legend.margin = margin(l = 0, t = 0, unit = "cm"),
+      legend.spacing.y = unit(0.07, units = "cm"),
+      legend.text.align = 0,
+      legend.box.just = "top",
+      legend.key.height = unit(0.2, "line"),
+      legend.key.width = unit(0.5, "line"),
+      text = element_text(size = 5)
+    )
+}
+
 
 my_caption=c("data: Austrian Parliament, Liste gemäß § 9 Bezügebegrenzungs-BVG, 2020. \nanalysis: Roland Schmidt | @zoowalk | https://werk.statt.codes")
 ```
@@ -529,10 +610,12 @@ pl_gender_category <- df_gender %>%
         axis.title.y.right = element_blank(),
         panel.grid.major.y  = element_blank())
 
+pl_gender_category
+
 ```
 </details>
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.height=6, fig.width=10, include=T}
 pl_gender_category
 
 ```

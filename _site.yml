@@ -32,7 +32,6 @@ rss:
 output: 
   distill::distill_article
 
-theme: theme.css 
-#preview: static/site-preview.png
+#theme: theme.css 
 
 #creative_commons: CC BY
