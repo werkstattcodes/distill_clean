@@ -180,5 +180,18 @@ gg_point = ggplot(data = data) +
 girafe(ggobj = gg_point)
 ```
 
+# Normal, theme_ipsum_rc, plot_title_elmenent_markdown, dno evice svglite
+
+```{r dev="svglite", eval=T}
+gg_point = ggplot(data = data) +
+  labs(title="long title long title long title")+
+    geom_point_interactive(aes(x = wt, y = qsec, color = disp,
+    tooltip = carname, data_id = carname)) +
+  theme_ipsum_rc()+
+  theme(plot.title=element_markdown())
+
+girafe(ggobj = gg_point)
+```
+
 
 
