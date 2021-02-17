@@ -19,7 +19,27 @@ output:
 knitr::opts_chunk$set(echo = T)
 ```
 
+
+
 ```{r}
+library(ggplot2)
+library(ggiraph)
+library(svglite)
+library(ggtext)
+library(hrbrthemes)
+library(extrafont)
+data <- mtcars
+data$carname <- row.names(data)
+
+```
+
+
+```{r}
+theme_post <- function() {hrbrthemes::theme_ipsum_rc()}
+```
+
+
+```{r, eval=F}
 theme_post <- function() {
   hrbrthemes::theme_ipsum_rc() +
     theme(
@@ -97,16 +117,6 @@ theme_post <- function() {
 }
 ```
 
-
-```{r}
-library(ggplot2)
-library(ggiraph)
-library(svglite)
-library(ggtext)
-data <- mtcars
-data$carname <- row.names(data)
-
-```
 
 # Normal, theme_minmal
 
