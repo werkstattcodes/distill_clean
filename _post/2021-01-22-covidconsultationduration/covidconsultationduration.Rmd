@@ -56,7 +56,7 @@ theme_post <- function() {
       plot.margin = margin(l = 0, 
                            t = 0.25,
                            unit = "cm"),
-      plot.title = element_markdown(
+      plot.title = element_text(
         color = "grey20",
         face = "bold",
         margin = margin(l = 0, unit = "cm"),
