@@ -15,7 +15,7 @@ categories:
   - OCR
   - web scraping
 
-preview: austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/preview.png
+# preview: austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/preview.png
 
 output:
   distill::distill_article:
@@ -23,35 +23,42 @@ output:
     toc_depth: 3
     toc_float: true
     self_contained: false
+    code_folding: TRUE
     
 creative_commons: CC BY-NC-SA
 ---
 
-
 ```{r include=FALSE}
-knitr::opts_chunk$set(echo = T)
+knitr::opts_chunk$set(echo = T,
+                      dev = "png")
 ```
 
 # Context
 
-Recently, at the end of June, the Austrian Parliament published its annual report on MPs' additional sources of revenue and pertaining activities (see [here](https://www.parlament.gv.at/POOL/SWBRETT/ZUSD/BezBegrBVGPar9-NR.pdf){target="_blank"}). The publication is mandatory by law, and basically seeks to curtail potential conflicts of interest and to increase transparency as to MPs' activities outside of parliament. While the list comes, unsurprisingly, with a number of caveats ^[For details see [here.](https://www.parlament.gv.at//POOL/SWBRETT/25020/0010/BezBegrBVGPar9Erkl-NR.pdf#page=1){target="_blank"}], and by itself can hardly constitute a watertight safeguard against the various 'undemocratic temptations', the report nevertheless seems to provide interesting data on MPs' financial statuses and professional machinations. All in all enough reason to give it a closer look, i.e. a blog post.^[Halfway through the blog, I realized that the transparency website meineabgeordneten.at had alreay published a similar, although non-technial blog on this matter. If you speak German, have a look [here](https://www.meineabgeordneten.at/News/detail/Nationalrat_Nebeneinkommen_Offenlegung_2019){target="_blank"}. In a previous version I also had wrongly identified the gender of one MP. Kindly, Marion Breitschopf from meineabgeordneten.at helped clarifying this.] Note that I will focus only on Austria's lower chamber (*Nationalrat*) in this post. If time permits, I'll follow up with one on the upper chamber (*Bundesrat*) at a later point.
+Recently, at the end of June, the Austrian Parliament published its annual report on MPs' additional sources of revenue and pertaining activities (see [here](https://www.parlament.gv.at/POOL/SWBRETT/ZUSD/BezBegrBVGPar9-NR.pdf){target="_blank"}). The publication is mandatory by law, and basically seeks to curtail potential conflicts of interest and to increase transparency as to MPs' activities outside of parliament. While the list comes, unsurprisingly, with a number of caveats [^1], and by itself can hardly constitute a watertight safeguard against the various 'undemocratic temptations', the report nevertheless seems to provide interesting data on MPs' financial statuses and professional machinations. All in all enough reason to give it a closer look, i.e. a blog post.[^2] Note that I will focus only on Austria's lower chamber (*Nationalrat*) in this post. If time permits, I'll follow up with one on the upper chamber (*Bundesrat*) at a later point.
+
+[^1]: For details see [here.](https://www.parlament.gv.at//POOL/SWBRETT/25020/0010/BezBegrBVGPar9Erkl-NR.pdf#page=1){target="_blank"}
+
+[^2]: Halfway through the blog, I realized that the transparency website meineabgeordneten.at had alreay published a similar, although non-technial blog on this matter. If you speak German, have a look [here](https://www.meineabgeordneten.at/News/detail/Nationalrat_Nebeneinkommen_Offenlegung_2019){target="_blank"}. In a previous version I also had wrongly identified the gender of one MP. Kindly, Marion Breitschopf from meineabgeordneten.at helped clarifying this.
 
 If you're not that much interested in the R code, simply collapse the code chunks. The entire code for the analysis will be on my github account ([link](https://github.com/werkstattcodes){target="_blank"}). For any questions, comments etc. feel free to send me a direct message on twitter ([link](https://twitter.com/zoowalk){target="_blank"}).
 
 # Setup
-But step by step:
-Let's first take care of the necessary R packages and blog/rmarkdown setup.
 
-<details closed> 
-<summary>Code: Load packages</summary> 
+But step by step: Let's first take care of the necessary R packages and blog/rmarkdown setup.
+
+<details closed>
+
+<summary>Code: Load packages</summary>
+
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(here)
 library(extrafont)
 loadfonts(device = "win", quiet = T)
 library(hrbrthemes)
-hrbrthemes::update_geom_font_defaults(family = "Roboto Condensed",
-                                      size=3)
+# hrbrthemes::update_geom_font_defaults(family = "Roboto Condensed",
+                                      # size=3)
 library(scales)
 library(knitr)
 library(paletteer)
@@ -64,10 +71,13 @@ library(lemon)
 library(ggiraph)
 
 ```
+
 </details>
 
-<details closed> 
-<summary>Code: Define rmarkdown options</summary> 
+<details closed>
+
+<summary>Code: Define rmarkdown options</summary>
+
 ```{r setup, echo = T}
 # knit_hooks$set(wrap = function(before, options, envir) {
 #   if (before) {
@@ -77,35 +87,38 @@ library(ggiraph)
 #   }
 # })
 
-knitr::opts_chunk$set(
-  echo = TRUE,
-  fig.align = "left",
-  # fig.height = 5,
-  # fig.width = 7,
-  out.width = "100%",
-  message = FALSE,
-  warning = FALSE
-)
-
-options(width = 180, dplyr.width = 150)
+# knitr::opts_chunk$set(
+#   echo = TRUE,
+#   fig.align = "left",
+#   # fig.height = 5,
+#   # fig.width = 7,
+#   out.width = "100%",
+#   message = FALSE,
+#   warning = FALSE
+# )
+# 
+# options(width = 180, dplyr.width = 150)
 ```
+
 </details>
 
-<details closed> 
-<summary>Code: Define plot theme</summary> 
+<details closed>
+
+<summary>Code: Define plot theme</summary>
+
 ```{r echo=F}
 plot_bg_color <- readr::read_file(file=here::here("theme.css")) %>% 
   str_extract(., regex("(?<=blog-bg-color:).*?(?=;)")) %>%
   str_trim() %>% 
   str_extract(., regex("^#\\S+"))
 
-theme_post2 <- function() {
+# theme_post <- function() {
   hrbrthemes::theme_ipsum_rc() +
     theme(
       plot.background = element_rect(fill = plot_bg_color, color=NA),
       panel.background = element_rect(fill = plot_bg_color, color=NA),
       plot.margin = margin(l = 0, unit = "cm"),
-      plot.title = element_markdown(
+      plot.title = element_text(
         color = "grey20",
         face = "bold",
         margin = margin(l = 0, unit = "cm"),
@@ -163,97 +176,28 @@ theme_post2 <- function() {
       legend.key.width = unit(0.5, "line"),
       text = element_text(size = 5)
     )
-}
+#}
 
 theme_post <- function() {
-  hrbrthemes::theme_ipsum_rc() +
-    theme(
-      plot.background = element_rect(fill = plot_bg_color, color=NA),
-      panel.background = element_rect(fill = plot_bg_color, color=NA),
-      #panel.border = element_rect(colour = plot_bg_color, fill=NA),
-      #plot.border = element_rect(colour = plot_bg_color, fill=NA),
-      plot.margin = margin(l = 0, 
-                           t = 0.25,
-                           unit = "cm"),
-      plot.title = element_markdown(
-        color = "grey20",
-        face = "bold",
-        margin = margin(l = 0, unit = "cm"),
-        size = 13
-      ),
-      plot.title.position = "plot",
-      plot.subtitle = element_text(
-        color = "grey50",
-        margin = margin(t = 0.2, b = 0.3, unit = "cm"),
-        size = 11
-      ),
-      plot.caption = element_text(
-        color = "grey50",
-        size = 8,
-        hjust = c(0)
-      ),
-      plot.caption.position = "panel",
-      axis.title.x = element_text(
-        angle = 0,
-        color = "grey50",
-        hjust = 1
-      ),
-      axis.text.x = element_text(
-        size = 9,
-        color = "grey50"
-      ),
-      axis.title.y = element_blank(),
-      axis.text.y = element_text(
-        size = 9,
-        color = "grey50"
-      ),
-      panel.grid.minor.x = element_blank(),
-      panel.grid.major.x = element_blank(),
-      panel.grid.minor.y = element_blank(),
-      panel.spacing = unit(0.25, "cm"),
-      panel.spacing.y = unit(0.25, "cm"),
-      strip.text = element_text(
-        angle = 0,
-        size = 9,
-        vjust = 1,
-        face = "bold"
-      ),
-      legend.title = element_text(
-        color = "grey30",
-        face = "bold",
-        vjust = 1,
-        size = 9
-      ),
-      legend.text = element_text(
-        size = 9,
-        color = "grey30"
-      ),
-      legend.justification = "left",
-      legend.box = "horizontal", # arrangement of multiple legends
-      legend.direction = "vertical",
-      legend.margin = margin(l = 0, t = 0, unit = "cm"),
-      legend.spacing.y = unit(0.07, units = "cm"),
-      legend.text.align = 0,
-      legend.box.just = "top",
-      legend.key.height = unit(0.2, "line"),
-      legend.key.width = unit(0.5, "line"),
-      text = element_text(size = 5)
-    )
+  hrbrthemes::theme_ipsum_rc() 
 }
 
 
 my_caption=c("data: Austrian Parliament, Liste gemäß § 9 Bezügebegrenzungs-BVG, 2020. \nanalysis: Roland Schmidt | @zoowalk | https://werk.statt.codes")
 ```
+
 </details>
 
 # Data extraction
-As so often, one of the main challenges to actually analyze available data is to 'liberate' the information of interest from the format in which they are provided. The Parliament's report comes as a pretty 'untidy' pdf with subheadings etc.,  a format hardly conducive for further analysis. Here's one MP's declaration from the report: 
 
-![](austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/list_example - Copy.PNG){width=100%}
+As so often, one of the main challenges to actually analyze available data is to 'liberate' the information of interest from the format in which they are provided. The Parliament's report comes as a pretty 'untidy' pdf with subheadings etc., a format hardly conducive for further analysis. Here's one MP's declaration from the report:
 
-Essentially, the table provides four relevant pieces of information: *1) an income category*, which groups MPs' additional income (which is within the scope of the legal reporting obligations and in addition to their salary as an MP) according to their average monthly income in 2019; 
+![](austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/list_example - Copy.PNG){width="100%"}
+
+Essentially, the table provides four relevant pieces of information: *1) an income category*, which groups MPs' additional income (which is within the scope of the legal reporting obligations and in addition to their salary as an MP) according to their average monthly income in 2019;
 
 The income categories are:
+
 ```{r echo=FALSE}
 data.frame(
   category = c(1L, 2L, 3L, 4L, 5L),
@@ -273,8 +217,10 @@ Extracting data from pdfs has been the topic of at least one of my previous post
 
 Let's start by retrieving the raw text.
 
-<details open> 
-<summary>Code: Extract text from pdfs </summary> 
+<details open>
+
+<summary>Code: Extract text from pdfs </summary>
+
 ```{r}
 my_path <- here::here("_blog_data", "MP_activities", "BezBegrBVGPar9-NR.pdf")
 
@@ -285,9 +231,12 @@ df_all <- pdftools::pdf_text(pdf = my_path) %>%
   ) %>%
   mutate(text_raw = str_replace_all(text_raw, "\\h+", " "))
 ```
+
 </details>
 
-The code above provides us with a tibble containing as many rows as the report has pages (186). The expression `str_replace_all(text_raw, "\\h+", " ")` replaces all horizontal white space with a single space, but keeps line breaks (\\n and \\r). The latter will be needed at a later stage when it comes to identifying the location of data of interest and extract them.^[I am grateful to the respondents to my pertaining question on [stackoverflow](https://stackoverflow.com/questions/62678640/stringr-remove-multiple-spaces-but-keep-linebreaks-n-r/62679016#62679016){target="_blank"}]
+The code above provides us with a tibble containing as many rows as the report has pages (186). The expression `str_replace_all(text_raw, "\\h+", " ")` replaces all horizontal white space with a single space, but keeps line breaks (\\n and \\r). The latter will be needed at a later stage when it comes to identifying the location of data of interest and extract them.[^3]
+
+[^3]: I am grateful to the respondents to my pertaining question on [stackoverflow](https://stackoverflow.com/questions/62678640/stringr-remove-multiple-spaces-but-keep-linebreaks-n-r/62679016#62679016){target="_blank"}
 
 Each row is one long string containing all the information from only one single page on an MP. However, note that the declarations of some MPs span over multiple pages, hence their data is contained in multiple strings. This is something we have to account for when crunching numbers during the actual analysis. Here one example for the data on one MP. Use the horizontal scrollbar to get an idea of the strings composition.
 
@@ -296,10 +245,15 @@ stringr::str_wrap(df_all$text_raw[1], 10)
 ```
 
 ## Get income category
-As a first step, let's extract the name of the MPs and the income category from the raw strings obtained above. The code chunk below is the pertaining code, making use of `stringr` and `regex`. Note the `(?s)` term in the regex expressions. While `.` would match any pattern but not line breaks, the `(?s)` alters this limitation and forces `.` to match also `\n`  and `\r`.^[See [here](https://stackoverflow.com/questions/159118/how-do-i-match-any-character-across-multiple-lines-in-a-regular-expression/45981809#45981809){target="_blank"} for a very helpful answer on SO.] 
 
-<details open> 
-<summary>Code: Extract MPs' names and income category </summary> 
+As a first step, let's extract the name of the MPs and the income category from the raw strings obtained above. The code chunk below is the pertaining code, making use of `stringr` and `regex`. Note the `(?s)` term in the regex expressions. While `.` would match any pattern but not line breaks, the `(?s)` alters this limitation and forces `.` to match also `\n` and `\r`.[^4]
+
+[^4]: See [here](https://stackoverflow.com/questions/159118/how-do-i-match-any-character-across-multiple-lines-in-a-regular-expression/45981809#45981809){target="_blank"} for a very helpful answer on SO.
+
+<details open>
+
+<summary>Code: Extract MPs' names and income category </summary>
+
 ```{r}
 df_all <- df_all %>%
   mutate(name = str_extract(text_raw, regex("(?<=Einkommenskategorie)(?s).*(?=für das Jahr)", ignore_case = T)) %>%
@@ -312,29 +266,36 @@ df_all <- df_all %>%
   select(-income_category_19_raw)
   
 ```
+
 </details>
 
-As already highlighted, since the declarations of some MPs run over multiple pages and are hence included several times in the above output, we have to limit the result to one row per MP. This is what `distinct()` does in the code chunk below. 
+As already highlighted, since the declarations of some MPs run over multiple pages and are hence included several times in the above output, we have to limit the result to one row per MP. This is what `distinct()` does in the code chunk below.
 
-<details open> 
-<summary>Code: Account for multi-page declarations </summary>  
+<details open>
+
+<summary>Code: Account for multi-page declarations </summary>
+
 ```{r}
 df_income <- df_all %>%
   select(name, income_category_19) %>%
   distinct()
 ```
- 
+
 ```{r}
 nrow(df_all)
 nrow(df_income)
 ```
+
 </details>
 
 ## Missing income data
+
 Let's have a first, quick look at the information obtained so far:
 
-<details closed> 
-<summary>Code: Number of MPs per income bracket </summary>  
+<details closed>
+
+<summary>Code: Number of MPs per income bracket </summary>
+
 ```{r}
 tbl_income <- df_income %>% 
   count(income_category_19) %>% 
@@ -342,6 +303,7 @@ tbl_income <- df_income %>%
   gt::cols_label(income_category_19=md("**income category**"),
                  n=md("**number of MPs**")) 
 ```
+
 </details>
 
 ```{r echo=FALSE}
@@ -350,8 +312,10 @@ tbl_income
 
 Before digging into frequencies of the income categories etc, a note on the missing observations. In ten instances, MPs did not report their income for 2019. Here are the ten MPs with missing income data.
 
-<details closed> 
-<summary>Code: MPs with with missing income data</summary>  
+<details closed>
+
+<summary>Code: MPs with with missing income data</summary>
+
 ```{r}
 df_income_missing <- df_income %>% 
   filter(income_category_19=="missing") %>% 
@@ -366,17 +330,21 @@ tbl_missing <- df_income_missing %>%
   gt::cols_align(align="center",
                  columns = vars(income_category_19))
 ```
+
 </details>
+
 ```{r echo=FALSE}
 tbl_missing
 ```
 
-One possible explanation for missing income data could be that these MPs have joined parliament only after the reporting period, i.e. in 2020 (I mean, there couldn't be any other possibility, no?). To check this, we need to obtain the dates of each MP's entry to parliament. Initially, I expected that such data should be readily available, but I must have been looking at the wrong places... Anyway, never waste an opportunity to scrap data. 
+One possible explanation for missing income data could be that these MPs have joined parliament only after the reporting period, i.e. in 2020 (I mean, there couldn't be any other possibility, no?). To check this, we need to obtain the dates of each MP's entry to parliament. Initially, I expected that such data should be readily available, but I must have been looking at the wrong places... Anyway, never waste an opportunity to scrap data.
 
-The website of the Austrian Parliament provides a list of all (current and previous) MPs. This list is provided in an xml format from which we can obtain the links to each MP's  individual biographical page. From these bios, we can subsequently extract the data when MP's entered the parliament. Not a bad detour...or, as a saying in German goes, Umwege erhöhen die Ortskenntnisse...(something like 'detours increase your local knowledge'.)
+The website of the Austrian Parliament provides a list of all (current and previous) MPs. This list is provided in an xml format from which we can obtain the links to each MP's individual biographical page. From these bios, we can subsequently extract the data when MP's entered the parliament. Not a bad detour...or, as a saying in German goes, Umwege erhöhen die Ortskenntnisse...(something like 'detours increase your local knowledge'.)
 
 <details closed>
+
 <summary>Code: Get entry dates for MPs with missing income data</summary>
+
 ```{r eval=FALSE}
 library(xml2)
 library(rvest)
@@ -434,7 +402,6 @@ df_mp_dates <- readr::read_rds(file=here::here("_blog_data", "MP_activities", "M
 
 ```
 
- 
 ```{r}
 #extract family name for subsequent merger with income data
 df_mp_dates <- df_mp_dates %>% 
@@ -451,6 +418,7 @@ df_income_missing <- df_income_missing %>%
            str_remove(., regex("(?<=\\d{4}).*")))
 
 ```
+
 </details>
 
 ```{r echo=FALSE}
@@ -460,16 +428,19 @@ df_income_missing %>%
                  name=md("**MP**"))
 ```
 
-And indeed. From the result above, we see that all those MPs who haven't submitted any income information were not MPs in 2019 *for a full month* (this is the requirement stipulated in the pertaining regulation). Hence, for the subsequent analysis on income data, when can safely disregard these MPs. 
+And indeed. From the result above, we see that all those MPs who haven't submitted any income information were not MPs in 2019 *for a full month* (this is the requirement stipulated in the pertaining regulation). Hence, for the subsequent analysis on income data, when can safely disregard these MPs.
 
 <details closed>
+
 <summary>Code: Remove MPs joining outside of reporting period </summary>
+
 ```{r echo=TRUE}
 nrow(df_income)
 df_income <- df_income %>% 
   filter(!name %in% df_income_missing$name)
 nrow(df_income)
 ```
+
 </details>
 
 # MPs' gender
@@ -505,7 +476,9 @@ income_categories_short <- df_income_categories %>%
 Let's have a gender-sensitive look at the income data. With the `gender`package we are able to infer with some acceptable margin of error MPs' gender from their first names. Names which were not (properly) recognized by the package I corrected manually in the code chunk below.
 
 <details open>
+
 <summary>Code: Get MPs' gender</summary>
+
 ```{r}
 #get a clean name, without any academic or prefessional titles
 df_income <- df_income %>% 
@@ -543,13 +516,17 @@ df_income<- df_income %>%
                           str_detect(name, "Ribo")==TRUE ~ "female",
                           TRUE ~ as.character(gender)))
 ```
+
 </details>
 
 ## Female share per income group
+
 What the subsequent analysis reveals is that the share of women per income category decreases the further we move up the income ladder. While there is almost gender parity in the income category 0, womens' shares decrease continuously up to category 4.
 
 <details closed>
+
 <summary>Code: Calculate gender ratios and create plots</summary>
+
 ```{r}
 df_gender <- df_income %>% 
   group_by(income_category_19, gender) %>% 
@@ -561,7 +538,7 @@ df_gender <- df_income %>%
   mutate(n_rel_gender=n_obs/n_gender)
 
 ```
- 
+
 ```{r}
 pl_gender_category <- df_gender %>% 
   # filter(gender=="female") %>% 
@@ -598,33 +575,37 @@ pl_gender_category <- df_gender %>%
   scale_y_discrete(labels=income_categories_short,
                    expand=expansion(mult=c(0, 0)),
                    position = "left")+
-  theme_post()+
-  theme(legend.position="none",
-        plot.title=element_markdown(),
-        axis.title.x=element_blank(),
-        axis.title.y.left = element_text(angle = 90,
-                                         color="grey50",
-                                         hjust=1),
-        axis.text.y.left = element_text(),
-        axis.text.y.right = element_blank(),
-        axis.title.y.right = element_blank(),
-        panel.grid.major.y  = element_blank())
+  theme_post()#+
+  # theme(legend.position="none",
+  #       plot.title=element_markdown(),
+  #       axis.title.x=element_blank(),
+  #       axis.title.y.left = element_text(angle = 90,
+  #                                        color="grey50",
+  #                                        hjust=1),
+  #       axis.text.y.left = element_text(),
+  #       axis.text.y.right = element_blank(),
+  #       axis.title.y.right = element_blank(),
+  #       panel.grid.major.y  = element_blank())
 
 pl_gender_category
 
 ```
+
 </details>
 
-```{r echo=FALSE, fig.height=6, fig.width=10, include=T}
+```{r echo=FALSE, fig.height=6, fig.width=10, include=T, device="ragg_png"}
 pl_gender_category
 
 ```
 
 ## Share of income groups per gender group
-Another gender sensitive perspective is to look at the distribution of the MPs across income categories within each gender group (in contrast to within each income group as in the previous graph). The graph highlights the difference between female and male MPs in terms of the income categories. While the distribution for female MPs is skewed towards lower income categories, that for male MPs is more concentrated on income category 2 and 3. Furthermore, only 4.4 % of all female MPs have additional incomes falling into the two highest categories, 4 and 5. In contrast, 19 % of all male MPs have income from these categories. 
 
-<details closed> 
+Another gender sensitive perspective is to look at the distribution of the MPs across income categories within each gender group (in contrast to within each income group as in the previous graph). The graph highlights the difference between female and male MPs in terms of the income categories. While the distribution for female MPs is skewed towards lower income categories, that for male MPs is more concentrated on income category 2 and 3. Furthermore, only 4.4 % of all female MPs have additional incomes falling into the two highest categories, 4 and 5. In contrast, 19 % of all male MPs have income from these categories.
+
+<details closed>
+
 <summary>Code: graph intra-gender distribution </summary>
+
 ```{r}
 pl_gender_intra_dist <- df_gender %>% 
   ggplot()+
@@ -649,12 +630,13 @@ pl_gender_intra_dist <- df_gender %>%
   scale_y_continuous(label=scales::label_percent(accuracy=1),
                      expand=expansion(mult=c(0, 0.1)))+
   facet_wrap(vars(gender))+
-  theme_post()+
+  # theme_post()+
   theme(legend.position = "none",
         axis.title.x = element_text(angle = 0,
                                          color="grey50",
                                          hjust=1),)
 ```
+
 </details>
 
 ```{r echo=FALSE}
@@ -663,11 +645,23 @@ pl_gender_intra_dist
 
 # Party affiliation
 
-## Get MPs' party membership
-As the next step to facilitate the analysis of the data, let's add MPs' party affiliation. I do this by importing the pertaining data from wikipedia's entry on Austria's current MP (the parliament's website was simply to messy for my liking). Here, the `rvest` package is our friend. Once the data on MP membership is retrieved, I merge it with MPs' income/transparency data. The key/identifier to merge both sets of data is an MP's name. To make this work, I had first to remove all academic/professional titles (it's Austria after all) and harmonize the sequence of first and family names. 
+```{r}
+mtcars %>% 
+  ggplot()+
+  geom_point(aes(
+    x=mpg,
+    y=disp
+  ))
+```
 
-<details closed> 
-<summary>Code: Get party affiliation </summary>  
+## Get MPs' party membership
+
+As the next step to facilitate the analysis of the data, let's add MPs' party affiliation. I do this by importing the pertaining data from wikipedia's entry on Austria's current MP (the parliament's website was simply to messy for my liking). Here, the `rvest` package is our friend. Once the data on MP membership is retrieved, I merge it with MPs' income/transparency data. The key/identifier to merge both sets of data is an MP's name. To make this work, I had first to remove all academic/professional titles (it's Austria after all) and harmonize the sequence of first and family names.
+
+<details closed>
+
+<summary>Code: Get party affiliation </summary>
+
 ```{r}
 wiki_link <- "https://de.wikipedia.org/wiki/Liste_der_Abgeordneten_zum_%C3%96sterreichischen_Nationalrat_(XXVII._Gesetzgebungsperiode)"
 
@@ -716,6 +710,7 @@ df_income <- df_income %>%
 
 
 ```
+
 </details>
 
 Below the result with all MPs, their party affiliation, and income data.
@@ -736,13 +731,14 @@ party_colors <- c(FPÖ = "#005DA8", NEOS = "#EA5290", ÖVP = "#5DC2CC", SPÖ = "
 
 ```
 
-
 ## MPs' income category by party
 
-With data on each MP's income category and party membership available, let's aggregate the data by parties. The graph below show the distribution of MPs over income categories per party in relative (and absolute) terms. 
+With data on each MP's income category and party membership available, let's aggregate the data by parties. The graph below show the distribution of MPs over income categories per party in relative (and absolute) terms.
 
-<details closed> 
-<summary>Code: plots on income categories</summary>  
+<details closed>
+
+<summary>Code: plots on income categories</summary>
+
 ```{r}
 df_agg <- df_income %>% 
   ungroup() %>%
@@ -798,21 +794,22 @@ pl_rel <- df_agg %>%
   theme(legend.position="none",
         axis.title.x = element_blank())
 ```
-</details>
 
+</details>
 
 ```{r echo=FALSE}
 pl_rel
 ```
 
-The ÖVP features the smallest share of MPs with no additional income (income category 0, only 6.2 %) followed by the FPÖ (though with a substantially higher share of 26.7 %). In contrast, Greens and Neos feature with 45.5 % and 40 % the highest share of MPs in in this category (leaving aside, Philippa Strache, the one independent MP with no additional income). The ÖVP features the highest absolute numbers in income categories 3, 4 and 5. In contrast, there are no Green MPs with an income falling into category 4 or 5. Similarly, there is also not a single MP from the SPÖ with an income from category 5. What's noteworthy with Neos is that they feature a comparably large share of MPs from income category 0, but also the largest relative number of MPs from the highest income category (13.3 %; equal with that of the FPÖ). 
+The ÖVP features the smallest share of MPs with no additional income (income category 0, only 6.2 %) followed by the FPÖ (though with a substantially higher share of 26.7 %). In contrast, Greens and Neos feature with 45.5 % and 40 % the highest share of MPs in in this category (leaving aside, Philippa Strache, the one independent MP with no additional income). The ÖVP features the highest absolute numbers in income categories 3, 4 and 5. In contrast, there are no Green MPs with an income falling into category 4 or 5. Similarly, there is also not a single MP from the SPÖ with an income from category 5. What's noteworthy with Neos is that they feature a comparably large share of MPs from income category 0, but also the largest relative number of MPs from the highest income category (13.3 %; equal with that of the FPÖ).
 
 # MPs' further jobs
 
-The subsequent part of the analysis will focus on MPs' additional professional positions, as provided by the transparency report. As outlined in the introduction, it provides details on MPs' additional 1) executive positions in stock companies, private limited companies, foundations or saving banks; this section further distinguishes between those executive positions which are remunerated and those which aren't. 2) other professional activities from which MPs generate income; and 3) (unpaid) honorary activities. 
+The subsequent part of the analysis will focus on MPs' additional professional positions, as provided by the transparency report. As outlined in the introduction, it provides details on MPs' additional 1) executive positions in stock companies, private limited companies, foundations or saving banks; this section further distinguishes between those executive positions which are remunerated and those which aren't. 2) other professional activities from which MPs generate income; and 3) (unpaid) honorary activities.
 
 ## Extracting data
-Extracting MPs' additional professional positions from the pdfs has been somewhat challenging. Initially - I was actually about to post the blog - I thought I could retrieve the data again with the `pdf_text` function as done above. However, when double checking some of the obtained results with the original pdf, I had to realize that some of my obtained numbers were inflated. After some digging and more digging, it turned out that the error originated from professional positions with names running over more than one line, i.e. which have a line break. Since I initially had counted the number of lines of positions to get the number of positions, some positions were counted multiple times. This problem arose since I was not able to distinguish between line breaks within cells (position with a long name) and those line breaks which indicated a new cell/row in the pdf's table (different professional position). 
+
+Extracting MPs' additional professional positions from the pdfs has been somewhat challenging. Initially - I was actually about to post the blog - I thought I could retrieve the data again with the `pdf_text` function as done above. However, when double checking some of the obtained results with the original pdf, I had to realize that some of my obtained numbers were inflated. After some digging and more digging, it turned out that the error originated from professional positions with names running over more than one line, i.e. which have a line break. Since I initially had counted the number of lines of positions to get the number of positions, some positions were counted multiple times. This problem arose since I was not able to distinguish between line breaks within cells (position with a long name) and those line breaks which indicated a new cell/row in the pdf's table (different professional position).
 
 The answer to this challenge is provided by the `pdf_data` function, also from the `pdftools` package. As the output below shows, the function provides you with x and y coordinates for the actual, physical location of each textbox (for details see [here](https://ropensci.org/technotes/2018/12/14/pdftools-20/){target="_blank"}).
 
@@ -825,12 +822,14 @@ datatable(pdf_file[[8]],
           rownames=FALSE)
 ```
 
-Taking a closer look at the rows in the results, I noticed that the difference in y values for linebreaks within a cell (long position name) is different than that between cells (different position). While 'normal' line breaks result in a y value change of 11, new cells result in a higher change of the y value. Hence, the difference in y values can be used as an indicator for a new cell and hence a different professional position. 
+Taking a closer look at the rows in the results, I noticed that the difference in y values for linebreaks within a cell (long position name) is different than that between cells (different position). While 'normal' line breaks result in a y value change of 11, new cells result in a higher change of the y value. Hence, the difference in y values can be used as an indicator for a new cell and hence a different professional position.
 
 To make use of this difference, I first calculate the difference of y values per row (`line_diff`), and subsequently and indicator which turns 1 if the y difference exceeds 11 (`row_jump`). Finally, I accumulate the value of the indicator to get an indicator for each row (`row_indicator`). For an example see the output below.
 
 <details open>
+
 <summary>Code: identifying new positions</summary>
+
 ```{r}
 df_linebreaks <- pdf_file[[8]] %>%
   select(y, text) %>% 
@@ -842,6 +841,7 @@ df_linebreaks <- pdf_file[[8]] %>%
     )) %>%
     mutate(row_indicator = cumsum(row_jump)) 
 ```
+
 </details>
 
 ```{r echo=FALSE}
@@ -854,24 +854,28 @@ datatable(df_linebreaks,
 In the next step, I group the data by the `row_indicator` and combine the different text parts with the same row indicator into one string. As a result, we get a dataframe where each row contains one row of the table (including those parts after the line break). Hooray!
 
 <details open>
+
 <summary>Code: Table with one row per position</summary>
+
 ```{r paged.print=TRUE}
 df_rows <- df_linebreaks %>% 
   group_by(row_indicator) %>%
     summarise(text_combined = paste(text, collapse = " ")) %>%
     mutate(text_combined = text_combined %>% str_trim() %>% str_squish())
 ```
+
 </details>
 
 ```{r}
 df_rows
 ```
 
-
-From this new dataframe we have to filter out those rows which contain the different professional positions we are interested in. To do this, I first extract the row number of those rows which contain the subheading of each nested table (on executive, other, and honorary positions). With row number values of these rows, I can subsequently filter out those rows which are located between the headings (= professional positions). 
+From this new dataframe we have to filter out those rows which contain the different professional positions we are interested in. To do this, I first extract the row number of those rows which contain the subheading of each nested table (on executive, other, and honorary positions). With row number values of these rows, I can subsequently filter out those rows which are located between the headings (= professional positions).
 
 <details closed>
+
 <summary>Code: row numbers of sub-headings</summary>
+
 ```{r}
 # headings
 heading_executive <- df_rows %>%
@@ -890,13 +894,17 @@ heading_executive
 heading_other
 heading_honorary
 ```
+
 </details>
 
 ## Putting it all into a function
+
 I put all the above outlined (and subsequent) steps into a function which provides me with the number of positions per category for each MP. Have a look in the code chunk below. In a sense, it's the key element of the overall analysis.
 
 <details open>
+
 <summary>Code: Function to extract positions </summary>
+
 ```{r}
 fn_get_positions <- function(x) {
   d <- x %>%
@@ -1001,12 +1009,15 @@ fn_get_positions <- function(x) {
 }
 
 ```
+
 </details>
 
 This function is applied to our previous results of the `pdf_data` function. At the end, I combine these results with MPs' names and aggregate those reports of MPs which run over multiple pages. Et voila! You can use the arrows to sort the table and get e.g the top-10 MPs as to their number of executive positions.
 
 <details open>
+
 <summary>Code: Apply function </summary>
+
 ```{r}
 df_data <- pdf_file %>%
   map_dfr(., fn_get_positions)
@@ -1020,6 +1031,7 @@ df_count <- df_positions %>%
   rowwise() %>% 
   mutate(total_n=sum(c_across(ends_with("_n")&!contains("remunerated")), na.rm=T))
 ```
+
 </details>
 
 ```{r echo=FALSE}
@@ -1082,14 +1094,17 @@ df_position_long <- df_count2 %>%
 ```
 
 ## Paid positions and income category
-Let's have a look at MPs' number of paid positions and income category. 
+
+Let's have a look at MPs' number of paid positions and income category.
 
 Paid are the positions stated in the category 'other positions' and 'executive position'. As for the latter, however, the list also includes unpaid executive positions which are marked with an asterisk (\*). Hence these positions have to be removed when calculating the total number of paid positions. For details see [below](#unpaid_executive).
 
 Hover over the points in the plot below to get details on each individual MP. Note that the points are located randomly *within* each square to avoid overplotting.
 
 <details closed>
+
 <summary>Code: Number of paid positions and income category</summary>
+
 ```{r}
 df_income_positions <- df_count2 %>% 
   left_join(., df_income %>% select(gender, income_category_19, name),
@@ -1143,20 +1158,22 @@ pl_income_positions <- df_income_positions %>%
         strip.text.y = element_blank())+
   guides(color=guide_legend(nrow=1))
 ```
-</details>
 
+</details>
 
 ```{r echo=FALSE, fig.height=15}
 girafe(ggobj = pl_income_positions)
 
 ```
 
-Overall, there seems to be a positive association between the number of positions and income category. However, bear in mind that we do not know how much income is generate from each specific position. We only know about the sum and shouldn't be tempted to infer any average salaries per position. E.g. while Herbert Fuchs' four paid positions yield in sum an income of more than 10,000 Euros per average month (income category 5), it could be that the bulk of the income sum originates from one particularly position only. This is particularly relevant if we think about comparing MPs within the same income category but different number of paid positions. 
+Overall, there seems to be a positive association between the number of positions and income category. However, bear in mind that we do not know how much income is generate from each specific position. We only know about the sum and shouldn't be tempted to infer any average salaries per position. E.g. while Herbert Fuchs' four paid positions yield in sum an income of more than 10,000 Euros per average month (income category 5), it could be that the bulk of the income sum originates from one particularly position only. This is particularly relevant if we think about comparing MPs within the same income category but different number of paid positions.
 
-A further qualifying note on the lower end of the income scale: Note that there are five curious cases of MPs having at least one paid position, but zero additional income. How can that be? Let's look at these five cases more closely. 
+A further qualifying note on the lower end of the income scale: Note that there are five curious cases of MPs having at least one paid position, but zero additional income. How can that be? Let's look at these five cases more closely.
 
 <details closed>
+
 <summary>Code: MPs with no income but paid positions</summary>
+
 ```{r}
 df_mp5 <- df_income_positions %>% 
   filter(income_category_19==0) %>% 
@@ -1185,6 +1202,7 @@ tb_mp5 <- df_mp5 %>%
              "other_positions"=md("**other positions**"))
 
 ```
+
 </details>
 
 ```{r echo=FALSE}
@@ -1193,17 +1211,18 @@ tb_mp5
 
 As for Neos MPs' Hoyos-Trauttmansdorff and Scherak a look at the parliament's list reveals that their declaration features an additional note indicating that both assumed their position only from April 2020 onward. Hence, there was no pertaining income for the 2019 category. Scherak's second executive position ('Margaretha Lupac - Stiftung') is unpaid as indicated by the \*. Hence, these two cases are clear.
 
-The other three cases are less clear to me. Eva-Maria Himmelbauer has an executive position in the Cloudcompany and there is no \* sign which would indicate that the position was without remuneration. What's furthermore noteworthy, if you look at the table above, it states 'Ablauf der Meldefrist: Geschäftsführerin 23.11.2019'. Remarkably, this text is not visible in the original pdf on the parliament's website. I have no idea why and how, but the  used `pdf_data` function extracted also 'hidden' text from the pdf. Whether this text was a comment to an e.g. Excel cell or a hidden row/column, I don't know. But irrespective of this, there is nothing in the additional text what would suggest - at leat to me - that Himmelbauer did not receive at least for one month a salary during the reporting period. 
-Similarly, Markus Koza and Meri Dioski had both paid positions for their own parities up until 31.10.2019. Nevertheless, this income was not reported as indicated by the income category 0. 
+The other three cases are less clear to me. Eva-Maria Himmelbauer has an executive position in the Cloudcompany and there is no \* sign which would indicate that the position was without remuneration. What's furthermore noteworthy, if you look at the table above, it states 'Ablauf der Meldefrist: Geschäftsführerin 23.11.2019'. Remarkably, this text is not visible in the original pdf on the parliament's website. I have no idea why and how, but the used `pdf_data` function extracted also 'hidden' text from the pdf. Whether this text was a comment to an e.g. Excel cell or a hidden row/column, I don't know. But irrespective of this, there is nothing in the additional text what would suggest - at leat to me - that Himmelbauer did not receive at least for one month a salary during the reporting period. Similarly, Markus Koza and Meri Dioski had both paid positions for their own parities up until 31.10.2019. Nevertheless, this income was not reported as indicated by the income category 0.
 
 To be clear, I have no reason to think that there is any malice etc. behind these inconsistencies, and I assume there is some formal, regulatory explanation which hasn't been made explicit in the parliament's list. If anyone has an answer to this I would be keen to hear it.
 
 ## Share of MPs with at least one additional position
 
-To move on and, to get some contrast between parties, the barplot below indicates the percentage of MPs per party which do have at least one additional professional position. 
+To move on and, to get some contrast between parties, the barplot below indicates the percentage of MPs per party which do have at least one additional professional position.
 
 <details open>
+
 <summary>Code: MP share w at least one add. position</summary>
+
 ```{r}
 df_bar_position <- df_position_long %>% 
   filter(!position %in% c("executive_non_remunerated_n",
@@ -1247,21 +1266,25 @@ pl_bar_position <- df_bar_position %>%
         axis.title.x = element_blank())
   
 ```
+
 </details>
 
 ```{r echo=FALSE}
 pl_bar_position
 ```
 
-As far as *executive positions* are concerned, the relative numbers of Neos stand out. More than half of Neos' MPs have an executive position. In absolute numbers, the ÖVP with 26 MPs leads in this category. 
+As far as *executive positions* are concerned, the relative numbers of Neos stand out. More than half of Neos' MPs have an executive position. In absolute numbers, the ÖVP with 26 MPs leads in this category.
 
 When it comes to *honorary positions*, there is a considerable gap between the three larger parties (ÖVP, SPÖ, FPÖ) and the two smaller ones (Greens, Neos). One possible explanation (which I have not looked into though) could be that larger parties have more party affiliated associations in which their MPs take up honorary positions. Maybe, and I am purely speculating here, the number of honorary positions is a function of a party's institutional width.
 
 ## Executive positions {#unpaid_executive}
-Below I further disaggregate executive positions into those which entail a salary and those which don't. In the parliament’s report, executive positions without salary were marked with an asterisk (\*). When retrieving the data above, I already accounted for this difference (`str_detect(., "\\*")`). The graph below now shows the percentage of MPs per party without executive positions, those with at least one executive position without salary (and no position with salary), and those with at least one remunerated executive position. 
+
+Below I further disaggregate executive positions into those which entail a salary and those which don't. In the parliament's report, executive positions without salary were marked with an asterisk (\*). When retrieving the data above, I already accounted for this difference (`str_detect(., "\\*")`). The graph below now shows the percentage of MPs per party without executive positions, those with at least one executive position without salary (and no position with salary), and those with at least one remunerated executive position.
 
 <details open>
+
 <summary>Code: different types of executive positions</summary>
+
 ```{r}
 df_executive <- df_count2 %>% 
     select(party, contains("executive")) %>% 
@@ -1315,6 +1338,7 @@ pl_executive <- df_executive %>%
              labeller=label_wrap_gen(width=30))
 
 ```
+
 </details>
 
 ```{r echo=FALSE}
@@ -1324,10 +1348,13 @@ pl_executive
 Note that there is only one MP from the Greens with a paid executive position. Also, there are only three Socialdemocrats in this category. Again, the ÖVP features most MPs with a paid executive position in absolute terms, and Neos in relative terms.
 
 ## Parties in comparison (Boxplot)
-The boxplot below might be a bit of an overkill, but it gives us a more detailed overview of MPs' additional positions per party. Each dot indicates the number of positions which one specific MP holds in one category of professional positions. In addition, the median, mean, max and minimum values for each party/position combination are provided. Note the comparably high median value of honorary positions among SPÖ MPs.  
+
+The boxplot below might be a bit of an overkill, but it gives us a more detailed overview of MPs' additional positions per party. Each dot indicates the number of positions which one specific MP holds in one category of professional positions. In addition, the median, mean, max and minimum values for each party/position combination are provided. Note the comparably high median value of honorary positions among SPÖ MPs.
 
 <details closed>
+
 <summary>Code: boxplots</summary>
+
 ```{r echo=TRUE, fig.height=7}
 df_position_labels <- df_position_long %>% 
   filter(!position %in% c("executive_non_remunerated_n",
@@ -1402,12 +1429,15 @@ pl_box <- df_position_long %>%
 "honorary_n"="honorary positions")))
 
 ```
+
 </details>
+
 ```{r echo=FALSE}
 pl_box
 ```
 
 # Wrap up
+
 So this has become a rather length blog entry. I hope there's been something useful in it for you as well. Again, the emphasis has been largely on various steps in R to extract and subsequently analyze the data of interest. If there's anything you feel like following up, feel free to let me know.
 
 ```{r}
@@ -1421,6 +1451,3 @@ df_nr<- df_count %>%
 
 
 ```
-
-
-

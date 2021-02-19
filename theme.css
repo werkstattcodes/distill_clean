@@ -84,7 +84,7 @@ d-appendix {
 
 
 :root {
-  --blog-bg-color: #e6e6e6 /* #FFFFFF (standard) #E2E1D9 (green); #f0eff0;*/
+  --blog-bg-color: #FFFFFF; /*#e6e6e6 /*  (standard) #E2E1D9 (green); #f0eff0;*/
 }
 
 body {
@@ -156,6 +156,8 @@ pre {
  /* font-size: 90%;*/
 }
 
+::selection { background: #296273; }
+
 
 /*HEADINGS*/
 
@@ -194,7 +196,7 @@ d-article pre, d-article div.sourceCode, d-article div.sourceCode pre {
     overflow: auto !important;
     overflow-x: auto !important;
     overflow-y: auto !important;
-     background-color: var(--blog-bg-color); 
+    background-color: var(--blog-bg-color);
 }
 
 

@@ -7,15 +7,7 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>ggiraph text test</title>
-      <dc:creator>Roland Schmidt</dc:creator>
-      <link>https://werk.statt.codes/post/2021-02-17-ggiraphtext</link>
-      <description>A short description of the post.</description>
-      <guid>https://werk.statt.codes/post/2021-02-17-ggiraphtext</guid>
-      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Austria's Covid legislation: Duration of parliamentarian consultation period in comparision.</title>
       <dc:creator>Roland Schmidt</dc:creator>
@@ -96,6 +88,18 @@
       <guid>https://werk.statt.codes/post/2020-10-10-vienna-elections-2020-age-profile</guid>
       <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-10-10-vienna-elections-2020-age-profile/vienna-elections-2020-age-profile_files/figure-html5/unnamed-chunk-20-1.svg" medium="image" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>Austrian Parliament: MPs transparency and conflict of interest report</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2020-07-21-attransperency</link>
+      <description>A short description of the post.</description>
+      <category>Austria</category>
+      <category>OCR</category>
+      <category>web scraping</category>
+      <guid>https://werk.statt.codes/post/2020-07-21-attransperency</guid>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2020-07-21-attransperency/attransperency_files/figure-html5/unnamed-chunk-20-1.png" medium="image" type="image/png" width="1920" height="1152"/>
     </item>
     <item>
       <title>Austrian Parliament: MPs transparency and conflict of interest report</title>
