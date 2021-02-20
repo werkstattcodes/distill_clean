@@ -306,10 +306,10 @@ reactable(df_submission,
           compact = TRUE,
           style = list(fontSize = "10px"),
           theme = reactableTheme(
-            backgroundColor = "#f0eff0",
+            backgroundColor = plot_bg_color,
                 filterInputStyle = list(
                   color="green",
-                  backgroundColor = "#f0eff0")))
+                  backgroundColor = plot_bg_color)))
 ```
 
 Notice that there are several submissions which state 'Keine öffentliche Stellungnahme' (no public statement) as a name. Hence, we will not be able to analyse the text of all submissions, but only of those which are made public. How many are there? Let's see:
@@ -519,9 +519,9 @@ tb_text <- reactable(df_submission %>%
           bordered=TRUE,
           compact = TRUE,
           theme = reactableTheme(
-            backgroundColor = "#f0eff0",
+            backgroundColor = plot_bg_color,
                 filterInputStyle = list(
-                  color="green",backgroundColor = "#f0eff0")
+                  color="green",backgroundColor = plot_bg_color)
           )
           )
 
@@ -845,10 +845,10 @@ reactable(df_collocs,
           style = list(fontSize = "10px"),
           filterable = TRUE,
           theme = reactableTheme(
-            backgroundColor = "#f0eff0",
+            backgroundColor = plot_bg_color,
                 filterInputStyle = list(
                   color="green",
-                  backgroundColor = "#f0eff0")))
+                  backgroundColor = plot_bg_color)))
 ```
 
 ## Cosine similarity
@@ -926,10 +926,10 @@ reactable(head(df_similarity, n = 10^3),
           style = list(fontSize = "10px"),
           filterable = TRUE,
           theme = reactableTheme(
-            backgroundColor = "#f0eff0",
+            backgroundColor = plot_bg_color,
                 filterInputStyle = list(
                   color="green",
-                  backgroundColor = "#f0eff0")))
+                  backgroundColor = plot_bg_color)))
 
 ```
 

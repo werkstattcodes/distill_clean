@@ -2189,7 +2189,7 @@ The first potential hurdle is to virtually 'liberate' the results pertaining to 
 
 Et voila (here only the first entries). If needed, you can downlaod the cleaned file [here](https://github.com/werkstattcodes/NRW19_preference_votes/master/data/AUT_NRW19_preference_votes.csv){target="_blank"} github repo.
 
-```{r echo=FALSE, message=FALSE, warning=TRUE}
+```{r echo=FALSE, message=FALSE, warning=TRUE, eval=F}
 df_merge %>% 
   reactable(.,
           filterable = T,
@@ -2546,7 +2546,7 @@ n_mandates_regional_districts <- MoI_url %>%
 ```
 
 
-```{r message=FALSE, warning=FALSE, paged.print=TRUE, code_folding=NULL, echo=F}
+```{r message=FALSE, warning=FALSE, paged.print=TRUE, code_folding=NULL, echo=F, eval=F}
 library(reactable)
 n_mandates_regional_districts %>% 
   reactable(.,

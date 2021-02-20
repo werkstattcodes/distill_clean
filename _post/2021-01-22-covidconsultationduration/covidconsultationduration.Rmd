@@ -2,7 +2,7 @@
 title: "Austria's Covid legislation: Duration of parliamentarian consultation period in comparision."
 description: |
   A (relative) deep dive into the length of the public consultation period for draft bills in Austria, and whether three days for three pages are actually 'normal'.
-date: 01-22-2021
+date: 02-20 -2021
 draft: false
 author:
     
@@ -492,7 +492,7 @@ pl_submissions_per_bill<- df_consolidated %>%
                                   TRUE ~ as.character("no"))) %>% 
   ungroup() %>% 
   ggplot()+
-  labs(title="LEGISLATIVE CONSULTATION PROCESS:<br>Number of filed submissions per bill.",
+  labs(title="LEGISLATIVE CONSULTATION PROCESS:\nNumber of filed submissions per bill.",
        subtitle="Note log scale of y-axis.",
        x="Date",
        y="Number of submissions (log scale)",
@@ -904,7 +904,7 @@ Nevertheless, out of the `r nrow(df_consolidated)` bills open for consultation, 
 
 ```
 
-```{r, fig.height=5, echo=F, code_folding=NULL, dev="ragg_png"}
+```{r, fig.height=5, echo=F, code_folding=NULL, dev="svglite"}
 pl_consolidated
 ```
 

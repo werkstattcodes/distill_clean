@@ -135,6 +135,11 @@ d-byline .byline h3 {
     margin-block-start: 0em !important; /*moves byline up; aligns all three components horizontally*/
     }
 
+/*reduce margin above list of posts on listing page*/
+.posts-list {
+   margin-top: 30px;
+}
+
 .posts-list .metadata {
     margin-top: 0px !important;
     }
@@ -220,14 +225,14 @@ d-article pre, d-article div.sourceCode, d-article div.sourceCode pre {
 a.title:not(nav-right) {
    color: white;
    font-weight: bold;
-   background-color: #296273;
+   background-color: #0f2e3d;
    padding-bottom: 0px !important;
    padding-top: 0px !important;
    margin-top: 14px;
 }
 
 a.title:hover:not(nav-right) {
-   color: #296273;
+   color: #0f2e3d;
    font-weight: bold;
    background-color: var(--blog-bg-color);
 }

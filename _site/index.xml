@@ -7,7 +7,7 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Austria's Covid legislation: Duration of parliamentarian consultation period in comparision.</title>
       <dc:creator>Roland Schmidt</dc:creator>
@@ -17,8 +17,8 @@
       <category>Corona</category>
       <category>pdftools</category>
       <guid>https://werk.statt.codes/post/2021-01-22-covidconsultationduration</guid>
-      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2021-01-22-covidconsultationduration/covidconsultationduration_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1248" height="960"/>
+      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-01-22-covidconsultationduration/covidconsultationduration_files/figure-html5/unnamed-chunk-7-1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
       <title>Similarity of public submissions to Austria's amendment of the epidemic law</title>
@@ -32,7 +32,7 @@
       <category>web scraping</category>
       <guid>https://werk.statt.codes/post/2020-12-22-submissionsepidemiclaw</guid>
       <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2020-12-22-submissionsepidemiclaw/submissionsepidemiclaw_files/preview.png" medium="image" type="image/png" width="1068" height="670"/>
+      <media:content url="https://werk.statt.codes/post/2020-12-22-submissionsepidemiclaw/submissionsepidemiclaw_files/preview.png" medium="image" type="image/png" width="1060" height="673"/>
     </item>
     <item>
       <title>Vienna Elections 2020: Analysis of parties' ads on facebook</title>
@@ -44,7 +44,7 @@
       <category>elections</category>
       <guid>https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook</guid>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png" medium="image" type="image/png" width="1123" height="707"/>
+      <media:content url="https://werk.statt.codes/post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png" medium="image" type="image/png" width="1127" height="692"/>
     </item>
     <item>
       <title>Static maps with mapbox background images (snapbox)</title>
@@ -100,18 +100,6 @@
       <guid>https://werk.statt.codes/post/2020-07-21-attransperency</guid>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2020-07-21-attransperency/attransperency_files/figure-html5/unnamed-chunk-20-1.png" medium="image" type="image/png" width="1920" height="1152"/>
-    </item>
-    <item>
-      <title>Austrian Parliament: MPs transparency and conflict of interest report</title>
-      <dc:creator>Roland Schmidt</dc:creator>
-      <link>https://werk.statt.codes/post/2020-07-21-austrian-parliament-mps-transparency-and-conflict-of-interest-report</link>
-      <description>Analysis of MP's transparency and conflict of interest report.</description>
-      <category>Austria</category>
-      <category>OCR</category>
-      <category>web scraping</category>
-      <guid>https://werk.statt.codes/post/2020-07-21-austrian-parliament-mps-transparency-and-conflict-of-interest-report</guid>
-      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2020-07-21-austrian-parliament-mps-transparency-and-conflict-of-interest-report/austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/preview.png" medium="image" type="image/png" width="4200" height="3000"/>
     </item>
     <item>
       <title>Update on Google mobility reports on Austria</title>

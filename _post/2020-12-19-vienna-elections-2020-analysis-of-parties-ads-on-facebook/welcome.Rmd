@@ -211,7 +211,7 @@ neos <- "#EA5290"
 oevp <- "#5DC2CC"
 spoe <- "#FC0204"
 greens <- "#A3C630"
-strache <- "White"
+strache <- "grey50"
 bier <- "yellow"
 
 df_party_colors <- tibble(fpö=fpoe, neos=neos, övp=oevp, spö=spoe, greens=greens, strache=strache, bier=bier) %>% 

@@ -561,9 +561,9 @@
 </defs>
 <g id="surface34">
 <rect x="0" y="0" width="468" height="288" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
-<rect x="0" y="0" width="468" height="288" style="fill:rgb(90.196078%,90.196078%,90.196078%);fill-opacity:1;stroke:none;"/>
+<rect x="0" y="0" width="468" height="288" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
 <g clip-path="url(#clip1)" clip-rule="nonzero">
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(90.196078%,90.196078%,90.196078%);fill-opacity:1;" d="M 30.207031 230.996094 L 468 230.996094 L 468 79.242188 L 30.207031 79.242188 Z M 30.207031 230.996094 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 30.207031 230.996094 L 468 230.996094 L 468 79.242188 L 30.207031 79.242188 Z M 30.207031 230.996094 "/>
 </g>
 <g clip-path="url(#clip2)" clip-rule="nonzero">
 <path style="fill:none;stroke-width:0.426791;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(80%,80%,80%);stroke-opacity:1;stroke-miterlimit:10;" d="M 30.207031 230.996094 L 468 230.996094 "/>

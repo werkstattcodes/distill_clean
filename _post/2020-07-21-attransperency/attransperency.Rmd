@@ -173,7 +173,7 @@ theme_post <- function() {
       legend.box.just = "top",
       legend.key.height = unit(0.2, "line"),
       legend.key.width = unit(0.5, "line"),
-      text = element_text(size = 3)
+      text = element_text(size = 5)
     )
 }
 
@@ -642,7 +642,7 @@ df_income <- df_income %>%
 
 Below the result with all MPs, their party affiliation, and income data.
 
-```{r echo=FALSE, code_folding=F}
+```{r echo=FALSE, code_folding=NULL}
 datatable(df_income %>% select(name, party, gender, income_category_19),
           colnames=c("MP name"="name", "income category"="income_category_19"),
           filter="top",
@@ -718,7 +718,7 @@ pl_rel <- df_agg %>%
         axis.title.x = element_blank())
 ```
 
-```{r echo=FALSE, code_folding=NULL}
+```{r echo=FALSE, fig.height=7, fig.width=10, code_folding=NULL, dev="svglite"}
 pl_rel
 ```
 
