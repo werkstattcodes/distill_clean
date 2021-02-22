@@ -7,7 +7,15 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>test table identification</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-02-21-test-table-identification</link>
+      <description>A short description of the post.</description>
+      <guid>https://werk.statt.codes/post/2021-02-21-test-table-identification</guid>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Austria's Covid legislation: Duration of parliamentarian consultation period in comparision.</title>
       <dc:creator>Roland Schmidt</dc:creator>
@@ -17,7 +25,7 @@
       <category>Corona</category>
       <category>pdftools</category>
       <guid>https://werk.statt.codes/post/2021-01-22-covidconsultationduration</guid>
-      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2021-01-22-covidconsultationduration/covidconsultationduration_files/figure-html5/unnamed-chunk-7-1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
@@ -78,7 +86,7 @@
       <title>Vienna Elections 2020: Age profile of electoral candidates</title>
       <dc:creator>Roland Schmidt</dc:creator>
       <link>https://werk.statt.codes/post/2020-10-10-vienna-elections-2020-age-profile</link>
-      <description>A short description of the post.</description>
+      <description>An empirical look at candidates' age.</description>
       <category>Austria</category>
       <category>elections</category>
       <category>OCR</category>

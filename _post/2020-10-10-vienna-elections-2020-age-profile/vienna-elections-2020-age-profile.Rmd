@@ -1,7 +1,7 @@
 ---
 title: "Vienna Elections 2020: Age profile of electoral candidates"
 description: |
-  A short description of the post.
+  An empirical look at candidates' age.
 date: 10-10-2020
 
 author:
@@ -221,7 +221,7 @@ Again, as so often, the trickiest part is to get the data ‘liberated’ from t
 
 When it comes to extracting the data from the linked pdf, a difficulty may arise due to the two-column format of the document. Hence, simple row-wise extraction doesn’t help much since it would put candidates together which could be from different parties. Similarly, simply isolating the two columns and extracting candidates would also not do the trick since breaks betwee parties, districts etc run over two, and not one column. To illustrate this, I resorted to cutting edge technology and drew the two arrows below:
 
-![](/post/2020-10-10-vienna-elections-2020-age-profile_files/Inkedtext_flow_LI_Moment.jpg){width=50% height=50%}
+![](vienna-elections-2020-age-profile_files/Inkedtext_flow_LI_Moment.jpg){width=50% height=50%}
 
 Luckily, the [`tabulizer` package](https://docs.ropensci.org/tabulizer/){target="_blank"} is not only very powerful when it comes to extracting text/data from a pdf, it is also sophisticated enough to take into consideration the text flow highlighted above. I am not familiar with the underlying heuristic, but I assume it is contingent on consistently formatted section headings. Hence, empowered with this tool, retrieving the text becomes rather effortless. The subsequent steps are a battery of regular expressions to extract the specific data we are interested in. To see the code, unfold the snippets below.
 
@@ -412,7 +412,9 @@ html_tb_all <- div(class="reactable-table",
 </details>
 
 ```{r echo=FALSE}
+#table.start
 html_tb_all
+#table.end
 ```
 
 # Analysis
@@ -561,7 +563,9 @@ html_tb_young <- fn_reactable_headings(header="WIEN-WAHL 2020: Jüngesten Kandid
 ```
 </details>
 ```{r echo=FALSE}
+#table.start
 html_tb_young
+#table.end
 ```
 
 As becomes clear from the table, there are overall `r df_main %>% nrow()` candidates who were all born in `r df_main %>% distinct(year_birth) %>% pull()`. 
@@ -634,8 +638,9 @@ html_tb_old <- fn_reactable_headings(header="WIEN-WAHL 2020: Ältesten KandidatI
 </details>
 
 ```{r echo=FALSE}
+#table.start
 html_tb_old
-
+#table.end
 ```
 <br>
 
@@ -987,7 +992,9 @@ Now let's dig deeper and see for the distribution of birth years by electoral di
 
 ### Graph
 <br>
+
 Hover with the mouse over the box plot and dots to obtain the pertaining data.
+
 <details closed> 
 <summary>Code: graph</summary> 
 ```{r}
@@ -1164,7 +1171,9 @@ html_age_list_district <- fn_reactable_headings(header ="WIEN-WAHL 2020: Durchsc
 ```
 </details>
 ```{r echo=FALSE}
+#table.start
 html_age_list_district
+#table.end
 ```
 <br>
 
@@ -1334,7 +1343,9 @@ tb_residence_party <- fn_reactable_headings(header = "Parties' number and share 
 </details>
 
 ```{r echo=FALSE}
+#table.start
 tb_residence_party
+#table.end
 ```
 
 
@@ -1404,7 +1415,9 @@ tb_residence_district <- fn_reactable_headings(header = "Share of non-resident c
 </details>
 
 ```{r echo=FALSE}
+#table.start
 tb_residence_district
+#table.end
 ```
 <br>
 

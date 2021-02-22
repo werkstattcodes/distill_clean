@@ -1226,7 +1226,7 @@ The boxplot below might be a bit of an overkill, but it gives us a more detailed
 
 <summary>Code: boxplots</summary>
 
-```{r echo=TRUE, fig.height=7}
+```{r echo=TRUE, fig.height=7, code_folding=F}
 df_position_labels <- df_position_long %>% 
   filter(!position %in% c("executive_non_remunerated_n",
                         "total_n")) %>% 
@@ -1303,7 +1303,7 @@ pl_box <- df_position_long %>%
 
 </details>
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.height=7, fig.width=10, code_folding=NULL}
 pl_box
 ```
 

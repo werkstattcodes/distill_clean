@@ -658,7 +658,7 @@ pl_duration_legis_period<- df_consolidated %>%
   ungroup() %>% 
   ggplot()+
   labs(title="Distribution of length of consultative periods.",
-       subtitle="",
+       subtitle="Red dot indicates median value.",
        x="legislative period",
        y="duration in days",
        caption=caption) +
@@ -911,13 +911,11 @@ pl_consolidated
 ## Overview table {#datatable}
 If you are interested in the details pertaining to each bill, the table below provides them. Note that for the sake of completeness this table also includes those bills for which I retrieved impossible/wrong duration data (see [here](#wrongdata) for details.) However, the latter were excluded from the analysis.
 
-```{r ref.label="chunk_reactable", code_folding=NULL, eval=F, echo=F}
-
-```
-
 
 ```{r, layout="l-body-outset", code_folding=NULL, echo=F}
+#table.start
 tb_consolidated
+#table.end
 ```
 
 ## Duration of consultation process per leigslative  period
@@ -1138,6 +1136,7 @@ knitr::include_graphics("covidconsultationduration_files/images/example_multiple
 Here's how the case is included in the data table above:
 
 ```{r code_folding=NULL, include=T, echo=F, layout="l-body-outset"}
+#table.start
 df_consolidated %>% 
   filter(duration_collected>=0) %>% 
   filter(bill_id=="ME_00294") %>% 
@@ -1218,6 +1217,7 @@ df_consolidated %>%
                             margin="0px 0px 0px 50px",
                             backgroundColor=plot_bg_color)))
               })
+#table.end
 ```
 
 ## Missing or wrong data {#wrongdata}
@@ -1231,6 +1231,7 @@ df_dates_missing <- df_duration_mult %>%
   filter(if_any(starts_with("date"), is.na)) #new w dplyr 1.04
 #nrow(df_dates_missing) #21
 
+#table.start
 df_dates_missing %>% 
   select(legis_period, title, bill_id, contains("date"), link_single_bill_page) %>% 
   reactable(.,
@@ -1253,12 +1254,14 @@ df_dates_missing %>%
                                     target="_blank",
                                     "Link")})),
             theme=rt_theme)
-
+#table.end
 ```
 
 There were also `r nrow(df_duration_collected %>% filter(duration_collected<0))`  bills where start and end dates were provided, but they effectively meant a negative duration. As far as I can tell, the reason behind these erroneous results are either due to obviously wrong data entries or an inconsistency in the data representation (and subsequently wrongly extracted data). 
 
 ```{r, eval=T, code_folding=NULL, include=T, layout="l-body-outset"}
+
+#table.start
 df_duration_collected %>% 
   filter(duration_collected<0) %>% 
   mutate(duration_collected=as.numeric(duration_collected)) %>% 
@@ -1285,6 +1288,7 @@ df_duration_collected %>%
                                     target="_blank",
                                     "Link")})),
             theme=rt_theme)
+#table.end
 ```
 
 Overall, there were `r nrow(df_duration_collected %>% filter(duration_collected<0)) + nrow(df_duration_mult %>% filter(if_any(starts_with("date"), is.na)))` cases in which the obtained duration was not helpful and eventually omitted from the further analysis. With a bit more time, one could go through these cases and correct the errors.

@@ -444,7 +444,9 @@ rt_pages <- reactable(pages_of_interest,
           compact=T,
           theme = rt_theme)
 
+#table.start
 fn_reactable_headings(title="WIEN-WAHL 2020: Facebook pages within scope and affiliated party", subtitle="", body = rt_pages, caption=my_caption)
+#table.end
 
 ```
 
@@ -576,10 +578,12 @@ tb_all <- reactable(df_ads_wide,
           wrap=F,
           theme=rt_theme)
 
+#table.start
 fn_reactable_headings(title="WIEN-WAHL 2020: All Facebook ads",
                       subtitle=glue::glue("Ads posted between {date_observation_start_format} and {date_observation_end_format}"),
                       body = tb_all,
                       caption=my_caption)
+#table.end
 ```
 
 We now have a dataframe with all ads of interest and most of the data rearrangement already implemented.
@@ -748,11 +752,12 @@ rt_party_pages <- reactable(df_party,
 
 
 ```{r echo=FALSE}
+#table.start
 fn_reactable_headings(title="WIEN-WAHL 2020: Number and total amount spent by party",
                       subtitle=glue::glue("Click to see details for indiviudal Facebook pages. Ads placed between {date_observation_start_format} and {date_observation_end_format}."),
                       body=rt_party_pages,
                       caption=my_caption)
-
+#table.end
 ```
 
 
@@ -1221,10 +1226,12 @@ rt_impressions <- reactable(tb_impression_cat %>%
 </details>
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
+#table.start
 fn_reactable_headings(title="Impressions",
                       subtitle="",
                       body = rt_impressions,
                       caption = my_caption)
+#table.end
 ```
 
 <br>
@@ -1762,8 +1769,9 @@ rt_female <- reactable(df_female,
 </details>
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
+#table.start
 fn_reactable_headings(title="WIEN-WAHL 2020: Accounts which placed ads with a median female audience share of >50%", subtitle="", body = rt_female, caption=my_caption)
-
+#table.end
 ```
 <br>
 Indeed, as the table above shows there were indeed a few pages with an average female audience share larger than 50 %. What is noteworthy, these pages belong almost exclusively to the Greens. There were only `r df_female %>% filter(party=="SPÖ") %>% nrow()` pages which belonged to the SPÖ, and `r df_female %>% filter(party=="ÖVP") %>% nrow()` to the ÖVP. There was not a single page from the FPÖ, Strache and, more surprisingly, the Neos.

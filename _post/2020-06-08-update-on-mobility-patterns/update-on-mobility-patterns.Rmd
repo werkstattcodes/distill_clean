@@ -275,15 +275,21 @@ options(noaakey = Sys.getenv("noaakey"))
 ```{r eval=TRUE, fig.height=6}
 library(rnoaa)
 #get all stations in Austria
-df_AT <- ncdc_stations(locationid='FIPS:AU')$data 
+df_AT <- ncdc_stations(locationid='FIPS:AU', token=Sys.getenv("noaakey"))$data 
 
 #only those of interest
 df_stations <- df_AT %>%  
   filter(str_detect(name, regex("Wien|Salzburg|Graz|Klagenfurt|Poelten", ignore_case = T)))
 
 #get temperature data
-df_res <- ncdc(datasetid = "GHCND", stationid = df_stations$id, datatypeid = "TAVG", startdate = "2020-01-01", enddate = "2020-06-01",
-     add_units=T, limit=1000)
+df_res <- ncdc(datasetid = "GHCND", 
+               stationid = df_stations$id, 
+               datatypeid = "TAVG", 
+               startdate = "2020-01-01", 
+               enddate = "2020-06-01", 
+               token=Sys.getenv("noaakey"),
+               add_units=T, 
+               limit=1000)
 
 df_temps <- df_res$data %>% 
   mutate(date=lubridate::ymd_hms(date) %>% as.Date()) %>% 

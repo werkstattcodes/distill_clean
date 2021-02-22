@@ -288,6 +288,7 @@ df_submission <- readr::read_csv2(file=here::here("_blog_data",                 
 As it turns out, there were `r nrow(df_submission) %>% scales::comma()` submissions to the amendment in total.
 
 ```{r echo=FALSE, paged.print=TRUE}
+#table.start
 reactable(df_submission, 
           defaultPageSize = 4, 
           columns = list(
@@ -310,6 +311,7 @@ reactable(df_submission,
                 filterInputStyle = list(
                   color="green",
                   backgroundColor = plot_bg_color)))
+#table.end
 ```
 
 Notice that there are several submissions which state 'Keine öffentliche Stellungnahme' (no public statement) as a name. Hence, we will not be able to analyse the text of all submissions, but only of those which are made public. How many are there? Let's see:
@@ -530,7 +532,9 @@ tb_text <- reactable(df_submission %>%
 </details>
 
 ```{r echo=FALSE}
+#table.start
 tb_text
+#table.end
 ```
 
 ## Frequency of key formulation
@@ -839,6 +843,7 @@ And as it turns out, our used inductively selected key phrase '`r submission_pat
 [^1]: Note that the frequency of `r submission_pattern` quanteda result is different than the frequency I detected earlier. I am not entirely sure why this is, but I assume it's due to different approaches. While our result above is the actual
 
 ```{r echo=FALSE}
+#table.start
 reactable(df_collocs,
           bordered=TRUE,
           compact = TRUE,
@@ -849,6 +854,7 @@ reactable(df_collocs,
                 filterInputStyle = list(
                   color="green",
                   backgroundColor = plot_bg_color)))
+#table.end
 ```
 
 ## Cosine similarity
@@ -917,6 +923,7 @@ df_similarity <- mat_similarity %>%
 What we obtain now is a comparison of all submission pairs (!) as to their cosine similarity. Overall, these are `r df_similarity %>% nrow() %>% scales::comma()` pairs (duplicates removed, i.e. document 1 vs document 2 = document 2 vs document 1). Seems like text analysis can quickly get a bit large. To keep the table manageable I only show the first thousand.
 
 ```{r echo=FALSE}
+#table.start
 reactable(head(df_similarity, n = 10^3),
           columns=list(
             cosine=colDef(format=colFormat(digits=4),
@@ -930,6 +937,7 @@ reactable(head(df_similarity, n = 10^3),
                 filterInputStyle = list(
                   color="green",
                   backgroundColor = plot_bg_color)))
+#table.end
 
 ```
 
