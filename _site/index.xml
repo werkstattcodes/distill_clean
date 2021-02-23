@@ -7,15 +7,7 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 21 Feb 2021 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>test table identification</title>
-      <dc:creator>Roland Schmidt</dc:creator>
-      <link>https://werk.statt.codes/post/2021-02-21-test-table-identification</link>
-      <description>A short description of the post.</description>
-      <guid>https://werk.statt.codes/post/2021-02-21-test-table-identification</guid>
-      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Austria's Covid legislation: Duration of parliamentarian consultation period in comparision.</title>
       <dc:creator>Roland Schmidt</dc:creator>
@@ -25,7 +17,7 @@
       <category>Corona</category>
       <category>pdftools</category>
       <guid>https://werk.statt.codes/post/2021-01-22-covidconsultationduration</guid>
-      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2021-01-22-covidconsultationduration/covidconsultationduration_files/figure-html5/unnamed-chunk-7-1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
@@ -101,7 +93,7 @@
       <title>Austrian Parliament: MPs transparency and conflict of interest report</title>
       <dc:creator>Roland Schmidt</dc:creator>
       <link>https://werk.statt.codes/post/2020-07-21-attransperency</link>
-      <description>A short description of the post.</description>
+      <description>Analysis of Austria MP's transparency reports.</description>
       <category>Austria</category>
       <category>OCR</category>
       <category>web scraping</category>
@@ -160,7 +152,7 @@
       <title>Bosnia: Voting behavior of MPs in the House of Representatives</title>
       <dc:creator>Roland Schmidt</dc:creator>
       <link>https://werk.statt.codes/post/2020-02-07-bih-voting-behavior-of-mps-in-house-of-representatives</link>
-      <description>A short description of the post.</description>
+      <description>Creating and analysing a new dataset on the voting behavior of BiH's members of the House of Representatives.</description>
       <category>Bosnia</category>
       <category>OCR</category>
       <category>web scraping</category>

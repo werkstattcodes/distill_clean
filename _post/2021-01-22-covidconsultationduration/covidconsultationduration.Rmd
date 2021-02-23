@@ -746,7 +746,7 @@ caption_note <- "Note: Each dot represents a specific bill of x pages and y days
 
 pl_length_duration <- df_consolidated %>% 
   filter(duration_collected<21) %>% 
-  filter(duration_collected>-1) %>% 
+  filter(duration_collected>0) %>% 
   filter(pdf_pages_sum<11) %>% 
   mutate(pdf_pages_sum_fct=forcats::fct_inseq(as.character(pdf_pages_sum))) %>% 
   mutate(duration_collected_fct=fct_inseq(as.character(duration_collected)) %>% fct_rev()) %>% 

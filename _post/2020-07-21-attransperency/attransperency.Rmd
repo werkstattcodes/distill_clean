@@ -1,7 +1,7 @@
 ---
 title: "Austrian Parliament: MPs transparency and conflict of interest report"
 description: |
-  A short description of the post.
+  Analysis of Austria MP's transparency reports.
 
 date: 07-21-2020
 author:
@@ -15,7 +15,7 @@ categories:
   - OCR
   - web scraping
 
-# preview: austrian-parliament-mps-transparency-and-conflict-of-interest-report_files/preview.png
+preview: attransperency_files/preview.png #speeling errors
 
 output:
   distill::distill_article:

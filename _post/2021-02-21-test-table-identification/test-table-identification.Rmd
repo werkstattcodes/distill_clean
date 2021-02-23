@@ -1,0 +1,29 @@
+---
+title: "test table identification"
+description: |
+  A short description of the post.
+author:
+  - name: Roland Schmidt
+    url: https://werk.statt.codes
+date: 02-21-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    
+draft: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T)
+library(tidyverse)
+library(DT)
+```
+
+
+```{r}
+#table.start
+datatable(mtcars)
+#table.end
+```
+
