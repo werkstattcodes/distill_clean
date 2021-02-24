@@ -1032,7 +1032,7 @@ First, to get the start and end date, I keep (filter) only those rows which incl
 
 Second, to eventually get the text of the bills, the function extracts those weblinks which include 'Ministerialentwurf' (ministrial draft) and the file suffix 'pdf', or 'Gesetzestext' (law text) or 'Entwurf' (draft) in their text. The `xpath` argument  of the `rvest::html_node` function allows for `regex` expressions what is just... beautiful. These links will be later used to download the bills and extract their number of pages.
 
-Third, 
+Third, apply the function to all links.
 
 ```{r chunk_fn_consult_copy, eval=F, code_folding=NULL, include=T}
 #function to extract details (duration and pdf links) from bills' overview
