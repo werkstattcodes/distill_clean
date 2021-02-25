@@ -7,9 +7,9 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Austria's Covid legislation: Duration of parliamentarian consultation period in comparision.</title>
+      <title>Austria's Covid legislation: Duration of parliamentarian consultation period in comparison.</title>
       <dc:creator>Roland Schmidt</dc:creator>
       <link>https://werk.statt.codes/post/2021-01-22-covidconsultationduration</link>
       <description>A (relative) deep dive into the length of the public consultation period for draft bills in Austria, and whether three days for three pages are actually 'normal'.</description>
@@ -17,8 +17,26 @@
       <category>Corona</category>
       <category>pdftools</category>
       <guid>https://werk.statt.codes/post/2021-01-22-covidconsultationduration</guid>
-      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
       <media:content url="https://werk.statt.codes/post/2021-01-22-covidconsultationduration/covidconsultationduration_files/figure-html5/unnamed-chunk-7-1.svg" medium="image" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>Thank you blogdown, hello distill</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-02-12-thankyoublogdownhellodistill</link>
+      <description>A short description of the post.</description>
+      <category>distill</category>
+      <guid>https://werk.statt.codes/post/2021-02-12-thankyoublogdownhellodistill</guid>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Thank you blogdown, hello distill</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-02-24-hellodistill</link>
+      <description>A short description of the post.</description>
+      <category>distill</category>
+      <guid>https://werk.statt.codes/post/2021-02-24-hellodistill</guid>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Similarity of public submissions to Austria's amendment of the epidemic law</title>

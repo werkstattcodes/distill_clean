@@ -1,5 +1,5 @@
 ---
-title: "Austria's Covid legislation: Duration of parliamentarian consultation period in comparision."
+title: "Austria's Covid legislation: Duration of parliamentarian consultation period in comparison."
 description: |
   A (relative) deep dive into the length of the public consultation period for draft bills in Austria, and whether three days for three pages are actually 'normal'.
 date: 02-20 -2021
