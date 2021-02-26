@@ -7,7 +7,18 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Thank you {blogdown}, hello {distill}.</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-02-24-hellodistill</link>
+      <description>A few notes on moving from blogdown to distill.</description>
+      <category>distill</category>
+      <category>blogdown</category>
+      <guid>https://werk.statt.codes/post/2021-02-24-hellodistill</guid>
+      <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-02-24-hellodistill/hellodistill_files/distill_logo_small.png" medium="image" type="image/png" width="2190" height="1156"/>
+    </item>
     <item>
       <title>Austria's Covid legislation: Duration of parliamentarian consultation period in comparison.</title>
       <dc:creator>Roland Schmidt</dc:creator>

@@ -162,7 +162,7 @@ pre {
  /* font-size: 90%;*/
 }
 
-::selection { background: #296273; }
+::selection { background: orange; }
 
 
 /*HEADINGS*/
@@ -237,12 +237,6 @@ a.title:hover:not(nav-right) {
    font-weight: bold;
    background-color: var(--blog-bg-color);
 }
-
-
-
-
-
-
 
 
 
