@@ -7,9 +7,6 @@ base_url: https://werk.statt.codes/
 navbar:
   search: true
   right:
-    # - text: "Home"
-    #   href: index.html
-    # - text: "About"
     - icon: fa fa-info-circle
       href: about.html
     - icon: fa fa-twitter
@@ -31,13 +28,11 @@ collections:
 rss:
   full_content: false
 
-output: 
-  distill::distill_article
-
-includes:
-    after_body: "_after_body.html"
-
-theme: theme.css   
-
+output:
+  distill::distill_article:
+    theme: theme.css
+    highlight: rstudio
+    includes:
+      after_body: "_after_body.html"
 
 google_analytics: "UA-149910232-1"
