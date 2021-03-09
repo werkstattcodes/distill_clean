@@ -31,7 +31,7 @@ rss:
 output:
   distill::distill_article:
     theme: theme.css
-    highlight: rstudio
+    #highlight: rstudio
     includes:
       after_body: "_after_body.html"
 
