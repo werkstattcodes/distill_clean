@@ -31,6 +31,7 @@ editor_options:
 ```{r setup, include=FALSE, code_collapse=NULL}
 library(tidyverse)
 library(svglite)
+library(hrbrthemes)
 
 knitr::opts_chunk$set(echo = FALSE)
 
