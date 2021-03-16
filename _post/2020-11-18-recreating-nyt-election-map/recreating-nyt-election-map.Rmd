@@ -13,7 +13,7 @@ author:
     orcid_id: 0000-0002-6897-1693
 categories:
   - Austria
-  - Corona virus
+  - COVID
   - OCR
   - stringr
   - web scraping

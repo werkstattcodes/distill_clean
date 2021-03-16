@@ -10,7 +10,7 @@ author:
     url: https://werk.statt.codes
     orcid_id: 0000-0002-6897-1693
 categories:
-  - Corona virus
+  - COVID
   - Austria
 
 #preview: submissionsepidemiclaw_files/preview.png

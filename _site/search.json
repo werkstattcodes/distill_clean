@@ -6,14 +6,14 @@
       "description": "Yet another blog...",
       "author": [],
       "contents": "\r\nNot that the world would have been waiting for another blog… but there you go. This (work in progress?) blog is a collection of my ‘thoughts in R’ with varying degrees of seriousness. Posts will mostly relate to my substantive interests (comparative political science, human rights) or are simply notes to myself on a specific R function. Not claiming any final truth. One step at a time.\r\nNote that I recently moved this blog and hence a few entries are somewhat ‘messy’ (broken links, images out of place). I’ll hope to be able to iron this out soon.\r\nRoland Schmidt #IStandWithCEU #COYG\r\nCodes are collected at www.github.com/werkstattcodes Tweets are at @zoowalk.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-03-09T09:11:20+01:00"
+      "last_modified": "2021-03-16T10:23:18+01:00"
     },
     {
       "path": "index.html",
       "title": "Posts",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-03-09T09:17:41+01:00"
+      "last_modified": "2021-03-16T10:23:23+01:00"
     }
   ],
   "collections": ["post/post.json"]

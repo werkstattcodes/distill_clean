@@ -12,7 +12,7 @@ author:
 categories:
   - Austria
   - climate
-  - Corona virus
+  - COVID
   - shiny
 
 # preview: /preview.png

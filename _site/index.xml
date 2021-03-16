@@ -7,7 +7,18 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Austria's Covid legislation: The remarkable absence of authorship in public submissions to the consultative process</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-03-10-covidsubmissionsnoauthor</link>
+      <description>Austria's legislative procedure provides for a consultative process which allows all citizens to make submissions in which they can raise their concerns as to a proposed bill. When making such a submission, submitters can decide whether their authorship and submission are published on the website of the parliament. Remarkably, the share of undisclosed authorships and statements is particularly high with bills introducing various restrictions to curtail the Covid epidemic.</description>
+      <category>Austria</category>
+      <category>COVID</category>
+      <guid>https://werk.statt.codes/post/2021-03-10-covidsubmissionsnoauthor</guid>
+      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-03-10-covidsubmissionsnoauthor/covidsubmissionsnoauthor_files/images/preview.png" medium="image" type="image/png" width="1075" height="576"/>
+    </item>
     <item>
       <title>Thank you {blogdown}, hello {distill}.</title>
       <dc:creator>Roland Schmidt</dc:creator>
