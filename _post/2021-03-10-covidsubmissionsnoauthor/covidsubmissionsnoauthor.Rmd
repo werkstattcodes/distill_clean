@@ -41,7 +41,7 @@ plot_bg_color <- readr::read_file(file=here::here("theme.css")) %>%
 
 
 theme_post <- function() {
-  hrbrthemes::theme_ipsum_rc() +
+  hrbrthemes::theme_ipsum_rc(base_family="RobotoCondensed") +
     theme(
       plot.background = element_rect(fill = plot_bg_color, color=NA),
       panel.background = element_rect(fill = plot_bg_color, color=NA),
@@ -452,6 +452,7 @@ pl_public<- df_submissions_per_bill %>%
 ```{r, echo=F, code_folding=NULL, dev="svglite"}
 girafe(ggobj = pl_public,
        height_svg = 4.5,
+       font=list(sans="RobotoCondensed"),
        options = list(
     opts_toolbar(saveaspng = FALSE),
     opts_tooltip(css = glue::glue("background-color:{plot_bg_color}; 
