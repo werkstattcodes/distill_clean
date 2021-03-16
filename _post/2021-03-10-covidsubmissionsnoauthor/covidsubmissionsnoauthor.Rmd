@@ -30,6 +30,7 @@ editor_options:
 
 ```{r setup, include=FALSE, code_collapse=NULL}
 library(tidyverse)
+library(svglite)
 
 knitr::opts_chunk$set(echo = FALSE)
 
