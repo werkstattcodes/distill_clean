@@ -448,7 +448,7 @@ pl_public<- df_submissions_per_bill %>%
 ```
 
 
-```{r, echo=F, code_folding=NULL}
+```{r, echo=F, code_folding=NULL, dev="svglite"}
 girafe(ggobj = pl_public,
        height_svg = 4.5,
        options = list(
