@@ -14,6 +14,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT Serif');
 @import url('https://fonts.googleapis.com/css?family=Roboto Condensed');
 @import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Lora');
 
 
 html {
@@ -34,7 +35,7 @@ html {
   /*-- Specify custom fonts ~~~ must be imported above   --*/
   --heading-font:    sans-serif;
   --mono-font:       monospace;
-  --body-font:       sans-serif;
+  --body-font:       Lora; /*sans-serif;*/
   --navbar-font:     sans-serif;  /* websites + blogs only */
 }
 
@@ -160,7 +161,7 @@ d-byline .byline h3 {
 /*description in overview page */
 .posts-list .post-preview p {
   margin: 0;
-  line-height: 1.1em !important;
+  line-height: 1.5em !important;
   font-size:12px;
  /* font-family: "PT-Serif" !important;*/
   
