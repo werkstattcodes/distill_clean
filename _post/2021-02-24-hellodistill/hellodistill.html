@@ -1434,7 +1434,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="hellodistill_files/header-attrs-2.8/header-attrs.js"></script>
+  <script src="hellodistill_files/header-attrs-2.7/header-attrs.js"></script>
   <script src="hellodistill_files/jquery-1.11.3/jquery.min.js"></script>
   <script src="hellodistill_files/popper-2.6.0/popper.min.js"></script>
   <link href="hellodistill_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1508,7 +1508,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>To overcome this obstacle, I first build the blog, producing the large <code>post.json</code> file, and afterwards run a script removing everything that is between the <code>&lt;svg&gt;</code> and <code>&lt;/svg&gt;</code> tags. Plots created by <code>ggiraph</code> are svg files.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://arxiv.org/abs/1403.2805'>jsonlite</a></span><span class='op'>)</span>
 
 <span class='va'>post</span> <span class='op'>&lt;-</span> <span class='fu'>readr</span><span class='fu'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/read_file.html'>read_file</a></span><span class='op'>(</span>file<span class='op'>=</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"_site"</span>, <span class='st'>"post"</span>, <span class='st'>"post.json"</span><span class='op'>)</span><span class='op'>)</span>

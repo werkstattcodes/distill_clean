@@ -7,56 +7,7 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>The 'Ibizia Inquiry' in numbers</title>
-      <dc:creator>Roland Schmidt</dc:creator>
-      <link>https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers</link>
-      <description>A few weeks ago, on 15 June, the so-called 'Ibiza Commission of Inquiry' had its last inquiry session after almost one year. The commission established by the Austrian Parliament was set up to investigate the prevalence of corruption during the coalition government of the ÖVP and FPÖ. This post diggs into the published transcripts of the inquiry's sessions.</description>
-      <category>Austria</category>
-      <category>Parliament</category>
-      <category>web scraping</category>
-      <guid>https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers</guid>
-      <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers/the-ibizia-inquiry-in-numbers_files/images/subpage_link_to_transcript.PNG" medium="image" type="image/png" width="1157" height="835"/>
-    </item>
-    <item>
-      <title>reactablefmtr and title size issue?</title>
-      <dc:creator>Roland Schmidt</dc:creator>
-      <link>https://werk.statt.codes/post/2021-08-19-reactablefmtr-and-title-size-issue</link>
-      <description>A short description of the post.</description>
-      <guid>https://werk.statt.codes/post/2021-08-19-reactablefmtr-and-title-size-issue</guid>
-      <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>test</title>
-      <dc:creator>Unknown</dc:creator>
-      <link>https://werk.statt.codes/post/2021-05-17-test</link>
-      <description>A short description of the post.</description>
-      <guid>https://werk.statt.codes/post/2021-05-17-test</guid>
-      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Extracting speeches held at Austria's Nationalrat</title>
-      <dc:creator>Roland Schmidt</dc:creator>
-      <link>https://werk.statt.codes/post/2021-04-20-extracting-speeches-held-at-austrias-parliament</link>
-      <description>This blog details how to retrieve transcripts of sessions held by Austria's lower chamber, the Nationalrat,  and extract individual statements by MPs and members of government. The resulting dataset forms the basis for further analysis.</description>
-      <category>Austria8</category>
-      <category>text analysis</category>
-      <guid>https://werk.statt.codes/post/2021-04-20-extracting-speeches-held-at-austrias-parliament</guid>
-      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>How often do Austria's Chancellors use the word 'I'</title>
-      <dc:creator>Roland Schmidt</dc:creator>
-      <link>https://werk.statt.codes/post/2021-04-22-how-often-do-austrias-chancellors-use-the-word-i</link>
-      <description>Drawing on transcripts of chancellors' statements in parlament, I check which head of government has used the word 'I' most frequently. The post details how to scrape records of speeches held in Austria's parliament and extract data of interest.</description>
-      <category>Austria</category>
-      <category>text analysis</category>
-      <guid>https://werk.statt.codes/post/2021-04-22-how-often-do-austrias-chancellors-use-the-word-i</guid>
-      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2021-04-22-how-often-do-austrias-chancellors-use-the-word-i/how-often-do-austrias-chancellors-use-the-word-i_files/figure-html5/unnamed-chunk-11-1.png" medium="image" type="image/png" width="1248" height="768"/>
-    </item>
+    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Austria's Covid legislation: The remarkable absence of authorship in public submissions to the consultative process</title>
       <dc:creator>Roland Schmidt</dc:creator>

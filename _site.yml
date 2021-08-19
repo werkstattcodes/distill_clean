@@ -17,6 +17,7 @@ navbar:
       href: index.xml
     - icon: fas fa-adjust
 
+  
 collections:
   post:
     feed_items_max: 50
@@ -30,9 +31,8 @@ rss:
 output:
   distill::distill_article:
     theme: theme.css
-    # highlight: zenburn
-    # highlight_downlit: false
-    #includes:
-    after_body: "_after_body.html"
+    #highlight: rstudio
+    includes:
+      after_body: "_after_body.html"
 
 google_analytics: "UA-149910232-1"
