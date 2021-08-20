@@ -2,13 +2,19 @@
 title: "reactablefmtr and title size issue?"
 description: |
   A short description of the post.
-author:
-  - name: Roland Schmidt
+author:  
+  - first_name: "Roland"
+    last_name: "Schmidt"
     url: https://werk.statt.codes
+    orcid_id: 0000-0002-6897-1693
 date: 08-19-2021
 output:
   distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
     self_contained: false
+    code_folding: TRUE
 ---
 
 This is quick test of how to change the font size in tables created by `reactable` and formated with the `reactablefrmtr` package.
