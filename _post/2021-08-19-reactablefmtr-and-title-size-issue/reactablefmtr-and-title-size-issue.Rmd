@@ -21,7 +21,7 @@ This is quick test of how to change the font size in tables created by `reactabl
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = T)
 ```
 
 ```{r}
