@@ -2227,7 +2227,6 @@ body {
 }
 
 
-
 d-article p {
     line-height: 1.6em !important;
     text-align: justify;
@@ -2270,6 +2269,12 @@ d-byline .byline {
 d-byline .byline h3 {
     margin-block-start: 0em !important; /*moves byline up; aligns all three components horizontally*/
     }
+
+#TOC{
+   font-family: sans-serif;
+   }
+
+
 
 /*reduce margin above list of posts on listing page*/
 .posts-list {
@@ -2320,7 +2325,43 @@ pre {
  /* font-size: 90%;*/
 }
 
-::selection { background: orange; }
+::selection {background: black;
+             color: orange;}
+
+
+/*TAGS*/
+
+.dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    background: #f5f4f4;
+    /* padding: 0.3em 0.4em; */
+    /* margin-right: 0.2em; */
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    font-family: sans-serif;
+    border: 0px solid rgba(0,0,0,0.2);
+    border-radius: 0px;
+    text-transform: inherit;
+    font-weight: 500;
+}
+
+
+.posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    background: #f5f4f4;
+    /* padding: 0.3em 0.4em; */
+    /* margin-right: 0.2em; */
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    font-family: sans-serif;
+    border: 0px solid rgba(0,0,0,0.2);
+    border-radius: 0px;
+    text-transform: inherit;
+    font-weight: 500;
+}
+
 
 
 /*HEADINGS*/
@@ -2329,13 +2370,13 @@ d-article h1 {
    border-bottom: 0px solid rgba(0, 0, 0, 0.1) !important;
    /'padding-bottom: 0.5rem;*/
    margin-top: 0px;  /*aligns heading with heading of toc*/
-   font-size: 28px !important;
+   font-size: 28px /*!important;*/
 }
 
 d-article h2 {
-   font-size: 22px !important;
+   font-size: 22px; /*!important;*/
    border: 0px !important;
-   padding-bottom: 0rem !important	;
+   padding-bottom: 0rem !important;
 }
 
 
@@ -2384,14 +2425,14 @@ d-article pre, d-article div.sourceCode, d-article div.sourceCode pre {
 a.title:not(nav-right) {
    color: white;
    font-weight: bold;
-   background-color: #0f2e3d;
+   background-color: #000000; /*#061d2d; /*#0f2e3d;*/
    padding-bottom: 0px !important;
    padding-top: 0px !important;
    margin-top: 14px;
 }
 
 a.title:hover:not(nav-right) {
-   color: #0f2e3d;
+   color: #000000; /*#061d2d; /*#0f2e3d;*/
    font-weight: bold;
    background-color: var(--blog-bg-color);
 }
@@ -2480,50 +2521,6 @@ details[open] summary::after {
 
 
 
-
-
-/*REACTABLE FORMAT*/
-
-.reactable-table {
-	font-family: Karla;*/
-	font-size:   100%;*/
-  
- }
-
-.reactable-title {
-/*  color: orange;#333333;*/
-  font-size: 100%;
-  font-weight: 600;
-  font-family: Roboto Condensed;
-}
-
-.reactable-subtitle {
-  /*color: #7f7f7f;*/
-  font-size: 90%;
-  font-weight: 100;
-  font-family: Roboto Condensed;
-  line-height: 100%;
-}
-
-.reactable-body {
-  /*color: #7f7f7f;*/
-  font-size: 80%;*/
-  color:red;
-  font-weight: 100;*/
-  /*font-family: Karla;*/
-  line-height: 100%; */	
-}
-
-.reactable-caption {
-   /*color: #7f7f7f;*/
-  font-size: 70%;
-  font-weight: 100;
-  line-height: 90%;
-  font-family: Roboto Condensed;
-  padding-left: 6px;
-  white-space: pre;
-
-}
 
 
 /* Darkmode */

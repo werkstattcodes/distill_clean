@@ -2202,7 +2202,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
 
-
   d-article p {
       line-height: 1.6em !important;
       text-align: justify;
@@ -2245,6 +2244,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-byline .byline h3 {
       margin-block-start: 0em !important; /*moves byline up; aligns all three components horizontally*/
       }
+
+  #TOC{
+     font-family: sans-serif;
+     }
+
+
 
   /*reduce margin above list of posts on listing page*/
   .posts-list {
@@ -2295,7 +2300,43 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
    /* font-size: 90%;*/
   }
 
-  ::selection { background: orange; }
+  ::selection {background: black;
+               color: orange;}
+
+
+  /*TAGS*/
+
+  .dt-tags .dt-tag {
+      display: inline-block;
+      color: rgba(0,0,0,0.6);
+      background: #f5f4f4;
+      /* padding: 0.3em 0.4em; */
+      /* margin-right: 0.2em; */
+      margin-bottom: 0.4em;
+      font-size: 60%;
+      font-family: sans-serif;
+      border: 0px solid rgba(0,0,0,0.2);
+      border-radius: 0px;
+      text-transform: inherit;
+      font-weight: 500;
+  }
+
+
+  .posts-list .dt-tags .dt-tag {
+      display: inline-block;
+      color: rgba(0,0,0,0.6);
+      background: #f5f4f4;
+      /* padding: 0.3em 0.4em; */
+      /* margin-right: 0.2em; */
+      margin-bottom: 0.4em;
+      font-size: 60%;
+      font-family: sans-serif;
+      border: 0px solid rgba(0,0,0,0.2);
+      border-radius: 0px;
+      text-transform: inherit;
+      font-weight: 500;
+  }
+
 
 
   /*HEADINGS*/
@@ -2304,13 +2345,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
      border-bottom: 0px solid rgba(0, 0, 0, 0.1) !important;
      /'padding-bottom: 0.5rem;*/
      margin-top: 0px;  /*aligns heading with heading of toc*/
-     font-size: 28px !important;
+     font-size: 28px /*!important;*/
   }
 
   d-article h2 {
-     font-size: 22px !important;
+     font-size: 22px; /*!important;*/
      border: 0px !important;
-     padding-bottom: 0rem !important	;
+     padding-bottom: 0rem !important;
   }
 
 
@@ -2359,14 +2400,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   a.title:not(nav-right) {
      color: white;
      font-weight: bold;
-     background-color: #0f2e3d;
+     background-color: #000000; /*#061d2d; /*#0f2e3d;*/
      padding-bottom: 0px !important;
      padding-top: 0px !important;
      margin-top: 14px;
   }
 
   a.title:hover:not(nav-right) {
-     color: #0f2e3d;
+     color: #000000; /*#061d2d; /*#0f2e3d;*/
      font-weight: bold;
      background-color: var(--blog-bg-color);
   }
@@ -2455,50 +2496,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 
-
-
-  /*REACTABLE FORMAT*/
-
-  .reactable-table {
-  	font-family: Karla;*/
-  	font-size:   100%;*/
-    
-   }
-
-  .reactable-title {
-  /*  color: orange;#333333;*/
-    font-size: 100%;
-    font-weight: 600;
-    font-family: Roboto Condensed;
-  }
-
-  .reactable-subtitle {
-    /*color: #7f7f7f;*/
-    font-size: 90%;
-    font-weight: 100;
-    font-family: Roboto Condensed;
-    line-height: 100%;
-  }
-
-  .reactable-body {
-    /*color: #7f7f7f;*/
-    font-size: 80%;*/
-    color:red;
-    font-weight: 100;*/
-    /*font-family: Karla;*/
-    line-height: 100%; */	
-  }
-
-  .reactable-caption {
-     /*color: #7f7f7f;*/
-    font-size: 70%;
-    font-weight: 100;
-    line-height: 90%;
-    font-family: Roboto Condensed;
-    padding-left: 6px;
-    white-space: pre;
-
-  }
 
 
   /* Darkmode */
@@ -2930,21 +2927,6 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
-<a href="post/2021-08-19-reactablefmtr-and-title-size-issue/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 18, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Roland Schmidt</div>
-</div>
-</div>
-<div class="thumbnail"></div>
-<div class="description">
-<h2>reactablefmtr and title size issue?</h2>
-<div class="dt-tags"></div>
-<p>A short description of the post.</p>
-</div>
-</a>
 <a href="post/2021-03-10-covidsubmissionsnoauthor/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["Austria","COVID"]}</script>
 <div class="metadata">
@@ -3038,7 +3020,7 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img data-src="post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png"/>
+<img src="post/2020-12-19-vienna-elections-2020-analysis-of-parties-ads-on-facebook/welcome_files/preview.png"/>
 </div>
 <div class="description">
 <h2>Vienna Elections 2020: Analysis of parties' ads on facebook</h2>
@@ -3294,7 +3276,7 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(17)</span>
+<span class="category-count">(16)</span>
 </li>
 <li>
 <a href="#category:Austria">Austria</a>
@@ -3407,7 +3389,7 @@ function init_posts_list() {
 <a href="#">More articles &raquo;</a>
 </div>
 </div>
-<!--/radix_placeholder_article_listing-->
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>Posts</h1>
