@@ -7,7 +7,19 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Extracting the transcripts of the 'Ibizia Inquiry'</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers</link>
+      <description>In mid-June, the so-called 'Ibiza Commission of Inquiry' heard its last witness after almost one year at work. The commission had been established by the Austrian Parliament and set up to investigate the prevalence of corruption during the coalition government of the ÖVP and FPÖ (Dec, 2017- May, 2019). This post diggs into its published transcripts. The emphasis of the post is, first, on demonstrating how to extract the text from the hearings' transcripts in R and, second, on crunching a few numbers to get some substantive insights. The compiled dataset, covering all statements (incl. questions, answers etc.), is available for download.</description>
+      <category>Austria</category>
+      <category>Parliament</category>
+      <category>web scraping</category>
+      <guid>https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers</guid>
+      <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers/the-ibizia-inquiry-in-numbers_files/images/subpage_link_to_transcript.PNG" medium="image" type="image/png" width="1157" height="835"/>
+    </item>
     <item>
       <title>Austria's Covid legislation: The remarkable absence of authorship in public submissions to the consultative process</title>
       <dc:creator>Roland Schmidt</dc:creator>

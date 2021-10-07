@@ -5,7 +5,7 @@ description: |
 output_dir: "_site"
 base_url: https://werk.statt.codes/
 navbar:
-  search: true
+  search: false
   right:
     - icon: fa fa-info-circle
       href: about.html
@@ -15,7 +15,7 @@ navbar:
       href: https://www.github.com/werkstattcodes
     - icon: fa fa-rss
       href: index.xml
-    - icon: fas fa-adjust
+    #- icon: fas fa-adjust
 
   
 collections:

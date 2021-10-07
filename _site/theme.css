@@ -246,6 +246,14 @@ d-article h2 {
 }
 
 
+d-article h3 {
+   font-size: 18px; /*!important;*/
+   font-style: italic;
+   color: red;
+   border: 0px !important;
+   padding-bottom: 0rem !important;
+}
+
 /*TITLE ON LISTING PAGE*/
 .posts-list .description h2 {
     font-size: 18px !important;
@@ -280,7 +288,7 @@ d-article pre, d-article div.sourceCode, d-article div.sourceCode pre {
 }
 
 .distill-site-nav a:hover:not(.title) {
-    color: #296273;
+    color: black;
     /*background-color: firebrick;*/
     /*border-width: 0px 0px 1px 0px:*/
     /*border-bottom: solid;*/
@@ -387,6 +395,11 @@ details[open] summary::after {
 
 
 
+/*reactablefmtr: move source closer to table*/
+
+.reactable {
+	margin-bottom: 0px !important;        
+}
 
 
 /* Darkmode */
