@@ -965,7 +965,8 @@ readr::write_excel_csv2(df_check, file=here::here("_blog_data", "2021_7_ibiza_in
 file_name <- paste("df_data", Sys.Date(), ".csv", sep="_")
 
 readr::write_excel_csv2(df_data %>% 
-                          select(-contains("id")),
+                          select(-id_check) %>% 
+                          arrange(link, session_no, id_statement),
   file = here::here("_blog_data", "2021_7_ibiza_inquiry", file_name)
 )
 
@@ -988,7 +989,7 @@ df_data <- df_data %>%
 
 ```
 
-The dataframe obtained comprises the transcripts of `r length(unique(df_data$link))` sessions, which cover `r scales::number(nrow(df_data), big.mark=",")` single statements (rows of our dataframe). If someone is interested in the entire dataset, it can be downloaded here. Note that the dataframe only covers statements, and not the accompanying text (introduction etc) of the transcript (if you use the dataset, grateful if you quote this post as its source).
+The dataframe obtained comprises the transcripts of `r length(unique(df_data$link))` sessions, which cover `r scales::number(nrow(df_data), big.mark=",")` single statements (rows of our dataframe). If someone is interested in the entire dataset, it can be downloaded [here](https://data.world/zoowalk/ibizaausschuss){target="_blank"}. Note that the dataframe only covers statements, and not the accompanying text (introduction etc) of the transcript (if you use the dataset, grateful if you quote this post as its source).
 
 # Analysis
 
@@ -2144,4 +2145,4 @@ df_tbl_vertrauensperson %>%
 
 # Wrap-up
 
-This post - once again - got much longer (and time consuming) than initially intended. I hope the obtained dataset and the above analysis is helpful to some. The file can be downloaded here. As already stated above, if you spot any error etc. please feel free to contact me, best via direct message on [twitter](https://twitter.com/zoowalk){target="_blank"}.
+This post - once again - got much longer (and time consuming) than initially intended. I hope the obtained dataset and the above analysis is helpful to some. The file can be downloaded [here](https://data.world/zoowalk/ibizaausschuss){target="_blank"}. As already stated above, if you spot any error etc. please feel free to contact me, best via direct message on [twitter](https://twitter.com/zoowalk){target="_blank"}.
