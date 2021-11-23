@@ -7,7 +7,31 @@
     <description>Personal blog on stuff related to R
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 06 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>How often do Austria's Chancellors use the word 'I'</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-04-22-how-often-do-austrias-chancellors-use-the-word-i</link>
+      <description>In a previous post, I detailed how to extract statements given in Austria's parlament from the sessions' transcripts. In this post, I use the extracted text - in combination with an already existing database on earlier sessions - to compare chancellors' engagement with parliament and ...their use of the word 'I'.</description>
+      <category>Austria</category>
+      <category>regex</category>
+      <guid>https://werk.statt.codes/post/2021-04-22-how-often-do-austrias-chancellors-use-the-word-i</guid>
+      <pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-04-22-how-often-do-austrias-chancellors-use-the-word-i/how-often-do-austrias-chancellors-use-the-word-i_files/images/pl_search_term_total_2_start.png" medium="image" type="image/png" width="850" height="550"/>
+    </item>
+    <item>
+      <title>How to extract speeches held at Austria's parliament</title>
+      <dc:creator>Roland Schmidt</dc:creator>
+      <link>https://werk.statt.codes/post/2021-04-20-extracting-speeches-held-at-austrias-parliament</link>
+      <description>The website of the Austrian parliament provides transcripts of its sessions. This post details how to extract the statements given by MPs, members of government and other speakers.</description>
+      <category>Austria</category>
+      <category>text analysis</category>
+      <category>web scraping</category>
+      <category>regex</category>
+      <guid>https://werk.statt.codes/post/2021-04-20-extracting-speeches-held-at-austrias-parliament</guid>
+      <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-04-20-extracting-speeches-held-at-austrias-parliament/extracting-speeches-held-at-austrias-parliament_files/images/preview_parliament.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Extracting the transcripts of the 'Ibizia Inquiry'</title>
       <dc:creator>Roland Schmidt</dc:creator>
@@ -17,8 +41,8 @@
       <category>Parliament</category>
       <category>web scraping</category>
       <guid>https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers</guid>
-      <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers/the-ibizia-inquiry-in-numbers_files/images/subpage_link_to_transcript.PNG" medium="image" type="image/png" width="1157" height="835"/>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://werk.statt.codes/post/2021-07-18-the-ibizia-inquiry-in-numbers/the-ibizia-inquiry-in-numbers_files/images/amused_graph.png" medium="image" type="image/png" width="1071" height="751"/>
     </item>
     <item>
       <title>Austria's Covid legislation: The remarkable absence of authorship in public submissions to the consultative process</title>

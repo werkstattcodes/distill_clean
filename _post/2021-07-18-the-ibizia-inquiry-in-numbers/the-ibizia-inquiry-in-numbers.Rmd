@@ -1,7 +1,7 @@
 ---
 title: "Extracting the transcripts of the 'Ibizia Inquiry'"
 description: In mid-June, the so-called 'Ibiza Commission of Inquiry' heard its last witness after almost one year at work. The commission had been established by the Austrian Parliament and set up to investigate the prevalence of corruption during the coalition government of the ÖVP and FPÖ (Dec, 2017 - May, 2019). This post diggs into its published transcripts. The emphasis of the post is, first, on demonstrating how to extract the text from the hearings' transcripts in R and, second, on crunching a few numbers to get some substantive insights. The compiled dataset, covering all statements (incl. questions, answers etc.), is available for download.
-  
+
 date: 10-07-2021
 
 author:  
@@ -13,7 +13,7 @@ categories:
   - Austria
   - Parliament
   - web scraping
-preview: the-ibizia-inquiry-in-numbers_files/images/subpage_link_to_transcript.PNG
+preview: the-ibizia-inquiry-in-numbers_files/images/amused_graph.png
 output:
   distill::distill_article:
     toc: true
@@ -37,7 +37,7 @@ The commission, empowered with a fairly broad mandate and armed with access to p
 
 Having said this, the purpose of this post is not to give a recap of the inquiry or its results, but first and foremost procedural in the sense that it intends to detail the necessary steps to extract statements from the inquiry's transcripts and subsequently obtain some exemplary insights with R. As always, if you spot any error, feel free to contact me, best via [twitter DM](https://twitter.com/zoowalk){target="_blank"}. And if you use any of the work provided here, grateful if you acknowledge my input.
 
-If you are not interested in any of the coding steps generating the data, jump directly to the [Analysis] section which still contains plenty of code, but you're not burdened with how to obtain the data in the first place.
+*If you are not interested in any of the coding steps generating the data, jump directly to the [Analysis] section* which still contains plenty of code, but you're not burdened with how to obtain the data in the first place.
 
 # Getting the data
 

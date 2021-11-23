@@ -15,7 +15,6 @@ navbar:
       href: https://www.github.com/werkstattcodes
     - icon: fa fa-rss
       href: index.xml
-    #- icon: fas fa-adjust
 
   
 collections:

@@ -14,5 +14,5 @@ Note that I recently moved this blog and hence a few entries are somewhat 'messy
 
 Roland Schmidt #IStandWithCEU #COYG
 
-Codes are collected at [www.github.com/werkstattcodes](https://github.com/werkstattcodes){target="_blank"}
-Tweets are at @zoowalk.
+Codes are collected at [www.github.com/werkstattcodes](https://github.com/werkstattcodes){target="_blank"}.
+Tweets are at [`@zoowalk`](https://twitter.com/zoowalk){target="_blank"}.

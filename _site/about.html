@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -1955,6 +1956,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
 
+  /*reduces vertical space between items of a list*/
+  d-article li {
+        	margin-bottom: 0;
+  	margin-left: 0;
+  	padding-left:0;
+  }
+
+
   /* short description text after title of post in article*/
   d-title p {
      font-size: medium !important;
@@ -2254,88 +2263,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*reactablefmtr: move source closer to table*/
 
   .reactable {
-  	margin-bottom: 0px !important;        
+  	margin-bottom: 0px !important;
+  	line-height:1.6;         
   }
 
-
-  /* Darkmode */
-
-  .darkmode {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #fff;
-    --header-color:    #fff;
-    --body-color:      #fff;
-    --aside-color:     #fff;
-    --fig-cap-color:   #fff;
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    'IBM Plex Sans', sans-serif;
-    --mono-font:       'IBM Plex Mono', monospace;
-    --body-font:       'IBM Plex Sans', sans-serif;
-    --navbar-font:     'IBM Plex Sans', serif; /* websites + blogs only */
-    background-color: #23252f;
-    color: #fff;
-  }
-
-  .darkmode body {
-    background-color: #23252f;
-  }
-
-  .darkmode d-article {
-    background-color: #23252f;
-    color: #fff;
-  }
-
-  .darkmode d-title {
-    color: #fff;
-  }
-
-  .darkmode d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   #fff;
-    --body-size:       0.8rem;
-    --body-color:      #fff;
-  }
-
-  .darkmode .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  .darkmode d-appendix {
-    --heading-size:    15px;
-    --heading-color:   #fff;
-    --text-size:       0.8em;
-    --text-color:      #fff;
-  }
-
-  .darkmode d-appendix a {
-    color:      #fff;
-  }
-
-  .darkmode .distill-site-header {
-    --title-size:       18px;
-    --text-color:       #fff;
-    --text-size:        17px;
-    --hover-color:      var(--primary);
-    --bkgd-color:       #23252f;
-  }
-
-  .darkmode .distill-site-footer {
-    --text-color:       #fff;
-    --text-size:        15px;
-    --hover-color:      var(--primary);
-    --bkgd-color:       #23252f;
-  }
-
-  .darkmode d-article .sourceCode {
-    background-color: #555;
-  }</style>
+  </style>
   <style type="text/css">
   /* base style */
 
@@ -2561,7 +2493,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Not that the world would have been waiting for another blog… but there you go. This (work in progress?) blog is a collection of my ‘thoughts in R’ with varying degrees of seriousness. Posts will mostly relate to my substantive interests (comparative political science, human rights) or are simply notes to myself on a specific R function. Not claiming any final truth. One step at a time.</p>
 <p>Note that I recently moved this blog and hence a few entries are somewhat ‘messy’ (broken links, images out of place). I’ll hope to be able to iron this out soon.</p>
 <p>Roland Schmidt #IStandWithCEU #COYG</p>
-<p>Codes are collected at <a href="https://github.com/werkstattcodes" target="_blank">www.github.com/werkstattcodes</a> Tweets are at <span class="citation" data-cites="zoowalk">@zoowalk</span>.</p>
+<p>Codes are collected at <a href="https://github.com/werkstattcodes" target="_blank">www.github.com/werkstattcodes</a>. Tweets are at <a href="https://twitter.com/zoowalk" target="_blank"><code>@zoowalk</code></a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
