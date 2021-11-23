@@ -12,7 +12,7 @@
       <title>How often do Austria's Chancellors use the word 'I'</title>
       <dc:creator>Roland Schmidt</dc:creator>
       <link>https://werk.statt.codes/post/2021-04-22-how-often-do-austrias-chancellors-use-the-word-i</link>
-      <description>In a previous post, I detailed how to extract statements given in Austria's parlament from the sessions' transcripts. In this post, I use the extracted text - in combination with an already existing database on earlier sessions - to compare chancellors' engagement with parliament and ...their use of the word 'I'.</description>
+      <description>In a previous post, I detailed how to extract statements given in Austria's parliament from the sessions' transcripts. In this post, I use the extracted text - in combination with an already existing database on earlier sessions - to compare chancellors' engagement with parliament and ...their use of the word 'I'.</description>
       <category>Austria</category>
       <category>regex</category>
       <guid>https://werk.statt.codes/post/2021-04-22-how-often-do-austrias-chancellors-use-the-word-i</guid>
