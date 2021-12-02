@@ -3306,7 +3306,7 @@ Show code
   <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>chancellor_name<span class='op'>=</span><span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>gov</span>, <span class='fu'><a href='https://stringr.tidyverse.org/reference/modifiers.html'>regex</a></span><span class='op'>(</span><span class='st'>"^\\w+"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title<span class='op'>=</span><span class='st'>"Wie lange haben Kanzler/in vor dem Parlament gesprochen?"</span>,
-       subtitle<span class='op'>=</span><span class='st'>"Anzahl der insg. gesprochen Worte im Parlament. Daten ab Vranitzky 5 (März 1996)."</span>,
+       subtitle<span class='op'>=</span><span class='st'>"Anzahl der insg. gesprochenen Worte im Parlament. Daten ab Vranitzky 5 (März 1996)."</span>,
        caption<span class='op'>=</span><span class='fu'>glue</span><span class='fu'>::</span><span class='fu'><a href='https://glue.tidyverse.org/reference/glue.html'>glue</a></span><span class='op'>(</span><span class='st'>"Daten: ParlSpeech V2 (Rauh und Schwalbach 2020) für {date_cut_off_min} bis {date_cut_off_max}; eigene Erhebung aus Protokollen des Parlaments \nfür {date_cut_off_max} bis {max(df_all$date)}.\nAnalyse/Graphik: Roland Schmidt | @zoowalk | http://werk.statt.codes"</span><span class='op'>)</span>,
        <span class='co'># x="Gesamtlänge aller Statements in Anzahl an Wörtern")+</span>
        x<span class='op'>=</span><span class='st'>"Tage im Amt"</span>,
@@ -3363,7 +3363,7 @@ Show code
               <span class='op'>)</span><span class='op'>)</span>,
             defaultPageSize <span class='op'>=</span><span class='fl'>11</span>,
             theme<span class='op'>=</span><span class='fu'><a href='https://kcuilla.github.io/reactablefmtr/reference/nytimes.html'>nytimes</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
-  <span class='fu'><a href='https://kcuilla.github.io/reactablefmtr/reference/add_title.html'>add_title</a></span><span class='op'>(</span><span class='st'>"Anzahl der gesprochen Worte im Parlament pro Tag im Amt"</span>,
+  <span class='fu'><a href='https://kcuilla.github.io/reactablefmtr/reference/add_title.html'>add_title</a></span><span class='op'>(</span><span class='st'>"Anzahl der gesprochenen Worte im Parlament pro Tag im Amt"</span>,
             font_size<span class='op'>=</span><span class='fl'>18</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
   <span class='fu'><a href='https://kcuilla.github.io/reactablefmtr/reference/add_subtitle.html'>add_subtitle</a></span><span class='op'>(</span><span class='st'>"Daten ab Vranitzky 5 (März 1996)."</span>,
                font_size<span class='op'>=</span><span class='fl'>12</span>,
@@ -3378,7 +3378,7 @@ Show code
 </code></pre>
 </div>
 </details>
-<h1 style="color:#000;background:#FFFFFF;text-align:left;font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:18px;font-style:normal;font-weight:bold;text-decoration:;margin:2px">Anzahl der gesprochen Worte im Parlament pro Tag im Amt</h1>
+<h1 style="color:#000;background:#FFFFFF;text-align:left;font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:18px;font-style:normal;font-weight:bold;text-decoration:;margin:2px">Anzahl der gesprochenen Worte im Parlament pro Tag im Amt</h1>
 <h2 style="color:#333;background:#FFFFFF;text-align:left;font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:12px;font-style:normal;font-weight:normal;text-decoration:;margin:2px">Daten ab Vranitzky 5 (März 1996).</h2>
 <div id="htmlwidget-ae3abce3c89a95c78982" class="reactable html-widget" style="width:auto;height:auto;"></div>
 <p style="color:#999999;background:#FFFFFF;text-align:left;font-family:Helvetica;font-size:11px;font-style:normal;font-weight:normal;text-decoration:;margin:4px">Daten: ParlSpeech V2 (Rauh und Schwalbach 2020) für 1996-01-31 bis 2018-12-13; eigene Erhebung aus Protokollen des Parlaments 
